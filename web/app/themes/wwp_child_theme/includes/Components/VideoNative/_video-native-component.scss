@@ -1,0 +1,182 @@
+@charset "UTF-8";
+/* ----------------------------- */
+/* ==Video component      */
+/* ----------------------------- */
+
+@import "video-commons";
+
+//Variables
+$progress-bar-bg: $gray-300;
+$progress-bar-color: white;
+
+$video-height: 440px;
+$video-controls-height: 50px;
+$video-trigger-color: $color-primary;
+$video-controls-color: $color-primary;
+
+.video-wrapper {
+  height: $video-height;
+}
+
+//Video player
+.video-player {
+
+  .controls {
+    position: absolute;
+    bottom: - $video-controls-height;
+    left: 0;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: center;
+    height: $video-controls-height;
+    width: 100%;
+    padding: 0 3rem;
+    background: $video-controls-color;
+
+    &[data-state=hidden] {
+      display: none;
+    }
+
+    &[data-state=visible] {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .progress-wrap {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    height: 10px;
+    width: 100%;
+  }
+
+  progress {
+    display: block;
+    height: 10px;
+    width: 100%;
+    background-color: $progress-bar-bg; //Background bar for all but Webkit
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    appearance: none;
+
+    //Recent browser custom for Firefox
+    &::-moz-progress-bar {
+      background-color: $progress-bar-bg; //Background bar
+    }
+
+    //Recent browser custom for Webkit
+    &::-webkit-progress-value {
+      background-color: $progress-bar-color; //Foreground bar
+    }
+
+    &::-webkit-progress-bar {
+      background-color: $progress-bar-bg; //Background bar
+    }
+
+    //Old browsers fallback
+    &[data-state="fake"] {
+      background: $progress-bar-color; //Foreground bar
+    }
+
+    //Custom for Internet Explorer
+    border: none;
+    color: $progress-bar-color; //Foreground bar
+
+    span {
+      width: 0%;
+      height: 100%;
+      display: inline-block;
+      background-color: $progress-bar-bg; //Background bar
+    }
+  }
+
+  .controls .buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .controls .left-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  .controls .right-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  //Override buttons base styles
+  button {
+    height: 26px;
+    min-height: 26px;
+    width: 26px;
+    min-width: auto;
+    margin-right: 10px;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    border: 0;
+    outline: 0;
+    box-shadow: none !important;
+    font-size: 0; //Hide text (test if better way)
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &[data-state="play"] {
+      @include svgIcon('video-bar-play');
+    }
+
+    &[data-state="pause"] {
+      @include svgIcon('video-bar-pause');
+    }
+
+    &[data-state="stop"] {
+      @include svgIcon('video-bar-stop');
+    }
+
+    &[data-state="unmute"] {
+      @include svgIcon('video-bar-unmute');
+    }
+
+    &[data-state="mute"] {
+      @include svgIcon('video-bar-mute');
+    }
+
+    &[data-state="go-fullscreen"] {
+      @include svgIcon('video-bar-fullscreen');
+    }
+
+    &[data-state="volup"] {
+      @include svgIcon('video-bar-volup');
+    }
+
+    &[data-state="voldown"] {
+      @include svgIcon('video-bar-voldown');
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+
+  //Ouverture en fullscreen
+  &[data-fullscreen="true"] {
+
+    .controls {
+      bottom: 0;
+    }
+  }
+}
+
+
+
+

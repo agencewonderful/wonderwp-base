@@ -1,0 +1,95 @@
+/*Items HeroVideo*/
+.hero-side {
+  height: 100%; //Le conteneur doit avoir une taille fixe !
+
+  a {
+    position: relative;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      pointer-events: none;
+    }
+  }
+
+  .hero-content {
+    @include absolute-center;
+    z-index: 3;
+    width: 43rem;
+    max-width: 100%;
+    padding: 0 4rem;
+
+    .title {
+      @extend .h1-like;
+      margin-bottom: 1rem;
+      color: white;
+      text-transform: uppercase;
+      font-family: $font-family-secondary;
+    }
+
+    .description {
+      color: white;
+      margin-bottom: 0;
+      margin-top: 0;
+      line-height: $line-height-s;
+    }
+    .btn{
+      margin-top:2rem;
+    }
+  }
+
+  .hero-cta {
+    position: absolute;
+    bottom: 8rem;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+  }
+
+  .cta-title {
+    top: auto;
+    bottom: 8rem;
+    width: 100%;
+    transform: translateX(0);
+    transition: all .4s ease;
+
+    &::before {
+      width: calc(60% - 18rem);
+    }
+  }
+
+  @media (max-width: $medium - 1) {
+
+    .hero-content {
+      width: 100%;
+
+      .description {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: $verytiny) {
+    height: 90vh;
+
+    .hero-content .title {
+      font-size: 4rem;
+    }
+  }
+}
+
+// Hero avec composant video embed
+.hero-side {
+
+  .video-trigger {
+    display: none;
+  }
+}
