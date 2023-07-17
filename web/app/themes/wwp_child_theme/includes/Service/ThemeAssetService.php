@@ -4,25 +4,11 @@ namespace WonderWp\Theme\Child\Service;
 
 use WonderWp\Component\Asset\AbstractAssetService;
 use WonderWp\Component\Asset\Asset;
-use WonderWp\Component\Asset\AssetManager;
 use WonderWp\Component\DependencyInjection\Container;
 use WonderWp\Theme\Core\ThemeManager;
 
 class ThemeAssetService extends AbstractAssetService
 {
-
-    public function registerAssets(AssetManager $assetManager, $assetClass)
-    {
-
-        //CSS
-        // TODO : Check ce que ça fait ici
-        $container = Container::getInstance();
-        $manager   = $container->offsetGet('wwp.theme.Manager');
-        $themePath = $manager->getConfig('path.url');
-        // $assetManager->registerAsset('css', new $assetClass('theme', $themePath . '/assets/raw/scss/theme.scss', [], '', false, 'core' ));
-
-    }
-
     public function getAssets()
     {
         if (empty($this->_assets)) {
@@ -36,6 +22,7 @@ class ThemeAssetService extends AbstractAssetService
                 'css' => [
                     new $assetClass('styleguide', $themePath . '/assets/raw/scss/theme.scss', [], '', true, 'styleguide'),
                     new $assetClass('critical', $themePath . '/assets/raw/scss/critical.scss', [], '', true, 'critical'),
+                    new $assetClass('admin', $themePath . '/assets/raw/scss/admin.scss', [], '', true, 'admin'),
                 ],
                 'js'  => [
                     new $assetClass('bootstrap', $themePath . '/assets/raw/js/app_bootstrap.js', [], '', true, ThemeManager::CRITICAL_ASSETS_GROUP), // global app entry point

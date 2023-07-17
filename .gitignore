@@ -35,6 +35,8 @@ web/app/themes/wwp_child_theme/assets/final/*.gif
 web/app/themes/wwp_child_theme/assets/final/*.png
 web/app/themes/wwp_child_theme/assets/final/*.jpg
 web/app/themes/wwp_child_theme/assets/final/*.jpeg
+web/app/themes/wwp_child_theme/assets/final/legacy
+web/app/themes/wwp_child_theme/assets/final/modern
 
 # Documentation
 web/documentation/dev/dest
@@ -49,17 +51,22 @@ web/documentation/wonderwp
 # Plugins
 web/app/plugins/*
 !web/app/plugins/.gitkeep
-!/web/app/plugins/wp-migrate-db-pro/
 
 # Tests
 cypress/screenshots
 !/cypress/screenshots/.gitkeep
 cypress/videos
 !/cypress/videos/.gitkeep
-/tests/reports/
+/tests/reports/*
 !/tests/reports/.gitkeep
-/tests/suites/
+/tests/suites/*
 !/tests/suites/.gitkeep
+
+# Cache
+/web/app/cache/*
+!web/app/cache/.gitkeep
+/web/app/wp-rocket-config/*
+web/app/advanced-cache.php
 
 # Other
 pimple.json
@@ -70,3 +77,4 @@ wonderwp-base.dev.crt
 wonderwp-base.dev.key
 main.css
 wonderwp_credentials.json
+

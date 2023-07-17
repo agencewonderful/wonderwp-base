@@ -4,24 +4,21 @@
 /* ==Fonts      */
 /* ----------------------------- */
 
-/* Fonts example (defined in variables.scss file) */
+/* Googlefonts are imported in variables.scss file */
 
+/*For Atomic docs*/
 .font {
-  font-weight: normal;
   margin-top: 0;
   span {
     display: block;
   }
 }
 
-.font1 {
-  font-family: $font-family-base;
+a {
+  color: var(--color-theme-base);
 }
 
-.font2 {
-  font-family: $font-family-headings;
-}
-
-.font3 {
-  font-family: $font-family-secondary;
+hr.wp-block-separator {
+  border-top: 0;
+  border-bottom: 1px solid currentColor;
 }

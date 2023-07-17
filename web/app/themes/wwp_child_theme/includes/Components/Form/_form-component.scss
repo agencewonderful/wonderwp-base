@@ -22,8 +22,11 @@ form {
     padding-left: 0;
   }
 
-  fieldset {
-    border: 1px solid $input-bgcolor;
+  fieldset,
+  .form-group-wrap {
+    padding: $fieldset-padding;
+    background-color: var(--color-theme-secondary);
+    border: 1px solid $fieldset-border;
   }
 
   input,
@@ -34,7 +37,12 @@ form {
     font-size: $input-font-size !important;
     color: $input-color !important;
     background-color: $input-bgcolor;
+    border-radius: $input-border-radius;
     border: none;
+
+    @media (max-width: $medium - 1) {
+      font-size: 1.6rem !important;
+    } //Pour iOS
   }
 
   input {
@@ -57,12 +65,17 @@ form {
   [type="week"],
   select,
   textarea {
+    min-height: $input-height;
+    padding: 0.5rem 4rem .5rem 2rem;
+    box-shadow: $input-box-shadow;
+
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       height: $input-height; //Pour IE
     }
-    min-height: $input-height;
-    padding: 0.5rem 4rem .5rem 1rem;
-    box-shadow: $input-box-shadow;
+
+    @media (max-width: $medium - 1) {
+      font-size: 1.6rem;
+    } // Pour éviter le zoom iOS
   }
 
   // reset knacss
@@ -72,6 +85,7 @@ form {
 
   label {
     color: $label-color;
+    font-size: $label-font-size;
   }
 
   legend {
@@ -83,10 +97,6 @@ form {
     color: $placeholder-color;
     font-size: $placeholder-font-size;
     line-height: normal; // Vertical center for iOS
-  }
-
-  ::-moz-placeholder {
-    line-height: 44px; //Préciser valeur en pixels pour centrage vertical sur Firefox
   }
 
   textarea {
@@ -126,20 +136,24 @@ form {
 
   .selectric {
     border: none;
+    border-radius: $input-border-radius;
     box-shadow: $input-box-shadow;
 
     .button {
       display: flex;
       width: $input-height;
       min-width: auto;
+      height: 100%;
+      min-height: auto;
+      margin: 0;
       padding: 0;
-      font: none;
+      font-size: 0;
       background-color: transparent;
       appearance: none;
       box-shadow: none;
 
       &::before {
-        @include svgIcon('chevron-bottom-s');
+        @include svgIcon('chevron-b-s');
       }
 
       &::after {
@@ -147,8 +161,19 @@ form {
       }
     }
   }
-}
 
+  .selectric-items {
+
+    li.selected {
+      background-color: $gray-300;
+    }
+
+    li:hover,
+    li:focus {
+      background-color: $gray-400;
+    }
+  }
+}
 
 @media (max-width: $medium - 1) {
 
@@ -205,8 +230,8 @@ form {
     &::before {
       content: "";
       display: block;
-      height: 10px;
-      width: 10px;
+      height: $checkbox-innersize;
+      width: $checkbox-innersize;
       background-color: $checkbox-color;
     }
   }
@@ -228,11 +253,34 @@ form {
 }
 
 //SUBMIT button
+.submitFormField {
+
+  form.auto-submit & {
+    @extend .visually-hidden;
+  }
+}
+
 [type="submit"] {
-  @extend .btn--primary;
+  @extend .btn--submit;
   justify-content: center;
   height: $input-height;
   min-height: $input-height;
+}
+
+// Champs date de naissance
+.dob-wrap {
+
+  .field-group {
+    display: flex;
+    margin-right: -1rem;
+    margin-left: -1rem;
+
+    > div {
+      flex: 1 1 calc(100% / 3);
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+  }
 }
 
 // Fieldset with inline (dates…)
@@ -252,9 +300,8 @@ fieldset.inline {
 
 // For before fields
 .form-before-fields {
-  grid-column: 1 / -1;
-  margin-bottom: 1rem;
   flex: 1 1 100% !important;
+  margin-bottom: 1rem;
   font-size: 1.2rem;
   font-style: italic;
 }
@@ -319,13 +366,18 @@ Form options (gutenberg ?)
 
 // Hidden labels
 .form-nolabel {
-  form div.form-group:not(.checkbox-wrap):not(.radio-wrap) label {
+  form div.form-group:not(.checkbox-wrap):not(.radio-wrap) > label {
     @extend .visually-hidden;
   }
 }
 
-/*Présentation sur en ligne*/
-$form-gutter: 5px;
+/*
+  Présentation en ligne
+  Variantes : nombre de colonnes, largeur de gouttière
+*/
+$form-gutter: 12px !default;
+$form-cols: 2 !default;
+$form-col-width: calc(100% / #{$form-cols}) !default;
 
 .form-inline {
 
@@ -335,13 +387,13 @@ $form-gutter: 5px;
     margin-right: -$form-gutter;
     margin-left: -$form-gutter;
 
-    > div {
-      flex: 1 1 auto;
+    .form-before-fields {
       margin: $form-gutter;
     }
 
-    > .form-group {
-      display: flex;
+    .form-group {
+      flex: 1 1 calc(#{$form-col-width} - #{$form-gutter * 2});
+      margin: $form-gutter;
     }
 
     .checkbox-wrap,
@@ -350,8 +402,13 @@ $form-gutter: 5px;
       flex-basis: 100%;
     }
 
-    .rgpd-consent-wrap {
-      order: 1;
+    .message-wrap {
+      display: block;
+    }
+
+    .submitFormField {
+      width: 100%;
+      text-align: center;
     }
   }
 
@@ -359,8 +416,12 @@ $form-gutter: 5px;
 
     form {
       display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
 
-      > div {
+      .form-before-fields,
+      .group-wrap {
         width: 100% !important;
         margin: 1rem 0;
       }
@@ -380,28 +441,17 @@ $form-gutter: 5px;
         padding-left: 0;
 
         .label {
-          margin-right: 1rem;
+          margin-left: 0;
+          margin-right: 0;
         }
 
         .button {
           width: 45px;
         }
       }
-
-      .submitFormField {
-        margin-top: 2rem !important;
-        margin-bottom: 2rem !important;
-        margin-left: 0;
-
-        .btn {
-          display: block;
-          width: auto !important;
-        }
-      }
     }
   }
 }
-
 
 /*Chosen styles override*/
 .chosen-container {

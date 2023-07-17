@@ -83,7 +83,7 @@
         "component": "forms",
         "category": "components",
         "description": "",
-        "backgroundColor": "",
+        "backgroundColor": "#ffffff",
         "order": 1,
         "has_js": "false"
     },
@@ -128,27 +128,11 @@
         "has_js": "false"
     },
     {
-        "component": "citation",
-        "category": "atoms",
-        "description": "",
-        "backgroundColor": "",
-        "order": -17,
-        "has_js": "false"
-    },
-    {
         "component": "lists",
         "category": "atoms",
         "description": "",
         "backgroundColor": "",
         "order": -18,
-        "has_js": "false"
-    },
-    {
-        "component": "cookies",
-        "category": "components",
-        "description": "",
-        "backgroundColor": "",
-        "order": -22,
         "has_js": "false"
     },
     {
@@ -164,7 +148,7 @@
         "category": "base",
         "description": "Ajouter ici les principales tailles d'images du projet (Unes, plugins\u2026)",
         "backgroundColor": "",
-        "order": -23,
+        "order": 4,
         "has_js": "false"
     },
     {
@@ -200,11 +184,91 @@
         "has_js": "false"
     },
     {
-        "component": "card_item",
+        "component": "card",
         "category": "components",
         "description": "",
         "backgroundColor": "",
         "order": -24,
+        "has_js": "false"
+    },
+    {
+        "component": "video_modale",
+        "category": "components",
+        "description": "",
+        "backgroundColor": "",
+        "order": -25,
+        "has_js": "false"
+    },
+    {
+        "component": "classes_utilitaires",
+        "category": "base",
+        "description": "",
+        "backgroundColor": "",
+        "order": 3,
+        "has_js": "false"
+    },
+    {
+        "component": "button",
+        "category": "components",
+        "description": "",
+        "backgroundColor": "",
+        "order": -27,
+        "has_js": "false"
+    },
+    {
+        "component": "telechargement",
+        "category": "components",
+        "description": "",
+        "backgroundColor": "",
+        "order": -28,
+        "has_js": "false"
+    },
+    {
+        "component": "paginations",
+        "category": "components",
+        "description": "",
+        "backgroundColor": "",
+        "order": -29,
+        "has_js": "false"
+    },
+    {
+        "component": "containers",
+        "category": "base",
+        "description": "",
+        "backgroundColor": "",
+        "order": -31,
+        "has_js": "false"
+    },
+    {
+        "component": "blockquote",
+        "category": "components",
+        "description": "",
+        "backgroundColor": "",
+        "order": -29,
+        "has_js": "false"
+    },
+    {
+        "component": "chiffre_cle",
+        "category": "components",
+        "description": "",
+        "backgroundColor": "",
+        "order": -30,
+        "has_js": "false"
+    },
+    {
+        "component": "hero",
+        "category": "components",
+        "description": "",
+        "backgroundColor": "",
+        "order": -31,
+        "has_js": "false"
+    },
+    {
+        "component": "timeline",
+        "category": "components",
+        "description": "",
+        "backgroundColor": "",
+        "order": -32,
         "has_js": "false"
     }
 ]

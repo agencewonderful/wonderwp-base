@@ -26,13 +26,13 @@ class VideoEmbedComponent extends AbstractComponent
 
     /**
      * @var string
-     * @BlockAttributes(component="PlainText",type="string",componentAttributes={"placeholder":"Videp embed"})
+     * @BlockAttributes(component="PlainText",type="string",componentAttributes={"placeholder":"Video ID"})
      */
     protected $video; // Youtube ID
 
     /**
      * @var string
-     * @BlockAttributes(component="PlainText",type="string",componentAttributes={"placeholder":"Image"})
+     * @BlockAttributes(component="MediaUpload",type="string",componentAttributes={"placeholder":"Image"})
      */
     protected $image;
 
@@ -79,14 +79,13 @@ class VideoEmbedComponent extends AbstractComponent
                 </div>';
             }
 
-            $markup .= '<button class="video-trigger"><span>'.trad('video.play.label', WWP_THEME_TEXTDOMAIN).' ' . $this->title . '</span></button>
+            $markup .= '<button class="video-trigger" aria-label="' . trad('video.play.label', WWP_THEME_TEXTDOMAIN) . '" ><span> ' . $this->title . '</span></button>
 
             <div class="video-player" data-video="' . $this->video . '">
 
             </div>';
 
         $markup .= '</div>'; /*.video-embed-wrapper*/
-
 
         return $markup;
     }

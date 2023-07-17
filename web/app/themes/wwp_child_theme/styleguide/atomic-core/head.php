@@ -3,7 +3,7 @@ if(!defined('WP_USE_THEMES')){ define('WP_USE_THEMES', false); }
 require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp/wp-blog-header.php' );
 require_once( get_stylesheet_directory().'/functions.php' );
 //require_once( get_theme_root().'/functions.php' );
-
+http_response_code(200);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>
@@ -26,16 +26,8 @@ require_once( get_stylesheet_directory().'/functions.php' );
     <link rel="stylesheet" type="text/css" href="atomic-core/css/site.css">
 
     <?php
-    $final_path_dir = get_stylesheet_directory().'/assets/final';
-    $final_path_uri = get_stylesheet_directory_uri().'/assets/final';
-
-    $version = include($final_path_dir.'/version.php');
-    $filename = (defined('FRONT_ENV') && FRONT_ENV==='webpack') ? 'styleguide' : 'app';
+    do_action('wwp.styleguide.head');
     ?>
-
-
-    <link rel="stylesheet" href="<?= $final_path_uri . "/css/".$filename.$version; ?>.css">
-
 
     <link rel="stylesheet" href="atomic-core/font-awesome/css/font-awesome.min.css">
 
@@ -49,9 +41,9 @@ require_once( get_stylesheet_directory().'/functions.php' );
             include("../atomic-head.php");
         }
     ?>
-    
+
     <?php
-    
+
         $parse_uri = explode( 'wp-content', $_SERVER['SCRIPT_FILENAME'] );
 
         $file_name =  $parse_uri[0] . 'wp-load.php';
@@ -62,7 +54,7 @@ require_once( get_stylesheet_directory().'/functions.php' );
 
     ?>
 
-    
+
 
 
 </head>

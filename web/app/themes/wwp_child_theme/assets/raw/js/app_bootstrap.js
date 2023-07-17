@@ -1,30 +1,6 @@
-import {EventManager} from "./features/EventManager";
 import {FeatureDetector} from "./features/FeatureDetector";
-
-/**
- * Object.assign Polyfill
- */
-if (typeof Object.assign != 'function') {
-  Object.assign = function (target) {
-    'use strict';
-    if (target == null) {
-      throw new TypeError('Cannot convert undefined or null to object');
-    }
-
-    target = Object(target);
-    for (var index = 1; index < arguments.length; index++) {
-      var source = arguments[index];
-      if (source != null) {
-        for (var key in source) {
-          if (Object.prototype.hasOwnProperty.call(source, key)) {
-            target[key] = source[key];
-          }
-        }
-      }
-    }
-    return target;
-  };
-}
+import {StylesheetManager} from "./components/StylesheetManager";
+import {EventManager} from "./features/EventManager";
 
 /**
  * Pew.js polyfill
@@ -108,11 +84,14 @@ var Enhancer = function () {
   }, {key: "getRegistryEntry", value: function (e) {return this.registry.getEntry(e)}}]), t
 }();
 
-window.EventManager = new EventManager();
 window.pew = new Pew();
 
 window.wonderwp = window.wonderwp || {};
 window.wonderwp.FeatureDetector = new FeatureDetector();
+
+window.wonderwp.StylesheetManager = new StylesheetManager();
+
+window.EventManager = new EventManager();
 
 let event = document.createEvent('Event');
 event.initEvent('criticalJsReady', true, true);

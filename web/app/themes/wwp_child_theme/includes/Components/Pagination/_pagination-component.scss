@@ -1,14 +1,13 @@
-@charset "UTF-8";
 /* ----------------------------- */
 /* ==Global layout      */
 /* ----------------------------- */
 
-/* Variables */
-$pagination-color: $color-primary;
+:root {
+  --pagination-color: var(--color-theme-base)
+}
 
-/* ------------- */
-
-.pagination {
+.pagination,
+.wp-block-query-pagination {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,46 +16,63 @@ $pagination-color: $color-primary;
 
   li {
     display: inline-block;
-    margin: 0 .5rem;
+    margin: 0 10px;
   }
 
-  li > a {
-    padding: 6px 11px 5px 11px;
-    color: $pagination-color;
-    background: #fff;
+  li > a,
+  .page-numbers {
+    padding: 6px 0 5px 0;
+    color: var(--pagination-color);
     text-decoration: none;
     transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
   }
 
-  li > a.navprev, li > a.navnext {
+  .page-numbers {
+    margin: 0 5px;
+  }
+
+  li > a.navprev,
+  li > a.navnext,
+  a.wp-block-query-pagination-next,
+  a.wp-block-query-pagination-previous {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 1.2rem;
   }
 
-  li > a.navprev{
+  li > a.navprev,
+  a.wp-block-query-pagination-previous {
     text-align: left;
+
     &::before {
       content: '';
       display: block;
-      @include svgIcon('chevron-l-small-grey');
+      @include svgIcon('pagination-left');
       margin-right: 1rem;
     }
   }
 
-  li > a.navnext{
+  li > a.navnext,
+  a.wp-block-query-pagination-next {
     text-align: right;
+
     &::after {
       content: '';
       display: block;
-      @include svgIcon('chevron-r-small-grey');
+      @include svgIcon('pagination-right');
       margin-left: 1rem;
     }
   }
 
-  li.select > a {
-    color: #fff;
-    background: $pagination-color;
+  li.select,
+  span.current {
+    font-family: var(--font-theme-secondary);
+
+    > a {
+      border-bottom-color: var(--pagination-color);
+    }
   }
 
   li > a:hover, li > a:focus {

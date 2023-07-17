@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ----------------------------- */
 /* ==Video commons      */
 /* ----------------------------- */
@@ -11,40 +10,62 @@ $video-height: 450px;
   position: relative;
   height: $video-height;
   display: block;
-
-  span {
-    @extend .visually-hidden;
-  }
 }
 
 //Video trigger
 .video-trigger {
   @include absolute-center;
-  z-index: 3;
-  display: block;
-  height: 53px;
-  min-height: 53px;
-  width: 53px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  height: auto;
+  min-height: auto;
   padding: 0;
   border-radius: 0;
   border: none;
   cursor: pointer;
   appearance: none;
-  background-color: transparent;
-  transition: all .4s;
+  background-color: transparent !important;
+  box-shadow: none;
 
-  &::after {
-    @include svgIcon('play');
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .4s;
+  span {
+    font-family: var(--font-theme-secondary);
+    font-size: 2.2rem;
+    text-transform: none;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    color: white;
+    pointer-events: none;
   }
 
-  &:hover,
+  &::before {
+    flex: 0 0 66px;
+    content: "";
+    display: block;
+    width: 66px;
+    background-color: var(--color-theme-primary);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 0.4s;
+  }
+
+  &::after {
+    @include svgIcon('play-white');
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(calc(-50% + 3px));
+  }
+
+  .no-touch &:hover,
   &:focus {
-    &::after {
-      transform: scale(1.5);
+    &::before {
+      transform: scale(1.1);
     }
   }
 }
@@ -97,24 +118,5 @@ $video-height: 450px;
   iframe {
     width: 100%;
     height: 100%;
-  }
-}
-
-//Animations
-.video-wrapper {
-
-  &:hover,
-  &:focus {
-    .video-image-wrapper::after {
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-  }
-
-  &.video-active {
-
-    .video-player {
-      z-index: 4;
-      opacity: 1;
-    }
   }
 }

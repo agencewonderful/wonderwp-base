@@ -1,12 +1,16 @@
-@charset "UTF-8";
 /* ----------------------------- */
 /* ==Content      */
 /* ----------------------------- */
 
+/*Worpress override*/
+.page-content, .entry-content, .entry-summary, .hentry {
+  margin: 0;
+}
+
 /*Knacss override*/
 hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
 }
 
 table, .table {
@@ -14,23 +18,32 @@ table, .table {
   table-layout: inherit;
 }
 
+p:empty {
+  display: none;
+}
+
+// Applique par défaut aux svg la couleur de leur parent !
+.shape-svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
 
 /* ==Grids */
 /* ----------------------------- */
 
-/*Variables*/
-/* ------------- */
-$mobileheaderHeight: $burger-btn-size;
-/* ------------- */
-
-
 .site-content {
   position: relative;
   z-index: 0;
+  min-height: calc(100vh - 27rem);
   padding: 6rem 0;
   overflow-x: hidden;
 
+  body.has-post-thumb & {
+    padding-top: 0;
+  }
+
   @media (max-width: $medium - 1) {
-    margin-top: $mobileheaderHeight;
+    margin-top: var(--header-height-mobile);
   }
 }

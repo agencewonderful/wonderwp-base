@@ -1,0 +1,50 @@
+// Quand cette classe est ajoutée, des icônes sont ajoutées devant certains labels (date, place, actu)
+// Toujours ajoutées dans la Newsroom
+.item.has-icons,
+.item.has-link.has-icons a {
+
+  // Exemple d'icônes
+  .card-date,
+  .event-location,
+  [class*="card-cat-categorie-"] {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &::before {
+      margin-right: 10px;
+      margin-left: -5px;
+    }
+
+    .separator {
+      &::before,
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 0.1em;
+      }
+    }
+  }
+
+  .card-cat-categorie-1::before {
+    @include svgIcon('icone-presse');
+    flex: 0 0 30px;
+  }
+
+  .card-cat-categorie-2::before {
+    @include svgIcon('icone-actu');
+    flex: 0 0 30px;
+  }
+
+  .card-cat-categorie-3::before,
+  .card-date::before {
+    @include svgIcon('icone-date');
+    flex: 0 0 25px;
+  }
+
+  .card-cat-categorie-4::before,
+  .event-location::before {
+    @include svgIcon('icone-lieu');
+    flex: 0 0 25px;
+  }
+}

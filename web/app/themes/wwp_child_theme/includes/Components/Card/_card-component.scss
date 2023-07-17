@@ -1,29 +1,39 @@
-@charset "UTF-8";
 /**************************
  * Cards - global styles
 *************************/
 
 /*Variables*/
-$image-height: 250px;
-$image-landscape-height: 360px;
-$image-mobile-height: 50vw;
+:root {
+  --card-image-height: 22rem;
+  --card-image-landscape-height: 36rem;
+  --card-image-mobile-height: 50vw;
+}
 
-.item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid $gray-300;
+.item,
+.wp-block-post {
+  background: white;
+  border-radius: var(--border-radius-theme);
+  box-shadow: var(--box-shadow-theme);
+
+  &,
+  &.has-link > a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%; //For IE11
+  }
 
   a {
     text-decoration: none;
   }
 
-  .img-wrap {
+  .img-wrap,
+  .wp-block-post-featured-image {
     position: relative;
-    height: $image-height;
+    height: var(--card-image-height);
     width: 100%;
     overflow: hidden;
+    border-radius: var(--border-radius-theme) var(--border-radius-theme) 0 0;
 
     a {
       position: relative;
@@ -38,9 +48,10 @@ $image-mobile-height: 50vw;
       left: 50%;
       float: none;
       min-height: 100%;
+      max-height: 200%;
       width: auto;
       min-width: 100%;
-      max-width: none;
+      max-width: 200%;
       margin: 0;
       transform: translate(-50%, -50%);
       transform-origin: center center;
@@ -49,100 +60,120 @@ $image-mobile-height: 50vw;
 
   .card-block {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    padding: 3rem;
+    padding: 2.5rem;
   }
 
-  .card-title {
-    @extend .h3-like;
+  .card-subtitle {
+    display: block;
+    margin-bottom: 4px;
+    font-family: var(--font-theme-bold);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--color-theme-primary);
+    letter-spacing: 0.05em;
+  }
+
+  .card-title,
+  .wp-block-post-title {
+    display: block;
+    max-width: 100%;
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-theme-secondary);
+    font-size: 2.2rem;
+    text-transform: none;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
   }
 
-  .card-date {
-    @extend .tag--primary;
-    color: $white;
-    margin-bottom: 2rem;
+  .card-date,
+  .event-location,
+  .wp-block-post-date {
+    @extend .card-subtitle;
+  }
+
+  .card-date,
+  .event-location {
+    order: -1;
   }
 
   ul.card-categories {
+    order: 1;
     list-style: none;
+    margin: 2rem 0;
     padding-left: 0;
 
     li {
-      @extend .tag;
-      margin: 0 1rem 1rem 0;
+      flex-basis: auto;
+      margin: 3px 1rem 3px 0;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-family: var(--font-theme-headings);
+      color: var(--color-theme-primary);
+
+      /* &::after {
+        content: "•";
+        margin-left: 8px;
+      }*/
     }
   }
 
   .card-text {
     clear: both;
-  }
+    letter-spacing: 0.05em;
+    font-size: 1.4rem;
 
-  .card-readmore-link {
-    @extend .btn;
-    display: flex;
-    margin: 2rem auto 0 auto;
-    justify-content: center;
-  }
-
-  /*Tester avant de supprimer les lignes de code ci-dessous*/
-/*  .post-author {
-    margin-bottom: 2rem;
-  }*/
-
-/*  ul.post-moderation {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-
-    li .btn {
-      @extend .tag--primary;
+    a:not(.card-link) {
+      text-decoration: underline;
     }
-  }*/
+  }
 
-/*  .content {
-    flex-grow: 1;
-    margin-top: 2rem;
-    padding-right: 4rem;
-    padding-left: 4rem;
-  }*/
+  //Champs spécifiques
+  .function,
+  .biography,
+  .email,
+  .phone {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .function {
+    font-weight: $weight-bold;
+  }
+
+  .card-readmore-link,
+  .wp-block-read-more {
+    order: 2;
+    @extend .btn--inline;
+    cursor: pointer;
+  }
 
   button, .btn {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
 
-  /*Options*/
+  // Si lien global (remplacer .has-link par .has-wrapperlink quand cette classe sera disponible)
+  &.has-link:not(.trombi-item) {
+    box-shadow: none;
 
-  &.reverse {
+    > a {
+      height: 100%;
+      border-radius: var(--border-radius-theme);
+      box-shadow: var(--box-shadow-theme);
 
-    .img-wrap {
-      order: 1;
-    }
-  }
-
-  &.landscape {
-    flex-direction: row;
-
-    .img-wrap {
-      height: $image-landscape-height;
+      .no-touch &:hover,
+      .no-touch &:focus {
+        box-shadow: var(--box-shadow-theme-active);
+      }
     }
   }
 
   @media (max-width: $medium) {
-
-  /* .content {
-      padding-right: 2rem;
-      padding-left: 2rem;
-    }*/
-
-    h3 {
-      font-size: 2.5rem;
-    }
 
     button, .btn {
       margin-top: 2rem;
@@ -155,70 +186,73 @@ $image-mobile-height: 50vw;
     flex-direction: column !important;
     margin-bottom: 3rem;
 
-    .img-wrap {
+    .img-wrap,
+    .wp-block-post-featured-image {
       order: initial;
-      height: $image-mobile-height;
+      height: var(--card-image-mobile-height);
     }
   }
 }
 
-.wrapper-image-large {
-  width: 60%;
-  border-bottom: none !important;
-  overflow: hidden;
+/*OPTIONS*/
+//Paysage : image/texte en vis-à-vis
+.item.landscape {
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
 
-  .cta-image, .cta-image img {
-    min-height: 100%;
-    width: auto;
-    min-width: 100%;
-    max-width: none;
-    margin-bottom: 0;
-  }
+  &.has-link {
+  display: block;
 
-  + .cta-text {
-    width: 40%;
-
-    &::before {
-      margin-top: 0;
-      margin-bottom: 2vw;
-    }
-  }
-
-  @media (max-width: $medium - 1) {
-    width: 100%;
-    margin-bottom: 0 !important;
-
-    + .cta-text {
+    a {
+      flex-direction: row;
       width: 100%;
     }
   }
+
+  .img-wrap,
+  .card-block {
+    flex: 0 0 50%;
+  }
+
+  .img-wrap {
+    height: auto; //Bug flex-child
+    border-radius: var(--border-radius-theme) 0 0 var(--border-radius-theme);
+  }
+
+  @media (max-width: $medium - 1) {
+    .img-wrap,
+    .wp-block-post-featured-image {
+      height: var(--card-image-mobile-height);
+    }
+  }
 }
 
-/*Pour tester les options du styleguide.
-Supprimer quand on pourra injecter les classes option dynamiquement*/
-.landscape-inside .item {
-  flex-direction: row;
-  > div {
-    flex: 1;
-  }
-  .img-wrap {
-    height: $image-landscape-height;
-  }
-  @media (max-width: $medium - 1) {
-    .img-wrap {
-      height: $image-mobile-height;
-    }
-  }
-}
-.reverse-inside .item {
-  .img-wrap {
+//Reverse : inversion image/texte haut/bas
+.item.reverse,
+.item.has-link.reverse a {
+
+  .img-wrap,
+  .wp-block-post-featured-image {
     order: 1;
+    border-radius: 0;
+    border-bottom-left-radius: var(--border-radius-theme);
+    border-bottom-right-radius: var(--border-radius-theme);
   }
+
   @media (max-width: $medium - 1) {
-    .img-wrap {
+    .img-wrap,
+    .wp-block-post-featured-image {
       order: initial;
-      height: $image-mobile-height;
+      height: var(--card-image-mobile-height);
     }
   }
 }
-/*Fin des éléments de test*/
+
+//Masque le lien : supprime le lien "En savoir plus"
+.item.hide-link {
+
+  .card-readmore-link {
+    display: none;
+  }
+}

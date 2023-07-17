@@ -1,3 +1,4 @@
+<?php if (!\WonderWp\Functions\isAjax()): ?>
 <?php
 /**
  * The template for displaying the header
@@ -14,14 +15,13 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width">
 
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="manifest" href="/favicons/site.webmanifest">
     <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/favicons/favicon.ico">
-    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">--> <!--TODO : Generate favicons here : https://realfavicongenerator.net-->
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
     <title><?php
         /*
@@ -31,10 +31,12 @@
 
         $pageTitle = stripslashes(wp_title('|', false, 'right'));
         $pageTitle = str_replace(['|'], [' '], $pageTitle);
-        echo $pageTitle;
+        if (!empty($pageTitle)) {
+            echo $pageTitle . ' | ';
+        }
 
         // Add the blog name.
-        echo ' | ' . get_bloginfo('name');
+        echo get_bloginfo('name');
 
         // Add the blog description for the home/front page.
         if (is_home() || is_front_page()) {
@@ -54,24 +56,28 @@
     <?php wp_head(); ?>
 
     <script>
-        if (window.criticalJsReady) {
-            criticalJsReady();
-        } else {
-            document.addEventListener('criticalJsReady', (e) => {
-                criticalJsReady();
-            });
-        }
-        criticalJsReady = function () {
+        window.document.documentElement.className += ' js-enabled';
+        window.document.documentElement.classList.remove('no-js');
+        var criticalJsReadyFn = function () {
             window.wonderwp.FeatureDetector.runTests();
         }
+        if (window.criticalJsReady) {
+            criticalJsReadyFn();
+        } else {
+            document.addEventListener('criticalJsReady', function () {
+                criticalJsReadyFn();
+            });
+        }
+
     </script>
 
 </head>
 
-<!--Ajouter la classe .stickable sur <body> pour rendre le header sticky-->
-<body <?php body_class(['stickable']); ?>>
+<body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
     <div class="skip-links"><a href="#content"><?php echo trad('Skip to content', WWP_THEME_TEXTDOMAIN); ?></a></div>
+
+    <?php echo apply_filters('wwp_before_header', ''); ?>
 
     <header class="site-header" id="header" role="banner">
 
@@ -80,12 +86,10 @@
             <button class="wdf-burger nav-button" data-menu-toggler type="button" aria-label="open/close navigation"><i></i></button>
 
             <?php
-            echo '<a href="/" class="logo" aria-label="' . trad('back.to.home', WWP_THEME_TEXTDOMAIN) . '">
-                <!--<img src="/app/themes/wwp_child_theme/assets/raw/svg/logo.svg" alt="Mon site - accueil">--> <span>LOGO</span>
-              </a>'
+            echo '<a href="/" class="logo" aria-label="' . trad('back.to.home', WWP_THEME_TEXTDOMAIN) . '"><img src="' . apply_filters('wwp-header-logo', '/app/themes/wwp_child_theme/assets/raw/images/logo-site.svg') . '" alt="Mon site - accueil" height="=44" width="200"></a>'
             ?>
 
-            <nav role="navigation" aria-label="Menu principal" class="navigation-wrapper">
+            <nav role="navigation" aria-label="<?php echo trad('main.menu', WWP_THEME_TEXTDOMAIN); ?>" class="<?php echo apply_filters('wwp-main-nav-class', 'navigation-wrapper'); ?>">
 
                 <ul class="header-menu" id="menu">
                     <?php
@@ -101,10 +105,16 @@
             <?php
             /** @var \WonderWp\Theme\Core\Service\ThemeViewService $themeViewService */
             $themeViewService = wwp_get_theme_service('view');
-            echo $langSwitcher = $themeViewService->getLangSwitcher(null, false, true);
+            echo $langSwitcher = $themeViewService->getLangSwitcher(
+                __DIR__ . '/plugins/wwp-translator/public/views/LangSwitcher.php',
+                false,
+                true
+            );
             ?>
 
         </div>
     </header>
-
+    <?php echo apply_filters('wwp_after_header', ''); ?>
+    <?php endif; /* isAjax */ ?>
     <div id="content" class="site-content transitionning">
+        <?php echo apply_filters('wwp_prepend_content', ''); ?>

@@ -1,13 +1,66 @@
-@charset "UTF-8";
 /* ----------------------------- */
 /* ==Video component      */
 /* ----------------------------- */
 
 @import "../Video/video-commons";
 
-//Variables
-$video-height: 436px;
-
+//Animations
 .video-wrapper {
-  height: $video-height;
+
+  .no-touch &:hover,
+  &:focus {
+    .video-image-wrapper::after {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .video-trigger {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &, &::after {
+      transition: none !important;
+    }
+  }
+
+  &.video-active {
+
+    .video-player {
+      z-index: 3;
+      opacity: 1;
+    }
+
+    .video-trigger {
+      display: block;
+      top: 0;
+      right: 0;
+      left: auto;
+      height: 40px;
+      width: 40px;
+      background-color: var(--color-theme-primary) !important;
+      opacity: 0;
+      transform: none !important;
+
+      &::after {
+        flex: auto;
+        @include svgIcon('video-close');
+        position: absolute;
+        top: 5px;
+        left: 4px;
+        margin: 0;
+        transform: none !important;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    .no-touch &:hover,
+    &:focus {
+      .video-trigger {
+        opacity: 1;
+      }
+    }
+  }
 }

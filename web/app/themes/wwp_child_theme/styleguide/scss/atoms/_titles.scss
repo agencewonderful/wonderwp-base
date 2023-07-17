@@ -5,18 +5,24 @@
 
 h1, .h1-like, h2, .h2-like, h3, .h3-like, h4, .h4-like {
   display: block;
-  line-height: 1;
+  font-family: var(--font-theme-headings);
+  line-height: var(--line-height-headings);
+  letter-spacing: 0.03em;
 }
 
 h1, .h1-like {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
   font-size: 4.5rem;
 }
 
 h2, .h2-like {
+  margin-bottom: 3rem;
   font-size: 3.5rem;
 }
 
 h3, .h3-like {
-  font-size: 2.5rem;
+  margin-top: 3rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
 }

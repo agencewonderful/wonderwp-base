@@ -4,11 +4,11 @@ import {Menu} from "./Menu";
 class headerComponent extends PewComponent {
 
   constructor(element, options) {
-    const defaultOptions = {
-      classToToggleOnBody: 'has-opened-menu',
-      classToCheckIfHeaderShouldBeSticky: 'stickable',
-      classToToggleOnBodyWhenHeaderStuck: 'has-stuck-header',
-      stickyOffset: 'bottom'
+    let defaultOptions = {
+      'classToToggleOnBody': 'has-opened-menu',
+      'classToCheckIfHeaderShouldBeSticky': 'stickable',
+      'classToToggleOnBodyWhenHeaderStuck': 'has-stuck-header',
+      'stickyOffset': 'bottom'
     };
     super(element, Object.assign(defaultOptions, options));
     this.menu = null;
@@ -36,10 +36,10 @@ class headerComponent extends PewComponent {
   registerSticky() {
     if ($('body').hasClass(this.options.classToCheckIfHeaderShouldBeSticky)) {
       window.onscroll = function () {checkHeaderFixation()};
-      checkHeaderFixation();
-
       const header = this.element[0];
       let stickTreshold = header.offsetTop;
+      const classToToggleOnBodyWhenHeaderStuck = this.options.classToToggleOnBodyWhenHeaderStuck;
+
       if (this.options.stickyOffset === 'top') {
         stickTreshold += 0;
       } else if (this.options.stickyOffset === 'center') {
@@ -49,7 +49,8 @@ class headerComponent extends PewComponent {
       } else {
         stickTreshold += this.options.stickyOffset;
       }
-      const classToToggleOnBodyWhenHeaderStuck = this.options.classToToggleOnBodyWhenHeaderStuck;
+
+      checkHeaderFixation();
 
       function checkHeaderFixation() {
         let $body = $('body');

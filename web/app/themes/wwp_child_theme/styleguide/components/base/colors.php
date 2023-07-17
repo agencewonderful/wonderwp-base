@@ -1,7 +1,17 @@
 <!-- components/base/colors.php -->
 <?php
 //Edit your color names here based on the ones you've entered in your sass variable $styleguide-colors
-$colors = ['base', 'brand', 'primary', 'lightgrey', 'mediumgrey', 'darkgrey'];
+$colors = [
+    'base',
+    'brand',
+    'primary',
+    'secondary',
+    'verylightgrey',
+    'lightgrey',
+    'mediumgrey',
+    'grey',
+    'darkgrey'
+];
 ?>
 
 <?php

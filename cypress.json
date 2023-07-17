@@ -1,10 +1,11 @@
 {
-  "host": "http://local.wonderwp.com",
+  "host": "https://local.wonderwp.com",
   "video": false,
   "screenshotsFolder": "./cypress/screenshots",
   "smoke-pages": [
     "/?locale=fr_FR",
-    "/fr/plugins/"
+    "/fr/plugins/",
+    "/app/themes/wwp_child_theme/styleguide/atomic-core/index.php?cat=components"
   ],
   "wp-admin": {
     "url": "/wp/wp-login.php",
@@ -13,14 +14,11 @@
   },
   "wwp-actu": {
     "list": {
-      "url": "/fr/plugins/actualites/",
-      "filters": {
-        "selector": ".actu-filters",
-        "class": "items-filters"
-      },
+      "url": "/fr/plugins-liste/actualites/",
       "list": {
         "selector": ".actu-list",
-        "class": "items-list"
+        "class": "items-list",
+        "itemSelector": ".item"
       }
     },
     "admin": {
@@ -38,6 +36,13 @@
       }
     }
   },
+  "wwp-cache": {
+    "admin": {
+      "inventory": {
+        "url": "/wp/wp-admin/admin.php?page=wwp-cache"
+      }
+    }
+  },
   "wwp-contact": {
     "form": {
       "url": "/fr/plugins/contact/",
@@ -51,7 +56,7 @@
   },
   "wwp-emploi": {
     "list": {
-      "url": "/fr/plugins/emploi/",
+      "url": "/fr/plugins-liste/emploi/",
       "filters": {
         "selector": ".emploi-filters",
         "class": "items-filters"
@@ -76,7 +81,7 @@
   },
   "wwp-faq": {
     "list": {
-      "url": "/fr/plugins/faq/",
+      "url": "/fr/plugins-liste/faq/",
       "list": {
         "selector": ".faq-list",
         "class": "items-list"
@@ -141,9 +146,34 @@
       }
     }
   },
+  "wwp-partenaires": {
+    "list": {
+      "url": "/fr/plugins-liste/partenaires/",
+      "list": {
+        "selector": ".partner-list",
+        "class": "items-list"
+      }
+    },
+    "admin": {
+      "list": {
+        "url": "/wp/wp-admin/admin.php?page=wwp-partenaires"
+      }
+    }
+  },
+  "wwp-rgpd": {
+    "url": "/donnees-personnelles",
+    "form": {
+      "formSelector": ".rgpd-auth-form"
+    },
+    "consents": {
+      "section": {
+        "selector": ".consents-wrap"
+      }
+    }
+  },
   "wwp-social": {
     "list": {
-      "url": "/fr/plugins/remontees-sociales/",
+      "url": "/fr/plugins-liste/remontees-sociales/",
       "list": {
         "selector": ".posts-list",
         "class": "items-list"
@@ -154,7 +184,7 @@
     "form": {
       "url": "/",
       "formSelector": ".module-tracker form",
-      "cacheEnabled": false
+      "cacheEnabled": true
     },
     "admin": {
       "list": {
@@ -164,7 +194,7 @@
   },
   "wwp-trombi": {
     "list": {
-      "url": "/fr/plugins/trombinoscope/",
+      "url": "/fr/plugins-liste/trombinoscope/",
       "list": {
         "selector": ".trombi-list",
         "class": "items-list"
@@ -178,7 +208,7 @@
   },
   "wwp-video": {
     "list": {
-      "url": "/fr/plugins/videos/",
+      "url": "/fr/plugins-liste/videos/",
       "list": {
         "selector": ".video-list",
         "class": "items-list"
@@ -195,5 +225,8 @@
       "url": "/fr/plugins/vote/",
       "formSelector": ".voteForm"
     }
+  },
+  "styleguide": {
+    "url": "/app/themes/wwp_child_theme/styleguide/atomic-core/index.php?cat=components"
   }
 }

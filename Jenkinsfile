@@ -34,6 +34,10 @@ def handleException(msg,exc) {
 
     changeString_ +="\n<${env.RUN_DISPLAY_URL}|Voir le build>";
 
+    if(env.siteUrl){
+      changeString_+="\n"+'<'+env.siteUrl+'|Voir le site>';
+    }
+
 	notify(changeString_,"danger");
 	if(exc){
 		throw(exc);
@@ -45,12 +49,35 @@ def notify(msg,color){
 }
 
 def deployCode(creds) {
-    echo "Sending files to remote server"
-    sh "rsync -uvr --delete --exclude-from ${WORKSPACE}/CI/exclude-file.txt ${WORKSPACE}/* ${creds.sshUser}@${creds.sshServer}:${creds.sshRemotePath};"
     if(creds.siteUrl){
         env.siteUrl = creds.siteUrl;
         env.slackMsg+="\n"+'<'+creds.siteUrl+'|Voir le site>';
     }
+    echo "Sending files to remote server"
+    sh "rsync -uvr --delete --exclude-from ${WORKSPACE}/CI/exclude-file.txt ${WORKSPACE}/* ${creds.sshUser}@${creds.sshServer}:${creds.sshRemotePath};"
+}
+
+def finalizeDistantMigration(creds){
+  if(creds.cacheEnabled || env.remoteCommandNeeded){
+    echo "Finalizing distant migration";
+    def remoteCommand = "ssh ${creds.sshUser}@${creds.sshServer} \"cd ${creds.sshRemotePath}";
+
+    if(env.runComposer){
+        remoteCommand+=" && WP_CLI_PHP=php8.0 vendor/wp-cli/wp-cli/bin/wp plugin deactivate --all";
+        remoteCommand+=" && WP_CLI_PHP=php8.0 vendor/wp-cli/wp-cli/bin/wp plugin activate --all";
+        remoteCommand+=" && WP_CLI_PHP=php8.0 vendor/wp-cli/wp-cli/bin/wp rewrite flush";
+    }
+
+    if(creds.cacheEnabled == true){
+      remoteCommand+=" && WP_CLI_PHP=php8.0 vendor/wp-cli/wp-cli/bin/wp wwp-cache:rebuild";
+    }
+
+    remoteCommand+=" && exit\"";
+
+    sh remoteCommand;
+  } else {
+    echo "Distant migration not needed";
+  }
 }
 
 def deployDbChanges(creds){
@@ -91,12 +118,14 @@ def defineVariables(){
 	env.runNpm = false;
 	env.runBuild = false;
 	env.runCypress=false;
+	env.remoteCommandNeeded = false;
 
-	if(env.BUILD_ID.toInteger() < 10){
+	if(env.BUILD_ID.toInteger() < 10 || isRestartedRun()){
 	    env.runComposer = true;
 	    env.runNpm = true;
 	    env.runBuild = true;
 	    env.runCypress=true;
+	    env.remoteCommandNeeded = true;
 	}
 
 	def changeLogSets_ = currentBuild.changeSets
@@ -108,19 +137,19 @@ def defineVariables(){
 	    for (int k = 0; k < files_.size(); k++) {
 	      def file_ = files_[k]
 	      //println file_.path
-	      if(file_.path=='composer.json' || file_.path=='composer.lock' || file_.path=='Jenkinsfile'){
+	      if(file_.path=='composer.json' || file_.path=='composer.lock' || file_.path.contains('Jenkinsfile')){
 	      	env.runComposer = true;
 	      	env.runBuild = true;
 	      	env.runCypress = true;
 	      }
-	      if(file_.path=='package.json' || file_.path=='package.lock' || file_.path=='Jenkinsfile'){
+	      if(file_.path=='package.json' || file_.path=='package.lock' || file_.path.contains('Jenkinsfile')){
 	      	env.runNpm = true;
 	      }
-	      if(file_.path.contains(".css") || file_.path.contains(".scss") || file_.path.contains(".js") || file_.path=='Jenkinsfile'){
-			env.runBuild = true;
+	      if(file_.path.contains(".css") || file_.path.contains(".scss") || file_.path.contains(".js") || file_.path.contains(".svg") || file_.path.contains('Jenkinsfile')){
+			    env.runBuild = true;
 	      }
 	      if(file_.path.contains(".php") || file_.path.contains(".js") || file_.path.contains('cypress')){
-			env.runCypress = true;
+			    env.runCypress = true;
 	      }
 	    }
 	  }
@@ -131,23 +160,34 @@ def defineVariables(){
 
 pipeline {
   agent any
+  options {
+    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '5')
+    disableConcurrentBuilds()
+  }
   stages {
     stage('Build') {
       steps {
         script{
-        	defineVariables();
-
             echo "Starting Build #${env.BUILD_ID}, triggered by $BRANCH_NAME";
 
+            echo "Definining variables";
+            defineVariables();
+
             if(env.runComposer=='true'){
-                try {
-	                sh 'composer install --no-dev --prefer-dist';
-                } catch(exc){
-                    handleException('Composer install failed', exc);
-                }
-	        } else {
-	        	echo 'skipped composer install';
-	        }
+              try {
+                sh '/usr/bin/php8.0 /usr/local/bin/composer install --no-dev --prefer-dist';
+              } catch(exc){
+                handleException('Composer install failed', exc);
+              }
+            } else {
+              echo 'skipped composer install';
+            }
+
+            if(env.runNpm=='true' || env.runBuild=='true'){
+              echo "Specifying correct node version";
+              env.PATH="/var/lib/jenkins/.nvm/versions/node/v16.14.2/bin:${env.PATH}";
+              sh 'node -v';
+            }
 
 	        if(env.runNpm=='true'){
 	            try {
@@ -176,34 +216,20 @@ pipeline {
         }
       }
     }
-    stage('deploy develop branch') {
-        when { branch 'develop' }
+    stage('Deploy') {
         steps {
             script {
             	try{
-	                echo "Deploying Develop Branch"
-	                def creds = loadCreds('wonderwp_credentials');
+	                echo "Deploying $BRANCH_NAME branch"
+	                def creds = loadCreds("wonderwp_${BRANCH_NAME}_credentials");
 	                deployCode(creds);
+	                finalizeDistantMigration(creds);
 	            } catch(exc){
-	            	handleException('The develop branch deployment failed',exc);
-                }
+	            	  handleException("The $BRANCH_NAME branch deployment failed",exc);
+              }
             }
         }
     }
-    /*stage('deploy master branch') {
-        when { branch 'master' }
-        steps {
-            script {
-            	try {
-	                echo "Deploying Master Branch"
-	                def creds = loadCreds('your_prod_credentials');
-	                deployCode(creds);
-	            } catch(exc){
-	            	handleException('The master branch deployment failed',exc);
-                }
-            }
-        }
-    }*/
     stage('Integration tests') {
         steps {
             script {
@@ -229,11 +255,9 @@ pipeline {
     stage('notify'){
         steps {
             script {
-    			notify(env.slackMsg,env.slackColor);
+    			    notify(env.slackMsg,env.slackColor);
             }
         }
     }
   }
 }
-
-

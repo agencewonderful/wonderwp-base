@@ -1,22 +1,28 @@
+@charset "UTF-8";
+
+@import "web/app/themes/wwp_child_theme/assets/fonts/fonts_critical";
+
 @import "../../../styleguide/scss/variables";
 @import "../../../styleguide/scss/mixins";
-@import "../../../styleguide/scss/knacss/knacss";
+@import "../../../styleguide/scss/knacss/_vendor/reboot";
+@import "../../../styleguide/scss/knacss/_library/base";
 @import "../../../styleguide/scss/knacss/components/skip-links";
 
 @import "../../../styleguide/scss/base/base";
 @import "../../../styleguide/scss/atoms/titles";
-@import "../../../styleguide/scss/atoms/buttons";
 
 @import "../../../assets/final/svg/view/sprite.scss";
 
-@import "../../../includes/Components/Form/form-component";
+@import "header";
 
 @import "menus/menu_variables";
+@import "layout";
+
 @import "menus/menu_base";
 @import "menus/menu_desktop";
 
 @import "langswitcher";
 
-@import "header";
+@import "entry-header";
 
 @import "../../../includes/Components/NoAjaxTransition/noajax-transition";

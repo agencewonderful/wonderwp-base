@@ -1,8 +1,10 @@
 /* Variables */
 /* ------------- */
-$header-bg-color: $gray-700;
-$menu-item-color: $white;
-$menu-item-bgcolor: $gray-600;
-$menu-item-color-active: $gray-700;
-$menu-item-bgcolor-active: $gray-400;
-$menu-item-m0-color: $gray-600;
+
+:root {
+  --menu-item-color: var(--color-theme-base);
+  --menu-item-bgcolor: transparent;
+  --menu-item-color-active: var(--color-theme-primary);
+  --menu-item-bgcolor-active: var(--grey);
+  --menu-item-m0-color: var(--color-theme-base);
+}

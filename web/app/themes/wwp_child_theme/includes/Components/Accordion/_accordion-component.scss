@@ -1,4 +1,15 @@
 // Accordion
+:root {
+  --accordion-color: var(--color-theme-base);
+  --accordion-bgcolor: white;
+  --accordion-btn-color: var(--color-theme-primary);
+  --accordion-hovercolor: var(--color-theme-base);
+  --accordion-hoverbackground: white;
+  --accordion-activecolor: var(--color-theme-base);
+  --accordion-activebackground: white;
+  --accordion-border-radius: var(--border-radius-theme);
+  --accordion-box-shadow: var(--box-shadow-theme-small);
+}
 
 .js-accordion {
   button, div {
@@ -10,28 +21,59 @@
   position: relative;
   display: block;
   width: 100%;
-  margin-top: 4rem;
-  padding: 0 4.5rem 1rem 0;
+  margin: 1rem 0 0 0;
+  padding: 0 3rem;
   text-align: left;
-  font-size: 2rem;
-  letter-spacing: .2rem;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid $gray-200;
+  color: var(--accordion-color);
+  font-weight: $weight-medium;
+  text-transform: none;
+  background-color: var(--accordion-bgcolor);
+  white-space: normal;
+  min-height: 9rem;
+  height: initial;
+  border: 0;
+  font-size: 1.3rem;
+  border-radius: var(--accordion-border-radius);
+  box-shadow: var(--accordion-box-shadow);
+  cursor: pointer;
 
-  &:after {
-    position: absolute;
-    right: 2rem;
-    z-index: 1;
-    content: "+";
-    font-weight: initial;
-    font-size: 3rem;
-    transform-origin: center;
-    transition: all .2s ease-out;
+  .no-touch &:hover,
+  &:focus,
+  &:active {
+    color: var(--accordion-hovercolor);
+    background-color: var(--accordion-hoverbackground);
+    //box-shadow: var(--box-shadow-theme-small--active);
   }
 
-  &[aria-expanded="true"]:after {
-    transform: rotate(45deg);
+  &:focus {
+    outline: 0;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    @include svgIcon('icon-more');
+  }
+
+  // Avec illustration
+  &.has-illustration {
+    padding-left: 10rem !important;
+    background-size: 5rem auto !important;
+    background-position-x: 3rem !important;
+  }
+
+  &[aria-expanded="true"] {
+    font-family: var(--font-theme-secondary);
+    color: var(--accordion-activecolor);
+    background-color: var(--accordion-activebackground);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &::after {
+      @include svgIcon('icon-less');
+    }
   }
 
   @media (max-width: $tiny) {
@@ -44,10 +86,17 @@
 
 
 .js-accordion__panel {
-  padding-bottom: 0;
-  overflow: hidden;
+  background: #fff;
+  position: relative;
+  z-index: -1;
+  border: 1px solid var(--accordion-bgcolor);
+  padding: 0 4rem 0 3.5rem;
+  border-bottom-right-radius: var(--accordion-border-radius);
+  border-bottom-left-radius: var(--accordion-border-radius);
   font-size: 1.5rem;
-  transition: all 1s ease-out;
+  box-shadow: var(--box-shadow-theme);
+  overflow: hidden;
+  transition: all .4s ease-out;
 
   .js &,
   .js-enabled & {
@@ -60,10 +109,9 @@
     content: none;
   }
 
-  @media (max-width: $tiny) {
-    /*visibility: visible;
-    opacity: 1;
-    height: auto;*/
+  &[aria-hidden="false"] {
+    padding: 1rem 4rem 4rem 3.5rem;
+    box-shadow: var(--accordion-box-shadow);
   }
 }
 
@@ -78,4 +126,60 @@
   visibility: visible;
   opacity: 1;
   height: auto;
+}
+
+
+// Accordéon autre style (page contrôle/collectif & valeurs)
+.accordeon-style2 {
+  counter-reset: accordeon;
+
+  button.js-accordion__header {
+    counter-increment: accordeon;
+    margin: -5px 0 0 0;
+    padding-right: 2rem;
+    padding-left: 6rem;
+    font-size: 2rem;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, .1);
+
+    &:before {
+      content: counter(accordeon) ".";
+      font-size: 3rem;
+      transform: none;
+      background: none;
+      top: 20px;
+      right: initial;
+      left: 3rem;
+    }
+
+    &:after {
+      display: none;
+    }
+
+    &[aria-expanded="true"] {
+      font-size: 2.4rem;
+      padding-left: 8rem;
+      padding-top: 3.6rem;
+
+      &:before {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  .js-accordion__panel {
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    margin-top: -3px;
+    padding-top: 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    &[aria-hidden="false"] {
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+    }
+  }
 }

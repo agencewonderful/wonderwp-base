@@ -1,17 +1,38 @@
+@import "Button/button-component";
+@import "Button/button-gutenberg";
+
+@import "Form/form-component";
+
 @import "Header/sticky_header";
 @import "Accordion/accordion-component";
-@import "Card/card-component";
-@import "Cookie/cookie-component";
 @import "Dropdown/dropdown-component";
-@import "Form/form-component";
 @import "Loader/loader-component";
 //@import "MapSearch/map_search";
 @import "Modal/modal-component";
 @import "Pagination/pagination-component";
+@import "PageSummary/pageSummaryWrap";
 @import "ProgressBar/progress-bar-component";
-@import "Slider/slider-component";
-@import "Slider/SliderGallery/slider-gallery";
+
+@import "Card/card-component";
+@import "Card/Card-backgroundimage/card-backgroundimage";
+@import "Card/Card-has-icons/card-has-icons";
+
+//@import "WpBlockPost/wp-block-post-list";
+@import "WpBlockPost/wp-block-post-item";
+
+@import "Timeline/timeline";
+@import "ToggleContentViaFilter/tcvf-component";
 @import "Tabs/tabs-component";
-@import "Timeline/timeline-component";
 @import "VideoEmbed/video-embed-component";
 @import "Video/video-component";
+@import "VideoModale/video-modale-component";
+@import "Citation/citation-component";
+@import "ChiffreCle/chiffre-cle-component";
+@import "Hero/hero-component";
+@import "ReseauxSociaux/reseaux-sociaux-component";
+
+// SLIDERS
+@import "Slider/SliderDefault/slider-component";
+@import "Slider/SliderDefault/SliderItem/slider-item-component";
+@import "Slider/SliderCarousel/slider-carousel-component";
+@import "Slider/SliderGutenbergGallery/slider-gallery";

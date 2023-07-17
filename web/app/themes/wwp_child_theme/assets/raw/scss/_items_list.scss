@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ----------------------------- */
 /* ==Items lists generic styles      */
 /* ----------------------------- */
@@ -30,8 +29,10 @@
 /* Default list parent style */
 /* ------------------------- */
 //Variables:
-$gutter  : 2rem; //Largeur gouttière
-$col     : 3; //Nombre de colonnes
+$gutter         : 2rem; //Largeur gouttière
+$gutterTablet   : 2rem;
+$col            : 3; //Nombre de colonnes
+$colTablet      : 2;
 
 .items-list {
   display: flex;
@@ -42,11 +43,30 @@ $col     : 3; //Nombre de colonnes
   margin-right: -$gutter;
   margin-left: -$gutter;
 
-  li, > .item {
-    width: calc(100% * 1 / #{$col} - #{$gutter * 2} - .01px);
+  //Au cas ou .item est un enfant direct de .items-list
+  li,
+  > .item {
+    flex: 0 1 auto;
+    flex-basis: calc(100% * 1 / #{$col} - #{$gutter * 2} - .01px);
     margin-right: $gutter;
     margin-left: $gutter;
-    margin-bottom: #{$gutter * 2};
+  }
+
+  //Au cas ou .item n'est pas un enfant direct de .items-list
+  li > .item {
+    height: 100%;
+  }
+
+  @media (max-width: $large) {
+    margin-right: -$gutterTablet;
+    margin-left: -$gutterTablet;
+
+    li,
+    > .item {
+      flex-basis: calc(100% * 1 / #{$colTablet} - #{$gutterTablet * 2} - .01px);
+      margin-right: $gutterTablet;
+      margin-left: $gutterTablet;
+    }
   }
 
   @media (max-width: $medium - 1) {
@@ -54,11 +74,22 @@ $col     : 3; //Nombre de colonnes
     margin-right: 0;
     margin-left: 0;
 
-    li, > .item {
-      width: 100%;
+    li,
+    > .item {
+      flex-basis: 100%;
       margin-right: 0;
       margin-left: 0;
       margin-bottom: $gutter;
     }
+  }
+}
+
+//Layout item
+.items-list li,
+.items-list > .item {
+  margin-bottom: #{$gutter * 2};
+
+  .wp-block-columns & {
+    margin-bottom: 0;
   }
 }

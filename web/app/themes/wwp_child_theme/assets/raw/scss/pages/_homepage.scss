@@ -1,0 +1,10 @@
+body.home {
+
+  .entry-header {
+    @extend .visually-hidden;
+  }
+
+  .site-content {
+    padding-top: 0;
+  }
+}

@@ -1,4 +1,5 @@
 // Config file and project variables
+@import "_variables_themes";
 
 // ----------------
 // Breakpoints zone
@@ -9,8 +10,8 @@
 $verytiny           : 320px !default;
 $extra-small        : 385px !default; // .container-xs
 $tiny               : 480px !default;
-$small              : 576px !default; // grid-small
-$medium             : 768px !default; // Mobile <768px .container-xs
+$small              : 660px !default;
+$medium             : 768px !default; //.container-s
 $large              : 960px !default; // .container
 $very-large         : 1200px !default;
 $extra-large        : 1280px !default; // .container-l
@@ -18,20 +19,65 @@ $extra-extra-large  : 1440px !default; // .container-xl
 
 $gutter: 16px;
 
+// Theme colors variables
+$color-theme-base: var(--color-theme-base);
+$background-theme-base: var(--background-theme-base);
+$color-theme-primary: var(--color-theme-primary);
+$color-theme-secondary: var(--color-theme-secondary);
+$color-theme-brand: var(--color-theme-brand);
+
+// Theme border-radius
+$border-radius-theme: var(--border-radius-theme);
+
+// Theme box-shadow
+$box-shadow-theme: var(--box-shadow-theme);
+$box-shadow-theme-active: var(--box-shadow-theme-active);
+
 // ----------
 // Fonts zone
 // ----------
+// Import : via theme.scss et critical.scss
 
-// Font families
-//Import Google fonts here:
-//@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
-$font-family-base      : -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default; // system font stack
-$font-family-headings  : sans-serif !default; // font for h1, h2.. h6
-$font-family-secondary: 'Comfortaa', cursive;
-$font-family-monospace : consolas, courier, monospace !default; // font for code and samples
+// 1. Create css variables in variables_themes.scss
+
+// 2. Define families variables for Knacss
+$font-family-base       : var(--font-theme-base), sans-serif !default;
+$font-family-headings   : var(--font-theme-headings), sans-serif !default;
+$font-family-secondary  : var(--font-theme-secondary), sans-serif !default;
+$font-family-monospace  : consolas, courier, monospace !default; // font for code and samples
+$font-theme-bold        : var(--font-theme-bold);
+
+// ...and weights variables
+$weight-light   : 200 !default;
+$weight-book    : 300 !default;
+$weight-regular : 400 !default;
+$weight-medium  : 500 !default;
+$weight-bold    : 700 !default;
+
+/*Examples if Google fonts are used*/
+// 3. Define families extends
+/*%font-family-roboto {
+  font-family: $font-family-base;
+}
+%font-family-sriracha {
+  font-family: $font-family-secondary;
+}*/
+
+// 4. Use families + weight extends
+/*.font-base {
+  @extend %font-family-roboto;
+  font-weight: $weight-book;
+}
+.font-headings {
+  @extend %font-family-roboto;
+  font-weight: $weight-bold;
+}
+.font-secondary {
+  @extend %font-family-sriracha;
+}*/
 
 // Font sizes (1.6rem value is "16px" equivalent)
-$font-size-base : 1.6rem !default;
+$font-size-base : var(--font-size-base);
 
 $font-sizes: (
     base: (
@@ -65,21 +111,73 @@ $font-sizes: (
 ) !default;
 
 // Line heights
-$line-height-s    : 1.3 !default;
-$line-height-base : 1.5 !default;
+$line-height-s    : var(--line-height-headings);
+$line-height-base : var(--line-height-base);
 $line-height-l    : 1.7 !default;
+
+// ----------
+// Color zone
+// ----------
+
+/*Project's colors*/
+
+// Theme's colors
+$color-base         : var(--color-theme-base);
+$background-base    : white;
+$color-brand        : var(--color-theme-brand);
+$color-primary      : var(--color-theme-primary);
+$color-secondary    : var(--color-theme-secondary);
+$color-tertiary      : var(--color-theme-tertiary);
+$color-quaternary    : var(--color-theme-quaternary);
+// Site's secondary colors
+$color-black: #2e2632;
+$color-grey-verylight: #F7F7FA;
+$color-grey-light: var(--color-theme-secondary); //#ECEDF0
+$color-grey-medium: #DEE0E3;
+$color-grey: #C2C3C8;
+$color-grey-dark: #97989B;
+// Alert's colors
+$color-alert-success: #155724;
+$color-alert-success-50: #d4edda;
+$color-alert-danger: #721c24;
+$color-alert-danger-50: #f8d7da;
+$color-alert-warning: #856404;
+$color-alert-warning-50: #fff3cd;
+$color-alert-info: #856404;
+$color-alert-info-50: #fff3cd;
+
+// Knacss colors (css framework)
+$white    : #fff !default;
+$gray-100 : #f8f9fa !default;
+$gray-200 : #e7e9ed !default;
+$gray-300 : #dee2e6 !default;
+$gray-400 : #ced4da !default;
+$gray-500 : #acb3c2 !default;
+$gray-600 : #727e96 !default;
+$gray-700 : #454d5d !default;
+$gray-800 : #333 !default;
+$gray-900 : #212529 !default;
+$black    : #000 !default;
+$blue-300   : #5BC0DE !default;
+$blue-500   : #0275D8 !default;
+$green-500  : #5CB85C !default;
+$orange-500 : #F0AD4E !default;
+$red-500    : #D9534F !default;
+
+// Alert colors
+$color-success  : $color-alert-success;
+$color-info     : $color-alert-warning;
+$color-warning  : $color-alert-warning;
+$color-danger   : $color-alert-danger;
+$color-error    : $color-alert-danger;
+$color-inverse  : $color-grey-dark;
+$color-ghost    : transparent;
+$color-muted    : $color-grey-light;
 
 // Default margin-bottom (vertical rythm)
 $margin-bottom-base     : 3rem !default;
 $headings-margin-bottom : $margin-bottom-base /2 !default;
 $paragraph-margin-bottom: $margin-bottom-base !default;
-
-// Font weights
-$weight-light   : 200 !default;
-$weight-book    : 300 !default;
-$weight-regular : 400 !default;
-$weight-medium  : 500 !default;
-$weight-bold    : 700 !default;
 
 // Activate hyphenation on small screens
 $hyphens: false !default;
@@ -96,6 +194,7 @@ $grid-gutters: (
 ) !default;
 
 // Spacings
+/*
 $spacer-tiny             : .5rem  !default;
 $spacer-tiny-plus        : .7rem !default;
 $spacer-small            : 1rem !default;
@@ -108,6 +207,24 @@ $spacer-extra-large      : 8rem !default;
 $spacer-extra-large-plus : 12rem !default;
 $spacer-ultra-large      : 16rem !default;
 $spacer-ultra-large-plus : 20rem !default;
+*/
+
+:root {
+  --spacer-base: 1rem;
+
+  --spacer-tiny: var(--spacer-base) * 0.5;
+  --spacer-small: var(--spacer-base);
+  --spacer-medium: calc(var(--spacer-base) * 2);
+  --spacer-large: calc(var(--spacer-base) * 4);
+  --spacer-extralarge: calc(var(--spacer-base) * 8);
+  --spacer-ultralarge: calc(var(--spacer-base) * 16);
+}
+$spacer-tiny: var(--spacer-tiny);
+$spacer-small: var(--spacer-small);
+$spacer-medium: var(--spacer-medium);
+$spacer-large: var(--spacer-large);
+$spacer-extra-large: var(--spacer-extralarge);
+$spacer-ultra-large: var(--spacer-ultralarge);
 
 // z-indexes
 $zindex-navigation   : 1000 !default;
@@ -118,59 +235,26 @@ $zindex-modal        : 5000 !default;
 $zindex-notification : 6000 !default;
 $zindex-debug        : 7000 !default;
 
-// ----------
-// Color zone
-// ----------
-
-// Color names
-$white    : #fff !default;
-$gray-100 : #f8f9fa !default;
-$gray-200 : #e7e9ed !default;
-$gray-300 : #dee2e6 !default;
-$gray-400 : #ced4da !default;
-$gray-500 : #acb3c2 !default;
-$gray-600 : #727e96 !default;
-$gray-700 : #454d5d !default;
-$gray-800 : #333 !default;
-$gray-900 : #212529 !default;
-$black    : #000 !default;
-
-$blue-300   : #5BC0DE !default;
-$blue-500   : #0275D8 !default;
-$green-500  : #5CB85C !default;
-$orange-500 : #F0AD4E !default;
-$red-500    : #D9534F !default;
-
-// Semantic colors
-$color-brand    : $green-500;
-$color-primary  : $blue-500;
-
-$color-success  : $green-500;
-$color-info     : $blue-300;
-$color-warning  : $orange-500;
-$color-danger   : $red-500;
-$color-error    : $red-500;
-$color-inverse  : $gray-800;
-$color-ghost    : transparent;
-$color-muted    : $gray-200;
-
-$color-base      : $gray-900;
-$background-base : $white;
-
 // Component: forms (ne surtout pas les déplacer dans le fichier forms.scss car utilisées à d'autres endroits
-$forms-color                : $gray-800 !default;
+$forms-color                : $color-grey-dark !default;
 $forms-bgcolor              : transparent !default;
-$label-color                : $gray-600 !default;
+$label-color                : $color-base !default;
 $input-color                : $color-base !default;
 $input-bgcolor              : $white !default;
-$placeholder-color          : $gray-600 !default;
+$placeholder-color          : $color-base !default;
+
+$fieldset-padding: 2rem;
+$fieldset-bgcolor: var(--color-theme-secondary);
+$fieldset-border: 1px solid var(--color-theme-primary);
 
 $forms-padding              : 0 !default;
 
 $input-height               : 45px !default; // Same as button height
-$input-font-size            : 1.3rem !default;
-$placeholder-font-size      : 1.3rem !default;
-$input-box-shadow           : 0 0 0 1px $gray-400 inset;
+$input-font-size            : 1.4rem !default;
+$label-font-size            : 1.4rem !default;
+$placeholder-font-size      : 1.4rem !default;
+$input-box-shadow           : 0 0 0 1px $gray-600 inset;
+$input-border-radius        : var(--border-radius-theme);
 
 $select-arrow-color         : $white !default;
 $select-arrow-bgcolor       : $gray-600 !default;
@@ -181,11 +265,12 @@ $select-active-bgcolor      : $gray-600 !default;
 
 $textarea-height            : ($input-height * 2) !default;
 
-$checkbox-color             : $color-primary !default;
-$checkbox-size              : 2rem;
-$checkbox-border-radius     : 0;
+$checkbox-color             : $color-base !default;
+$checkbox-size              : 3rem;
+$checkbox-innersize         : 16px;
+$checkbox-border-radius     : 5px;
 
-$switch-color               : $gray-600 !default;
+$switch-color               : $color-base !default;
 $switch-size                : 3rem;
 $switch-border-radius       : 3em;
 
@@ -194,13 +279,13 @@ $switch-border-radius       : 3em;
 // ---------------
 
 // Component: links
-$link-color            : $gray-800 !default;
+$link-color            : $color-grey-dark !default;
 $link-color-hover      : darken($link-color, 15%) !default;
 $link-decoration       : underline;
 $link-decoration-hover : underline;
 
 // Global border-radius
-$border-radius: 0 !default;
+$global-border-radius: 0 !default;
 
 // Component: quotes
 $quote-color     : $gray-200 !default;
@@ -210,7 +295,7 @@ $arrow-color     : $color-base !default;
 
 // Component: tables
 $table-border               : $gray-500 !default;
-$table-caption-color        : $gray-800 !default;
+$table-caption-color        : $color-grey-dark !default;
 $table-background           : transparent !default;
 $table-head-color           : $color-base !default;
 $table-head-background      : transparent !default;
@@ -220,18 +305,23 @@ $table-footer-background    : transparent !default;
 // Components: buttons, badges, alerts color variants list
 // Convention is: name - background-color - color - border
 $variants-list: (
-        (primary,    $color-primary,    $white,    0 0 0 2px $color-primary inset),
-        (success,    $color-success,    $white,    0 0 0 2px $color-success inset),
-        (info,       $color-info,       $white,    0 0 0 2px $color-info inset),
-        (warning,    $color-warning,    $white,    0 0 0 2px $color-warning inset),
-        (danger,     $color-danger,     $white,    0 0 0 2px $color-danger inset),
-        (error,      $color-error,      $white,    0 0 0 2px $color-error inset),
-        (inverse,    $color-inverse,    $white,    0 0 0 2px $color-inverse inset),
-        (ghost,      $color-ghost,      $white,    0 0 0 2px $color-ghost inset)
+        (primary,    var(--color-theme-primary),    white,    0 0 0 2px var(--color-theme-primary) inset),
+        (brand,      var(--color-theme-brand),      white,    0 0 0 2px var(--color-theme-brand) inset),
+        (black,      var(--color-theme-base),      white,    0 0 0 2px var(--color-theme-base) inset),
+        (white,      white,             $color-base,    0 0 0 2px $color-base inset),
+        (success,    $color-alert-success-50,    $color-alert-success,    0 0 0 2px $color-success inset),
+        (info,       $color-alert-info-50,       $color-alert-info,    0 0 0 2px $color-alert-info inset),
+        (warning,    $color-alert-warning-50,    $color-alert-warning,    0 0 0 2px $color-alert-warning inset),
+        (danger,     $color-alert-danger-50,     $color-alert-danger,    0 0 0 2px $color-alert-danger inset),
+        (error,      $color-alert-danger-50,      $color-alert-danger,    0 0 0 2px $color-alert-danger inset),
+        (inverse,    $color-inverse,    white,    0 0 0 2px $color-inverse inset),
+        (ghost,      $color-ghost,      white,    0 0 0 2px $color-ghost inset)
 ) !default;
-$button-height         : $input-height;
-$button-height-small   : 50px !default;
-$button-height-large   : 70px !default;
+$button-height          : $input-height;
+$button-height-small    : 40px !default;
+$button-height-large    : 70px !default;
+$button-box-shadow      : none; //0 5px 14px 0 rgba(0, 0, 0, 0.09)
+$button-border-radius   : var(--border-radius-theme);
 
 // Component: tabs
 $tabs-border            : $gray-200 !default;
@@ -240,11 +330,11 @@ $tabs-color             : $color-base !default;
 $tabs-active-color      : $gray-800 !default;
 $tabs-background        : transparent !default;
 $tabs-active-background : transparent !default;
-$tabs-border-radius     : 0;
+$tabs-border-radius     : var(--border-radius-theme);
 
 // Component: nav burger button
 $burger-btn-size          : 60px; //width of whole button
-$burger-color             : white !default;
+$burger-color             : $color-base !default;
 $burger-background        : transparent !default; //behind stripes
 $burger-hover-background  : transparent !default;
 $burger-size              : 25px;
@@ -276,3 +366,13 @@ $rgpd-color: $color-primary !default;
 // Newsletter form - colors override
 /*$nl-color: red;
 $nl-bgcolor: blue;*/
+
+// ---------------
+// Layout
+// ---------------
+:root {
+  --header-height: 80px;
+  --header-height-mobile: 80px;
+  --header-bg-color: white;
+  --desktopheaderHeight: 80px;
+}
