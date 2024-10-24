@@ -66,7 +66,7 @@ iframe {
 }
 
 .container {
-  max-width: $large;
+  max-width: var(--wp--style--global--content-size);
 
   @media (max-width: $very-large) {
     padding-right: 4em;
@@ -88,9 +88,9 @@ iframe {
 }
 
 .container-l {
-  max-width: $extra-large;
+  max-width: var(--wp--style--global--wide-size);
 
-  @media (max-width: $extra-large) {
+  @media (max-width: $extra-large - 1) {
     width: 100%;
     margin-right: 0;
     margin-left: 0;
@@ -116,7 +116,7 @@ iframe {
 }
 
 .container-xl {
-  max-width: $extra-large;
+  max-width: var(--wp--style--global--extra-wide-size);
 
   @media (max-width: $extra-large) {
     width: 100%;

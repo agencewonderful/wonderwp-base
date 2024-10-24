@@ -1,0 +1,238 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "base",
+          "color": "#2E2632",
+          "name": "Base (Noir)"
+        },
+        {
+          "slug": "background",
+          "color": "#FFFFFF",
+          "name": "Fond de base (Blanc)"
+        },
+        {
+          "slug": "brand",
+          "color": "#C81F3B",
+          "name": "Marque (Rouge)"
+        },
+        {
+          "slug": "primary",
+          "color": "#FF503A",
+          "name": "Primaire (Orange)"
+        },
+        {
+          "slug": "secondary",
+          "color": "#ECEDF0",
+          "name": "Secondaire (Gris)"
+        },
+        {
+          "slug": "tertiary",
+          "color": "#FF9999",
+          "name": "Tertiaire (Orange clair)"
+        },
+        {
+          "slug": "quaternary",
+          "color": "#A574BE",
+          "name": "Quaternaire (Violet)"
+        },
+        {
+          "slug": "verylightgrey",
+          "color": "#F7F7FA",
+          "name": "Gris très clair"
+        },
+        {
+          "slug": "lightgrey",
+          "color": "#ECEDF0",
+          "name": "Gris clair"
+        },
+        {
+          "slug": "grey",
+          "color": "#C2C3C8",
+          "name": "Gris"
+        },
+        {
+          "slug": "mediumgrey",
+          "color": "#DEE0E3",
+          "name": "Gris moyen"
+        },
+        {
+          "slug": "darkgrey",
+          "color": "#97989B",
+          "name": "Gris foncé"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "geomanistlight",
+          "slug": "light",
+          "name": "Geomanist Light"
+        },
+        {
+          "fontFamily": "geomanistregular",
+          "slug": "regular",
+          "name": "Geomanist Regular"
+        },
+        {
+          "fontFamily": "geomanistmedium",
+          "slug": "medium",
+          "name": "Geomanist Medium"
+        },
+        {
+          "fontFamily": "geomanistbold",
+          "slug": "bold",
+          "name": "Geomanist Bold"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "root",
+          "size": "62.5%",
+          "name": "Root"
+        },
+        {
+          "slug": "small",
+          "size": "1.4rem",
+          "name": "Small"
+        },
+        {
+          "slug": "medium",
+          "size": "1.6rem",
+          "name": "Medium"
+        },
+        {
+          "slug": "large",
+          "size": "1.8rem",
+          "name": "Large"
+        },
+        {
+          "slug": "x-large",
+          "size": "2.4rem",
+          "name": "Extra Large"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "960px",
+      "wideSize": "1280px",
+      "extraWideSize": "1440px",
+      "fullSize": "100%"
+    },
+    "custom": {
+      "line-height": {
+        "body": 1.6,
+        "heading": 1
+      }
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--background)",
+      "text": "var(--wp--preset--color--base)"
+    },
+    "typography": {
+      "lineHeight": "var(--wp--custom--line-height--body)"
+    },
+    "elements": {
+      "h1": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--light)",
+          "fontSize": "clamp(6rem, 4vw, 3rem)",
+          "fontWeight": "normal",
+          "lineHeight": "var(--wp--custom--line-height--heading)"
+        },
+        "spacing": {
+          "margin": {
+            "top": "0",
+            "bottom": "1rem"
+          }
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--light)",
+          "fontSize": "clamp(4.2rem, 4vw, 2rem)",
+          "fontWeight": "normal",
+          "lineHeight": "var(--wp--custom--line-height--heading)",
+          "letterSpacing": "0.01em"
+        },
+        "spacing": {
+          "margin": {
+            "top": "0",
+            "bottom": "2rem"
+          }
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--medium)",
+          "fontSize": "2rem",
+          "fontWeight": "500",
+          "lineHeight": "var(--wp--custom--line-height--body)",
+          "textTransform": "uppercase"
+        },
+        "spacing": {
+          "margin": {
+            "top": "0",
+            "bottom": "0.5rem"
+          }
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--base)"
+        }
+      }
+    },
+    "blocks": {
+      "core/post": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--regular)"
+        },
+        "background": "var(--wp--preset--color--background)",
+        "border": {
+          "radius": "6px"
+        }
+      },
+      "core/button": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--medium)",
+          "fontSize": "var(--wp--preset--font-size--medium)",
+          "lineHeight": "var(--wp--custom--line-height--body)",
+          "textTransform": "uppercase",
+          "textDecoration": "none",
+          "background": "var(--wp--preset--color--background)",
+          "border": {
+            "radius": "6px"
+          }
+        },
+        "spacing": {
+          "padding": {
+            "top": "1rem",
+            "right": "2rem",
+            "bottom": "1rem",
+            "left": "2rem"
+          }
+        },
+        "color": {
+          "text": "var(--wp--preset--color--background) !important",
+          "background": "var(--wp--preset--color--primary)",
+          "transition": "all 0.3s"
+        },
+        "border": {
+          "radius": "6px",
+          "width": "2px",
+          "style": "solid",
+          "color": "var(--wp--preset--color--primary)"
+        },
+        "css": "&:hover{color:var(--wp--preset--color--primary) !important; background:var(--wp--preset--color--background) !important;}"
+      }
+    }
+  }
+}
