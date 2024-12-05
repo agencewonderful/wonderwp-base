@@ -3,16 +3,13 @@
 //Edit your color names here based on the ones you've entered in your sass variable $styleguide-colors
 $colors = [
     'base',
-    'background-base',
     'brand',
     'primary',
     'secondary',
-    'tertiary',
-    'quaternary',
-    'grey',
     'verylightgrey',
     'lightgrey',
     'mediumgrey',
+    'grey',
     'darkgrey'
 ];
 ?>
@@ -28,8 +25,8 @@ $colors = [
     if (!empty($colors)) {
         foreach ($colors as $color) {
             echo '
-            <div class="color background-' . $color . '">
-                <span>var(--wp--preset--color--' . $color . ')</span>
+            <div class="color ' . $color . ' background-' . $color . '">
+                <span>$color-' . $color . '</span>
             </div>';
         }
     }

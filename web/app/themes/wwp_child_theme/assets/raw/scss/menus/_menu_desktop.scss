@@ -2,11 +2,13 @@
 /* ==Header menu desktop + tablet (<=768px)      */
 /* ----------------------------- */
 
-$menu-item-m0-color-active: $color-theme-base;
-$menu-item-m1-color: $color-theme-base;
-$menu-item-m1-color-active: $color-theme-primary;
-$menu-item-m1-bgcolor: $background-theme-base;
-$menu-item-m1-bgcolor-active: $color-theme-secondary;
+:root {
+  --menu-item-m0-color-active: var(--color-theme-base);
+  --menu-item-m1-color: var(--color-theme-base);
+  --menu-item-m1-color-active: var(--color-theme-primary);
+  --menu-item-m1-bgcolor: white;
+  --menu-item-m1-bgcolor-active: var(--color-theme-secondary);
+}
 
 @media (min-width: $medium) {
 
@@ -28,6 +30,9 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
 
     li {
       position: relative;
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 1;
     }
 
     //Tous les sous-menus sont masqués
@@ -51,7 +56,7 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
         width: 10px;
         border-right: 2px solid;
         border-bottom: 2px solid;
-        border-color: $color-theme-base;
+        border-color: var(--color-theme-base);
         transform: rotate(-45deg);
         transition: transform 0.4s;
         transform-origin: center;
@@ -61,7 +66,7 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
     li.current_page_ancestor,
     li.current_page_item {
       > a {
-        color: $menu-item-m1-color-active;
+        color: var(--menu-item-m1-color-active);
       }
     }
 
@@ -72,7 +77,7 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
         position: relative;
         display: flex;
         align-items: center;
-        height: $header-height; //Permet de postionner les enfants
+        height: var(--header-height); //Permet de postionner les enfants
         margin-right: 4rem;
         padding: 0;
         border-bottom: 2px solid transparent;
@@ -82,7 +87,7 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
 
         > a {
           margin-right: 6rem;
-          color: $menu-item-m0-color-active;
+          color: var(--menu-item-m0-color-active);
 
           &::after {
             right: -25px;
@@ -94,10 +99,10 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
       &.current_page_item {
 
         > a {
-          border-bottom-color: $color-theme-primary;
+          border-bottom-color: var(--color-theme-primary);
 
           &::after {
-            border-color: $color-theme-primary;
+            border-color: var(--color-theme-primary);
           }
         }
       }
@@ -119,23 +124,25 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
 
       > li:hover, > li:focus {
         > a {
-          background-color: $menu-item-m1-bgcolor-active;
+          background-color: var(--menu-item-m1-bgcolor-active);
         }
       }
     }
 
     // Deuxième niveau
     ul.level1 {
-      top: $header-height;
+      top: var(--header-height);
       z-index: 1;
 
       body.has-stuck-header & {
-        top: calc($header-height / 2);
+        top: calc(var(--header-height) / 2);
       }
 
       li {
         margin-left: 0;
         min-width: 320px;
+        font-family: var(--font-theme-base);
+        font-size: 1.4rem;
         text-align: left;
       }
 
@@ -143,9 +150,9 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
         position: relative;
         display: block;
         height: 100%;
-        padding: 1rem 3rem;
+        padding: 1.5rem 3rem;
         text-decoration: none;
-        background-color: $menu-item-m1-bgcolor;
+        background-color: var(--menu-item-m1-bgcolor);
       }
 
       > li:first-child > a {
@@ -159,13 +166,13 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
       li.current_page_item {
 
         > a {
-          color: $menu-item-m1-color-active;
+          color: var(--menu-item-m1-color-active);
         }
       }
 
       //Pour IE11
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        top: calc($header-height / 2);
+        top: calc(var(--header-height) / 2);
       }
     }
 
@@ -208,8 +215,7 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
     @media (max-width: $very-large) {
 
       li {
-        //font-size: 1.3rem;
-        font-size: 0.9em;
+        font-size: 1.3rem;
       }
 
       ul.level1 {
@@ -236,8 +242,7 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
       }
 
       ul.level1 li {
-        //font-size: 1.2rem;
-        font-size: 0.9em;
+        font-size: 1.2rem;
 
         > a {
           padding: 1.5rem 3rem;
@@ -250,3 +255,5 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
     }
   }
 }
+
+

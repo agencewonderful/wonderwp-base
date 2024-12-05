@@ -28,6 +28,7 @@ li.breadcrumb-item {
   display: flex;
   align-items: center;
   margin-right: 1rem;
+  font-size: 1.4rem;
   &::before {
     // Chevron
     content: "";
@@ -37,7 +38,7 @@ li.breadcrumb-item {
     margin-right: 0.8em;
     border-right: 2px solid;
     border-bottom: 2px solid;
-    border-color: $color-theme-base;
+    border-color: var(--color-theme-base);
     transform: rotate(-45deg);
   }
   a {

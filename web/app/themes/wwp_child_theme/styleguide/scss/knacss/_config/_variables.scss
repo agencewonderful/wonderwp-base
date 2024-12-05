@@ -144,7 +144,7 @@ $color-inverse  : $gray-800;
 $color-ghost    : transparent;
 $color-muted    : $gray-200;
 
-$color-theme-base      : $gray-900;
+$color-base      : $gray-900;
 $background-base : $white;
 
 $forms-color     : $gray-800;
@@ -180,9 +180,9 @@ $switch-border-radius   : 3em;
 $table-border               : $gray-500;
 $table-caption-color        : $gray-800;
 $table-background           : transparent;
-$table-head-color           : $color-theme-base;
+$table-head-color           : $color-base;
 $table-head-background      : transparent;
-$table-footer-color         : $color-theme-base;
+$table-footer-color         : $color-base;
 $table-footer-background    : transparent;
 
 // Components: buttons, badges, alerts color variants list
@@ -200,7 +200,7 @@ $variants-list: (
 // Component: tabs
 $tabs-border            : $gray-200;
 $tabs-active-border     : $gray-800;
-$tabs-color             : $color-theme-base;
+$tabs-color             : $color-base;
 $tabs-active-color      : $gray-800;
 $tabs-background        : transparent;
 $tabs-active-background : transparent;

@@ -44,7 +44,6 @@
     "jquery-ui-bundle": "^1.12.1",
     "jquery-validation": "^1.19.3",
     "modaal": "^0.4.4",
-    "normalize.css": "^8.0.1",
     "pewjs": "^1.0.4",
     "pikaday": "^1.8.2",
     "scrollmagic": "github:janpaepke/ScrollMagic#master",

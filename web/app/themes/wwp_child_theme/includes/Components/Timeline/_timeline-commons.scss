@@ -21,7 +21,7 @@ ul.timeline {
     display: block;
     height: 2px;
     width: 100%;
-    background-color: $color-theme-base;
+    background-color: $color-base;
     position: absolute;
     top: calc(50% - 1px);
     pointer-events: none;
@@ -69,14 +69,14 @@ ul.timeline {
 
     a::before {
       z-index: 0;
-      background-color: $color-theme-base;
+      background-color: $color-base;
       opacity: 0.2;
       transform: translate(-50%, -50%) scale(1);
     }
 
     a::after {
       z-index: 1;
-      background-color: $color-theme-base;
+      background-color: $color-base;
     }
 
     //Eléments de contenu à révéler
@@ -84,7 +84,7 @@ ul.timeline {
     .date {
       display: block;
       text-align: center;
-      //font-size: 1.4rem;
+      font-size: 1.4rem;
       line-height: 1.2;
     }
 

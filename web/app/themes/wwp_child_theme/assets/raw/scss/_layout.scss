@@ -29,7 +29,7 @@ iframe {
   .container-xl {
     margin-bottom: 2rem;
     padding: 1rem;
-    background: $color-grey-light;
+    background: $gray-200;
     text-align: center;
   }
 }
@@ -90,7 +90,7 @@ iframe {
 .container-l {
   max-width: $extra-large;
 
-  @media (max-width: $extra-large - 1) {
+  @media (max-width: $extra-large) {
     width: 100%;
     margin-right: 0;
     margin-left: 0;
@@ -116,7 +116,7 @@ iframe {
 }
 
 .container-xl {
-  max-width: $extra-extra-large;
+  max-width: $extra-large;
 
   @media (max-width: $extra-large) {
     width: 100%;

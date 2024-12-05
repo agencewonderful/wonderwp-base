@@ -4,10 +4,10 @@
 
 
 :root {
-  --footer-top-color: $color-theme-base;
-  --footer-top-background-color: $color-theme-grey;
+  --footer-top-color: var(--color-theme-base);
+  --footer-top-background-color: var(--color-theme-secondary);
   --footer-bottom-color: white;
-  --footer-bottom-background-color: $color-theme-base;
+  --footer-bottom-background-color: var(--color-theme-base);
 }
 
 $footer-content-height: 75px;
@@ -31,6 +31,7 @@ $colPaddingSmall: 3rem;
     position: relative;
     display: flex;
     align-items: stretch;
+    height: 100%;
   }
 
   .first-col {
@@ -53,8 +54,9 @@ $colPaddingSmall: 3rem;
     }
 
     li {
-      font-size: var(--wp--preset--font-size--small);
-      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 1;
+      letter-spacing: 0.03em;
     }
 
     li > a {
@@ -132,6 +134,7 @@ $colPaddingSmall: 3rem;
   nav ul.menu {
 
     li {
+      font-family: var(--font-theme-secondary);
       text-transform: uppercase;
     }
 
@@ -276,7 +279,7 @@ $colPaddingSmall: 3rem;
     text-decoration: none;
     color: #fff;
     text-indent: -9999px;
-    background-color: $color-theme-primary;
+    background-color: var(--color-theme-primary);
   }
 
   a::after {
@@ -286,6 +289,6 @@ $colPaddingSmall: 3rem;
 
   a:hover,
   a:focus {
-    background-color: $color-theme-base;
+    background-color: var(--color-theme-base);
   }
 }

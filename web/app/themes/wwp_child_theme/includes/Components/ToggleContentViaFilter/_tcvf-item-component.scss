@@ -26,12 +26,12 @@
     // Survol
     &:hover,
     &:focus {
-      background-color: $tcvf-bgcolor--hover;
+      background-color: var(--tcvf-bgcolor--hover);
     }
 
     // Actif
     &.active {
-      background-color: $tcvf-bgcolor;
+      background-color: var(--tcvf-bgcolor);
     }
   }
 

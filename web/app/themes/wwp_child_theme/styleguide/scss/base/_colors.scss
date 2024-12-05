@@ -1,3 +1,4 @@
+/* scss/base/_colors.scss */
 
 /**
  * -----------------------------
@@ -7,25 +8,23 @@
  */
 
 /**
- * Edit your colors in theme.json file
+ * Edit your colors in the variables file : web/app/themes/wwp_child_theme/styleguide/scss/_variables.scss
  * Then fill the $styleguide-colors below accordingly
- * Warning! Variables declared in theme.json do not appear in the styleguide. SO YOU NEED TO REDEFINE THEM BELOW:
  */
 
 //Styleguide Colors
 $styleguide-colors: (
-  "base": $color-theme-base, //var(--wp--preset--color--contrast)
-  "background-base": $background-theme-base, //var(--wp--preset--color--base)
-  "brand": $color-theme-brand, //$color-theme-brand
-  "primary": $color-theme-primary, //$color-theme-primary
-  "secondary": $color-theme-secondary, //$color-theme-secondary
-  "tertiary": $color-theme-tertiary, //$color-theme-tertiary
-  "quaternary": $color-theme-quaternary, //$color-theme-quaternary
-  "verylightgrey": $color-theme-grey-verylight, //$color-theme-grey-verylight
-  "grey": $color-theme-grey, //$color-theme-grey
-  "lightgrey": $color-theme-grey-light, //$color-theme-grey-light
-  "mediumgrey": $color-theme-grey-medium, //$color-theme-grey-medium
-  "darkgrey": $color-theme-grey-dark, //$color-theme-grey-dark
+  "base": $color-base,
+  "brand": $color-brand,
+  "primary": $color-primary,
+  "secondary": $color-secondary,
+  "tertiary": $color-tertiary,
+  "quaternary": $color-quaternary,
+  "verylightgrey": $color-grey-verylight,
+  "lightgrey": $color-grey-light,
+  "mediumgrey":$color-grey-medium,
+  "grey":$color-grey,
+  "darkgrey":$color-grey-dark,
   "white": white
 );
 
@@ -97,6 +96,15 @@ $styleguide-colors: (
   color: #000;
   position: relative;
 
+  &::after {
+    content: 'undefined';
+    color: red;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   span {
     width: 100%;
     border-top: 1px solid red;
@@ -105,11 +113,10 @@ $styleguide-colors: (
     margin-top: auto;
     background: #fff;
     font-size: .8em;
-  }
-}
 
-// BODY
-body {
-  color: $color-theme-base;
-  background-color: $background-theme-base;
+    &::after {
+      content: ' : undefined';
+      color: red;
+    }
+  }
 }
