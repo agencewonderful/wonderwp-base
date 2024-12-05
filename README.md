@@ -1,6 +1,6 @@
 # Project Installation
 
-* PHP >= 8.0
+* PHP >= 8.3
 * Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 * node >= 16
 
