@@ -3,7 +3,7 @@
 
 // Les variables du menu sont réinitialisées
 .navigation-wrapper.megamenu {
-  --menu-item-m1-color-active: var(--color-theme-primary);
+  --menu-item-m1-color-active: $color-theme-primary;
   --menu-item-m1-bgcolor-active: white
 }
 
@@ -97,7 +97,8 @@
       //iPad only
 
       ul.level1 li {
-        font-size: 1.2rem;
+        //font-size: 1.2rem;
+        font-size: 0.9em;
 
         > a {
           padding: 1.5rem 1rem;

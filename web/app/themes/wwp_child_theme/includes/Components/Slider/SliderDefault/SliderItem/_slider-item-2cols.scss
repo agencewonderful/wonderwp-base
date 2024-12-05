@@ -17,11 +17,11 @@ $pagerHeight: 5rem;
       transform: none;
 
       .slider-title {
-        color: $color-base;
+        color: $color-theme-base;
       }
 
       .slider-content {
-        color: $color-base;
+        color: $color-theme-base;
       }
     }
 
@@ -74,7 +74,8 @@ $pagerHeight: 5rem;
         display: flex;
         justify-content: center;
         margin: 0 5px;
-        font-size: 1.5rem;
+        //font-size: 1.5rem;
+        font-size: 0.9em;
         line-height: 1.2;
       }
 

@@ -24,7 +24,7 @@
   .content-part {
     flex: 0 1 40rem;
     padding: 4rem 5rem 3rem 5rem;
-    background-color: var(--tcvf-bgcolor);
+    background-color: $tcvf-bgcolor;
 
     > * {
       animation-name: fadeIn;

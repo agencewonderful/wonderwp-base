@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import "../../../assets/fonts/_fonts";
+//@import "../../../assets/fonts/_fonts";
 
 @import '../../../styleguide/scss/main';
 
@@ -23,9 +23,10 @@
 @import "plugins/vendors";
 @import "../../../plugins/wwp-actu/public/scss/actus-list";
 @import "../../../plugins/wwp-event/public/scss/events-list";
+@import "../../../plugins/wwp-faq/public/scss/faq-list";
 
 @import "gutenberg";
 
 @import "pages/homepage";
 
-@import "../../../plugins/generateblocks/scss/generateblocks";
+//@import "../../../plugins/generateblocks/scss/generateblocks";

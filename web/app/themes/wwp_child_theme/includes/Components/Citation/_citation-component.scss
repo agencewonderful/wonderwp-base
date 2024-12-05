@@ -38,7 +38,7 @@ blockquote {
     height: 68px;
 
     .st0 {
-      fill: var(--color-theme-primary);
+      fill: $color-theme-primary;
     }
   }
 
@@ -81,16 +81,17 @@ blockquote {
 .cite-name,
 blockquote.wp-block-quote cite,
 .wp-block-pullquote blockquote cite {
-  font-family: var(--font-theme-secondary), sans-serif;
+  font-family: $font-family-secondary, sans-serif;
   font-style: inherit;
   font-weight: $weight-medium;
   font-size: 1.6rem;
-  color: var(--color-theme-base);
+  color: $color-theme-base;
 }
 
 .cite-function {
   margin: 0.5rem 0;
-  font-size: 1.5rem;
+  //font-size: 1.5rem;
+  font-size: 0.9em;
 }
 
 // Bloc citation en exergue

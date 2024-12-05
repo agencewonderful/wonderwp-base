@@ -61,13 +61,13 @@ a.btn {
 .btn,
 .button {
   color: white;
-  background-color: $color-base;
+  background-color: $color-theme-base;
   border-color: white;
 
   &:active,
   &:focus,
   &:hover {
-    color: $color-base;
+    color: $color-theme-base;
     background-color: white;
   }
 }

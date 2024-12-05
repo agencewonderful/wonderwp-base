@@ -1,6 +1,11 @@
 /* ----------------------------- */
 /* ==Header menu commons    */
 /* ----------------------------- */
+$menu-item-color: $color-theme-base;
+$menu-item-bgcolor: transparent;
+$menu-item-color-active: $color-theme-primary;
+$menu-item-bgcolor-active: var(--grey);
+$menu-item-m0-color: $color-theme-base;
 
 ul.header-menu {
   display: block;
@@ -14,16 +19,14 @@ ul.header-menu {
   }
 
   li {
-    font-family: var(--font-theme-secondary);
-    font-size: 1.4rem;
-    letter-spacing: 0.05em;
+    //font-size: $font-size-small;
   }
 
   li > a {
     display: block;
     padding: 20px;
-    color: var(--menu-item-color);
-    background-color: var(--menu-item-bgcolor);
+    color: $menu-item-color;
+    background-color: $menu-item-bgcolor;
     text-decoration: none;
     position: relative;
     cursor: pointer;
@@ -35,6 +38,6 @@ ul.header-menu {
   }
 
   ul.children {
-    background-color: var(--menu-item-bgcolor);
+    background-color: $menu-item-bgcolor;
   }
 }

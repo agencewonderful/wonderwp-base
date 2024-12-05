@@ -3,8 +3,13 @@
 /* ----------------------------- */
 /* ==Fonts      */
 /* ----------------------------- */
+body {
+  //font-family: $font-family-base;
+  //font-weight: $weight-book;
+  //font-size: $font-size-base;
+  //line-height: $line-height-base;
+}
 
-/* Googlefonts are imported in variables.scss file */
 
 /*For Atomic docs*/
 .font {
@@ -14,7 +19,7 @@
   }
 }
 
-hr.wp-block-separator {
+/*hr.wp-block-separator {
   border-top: 0;
   border-bottom: 1px solid currentColor;
-}
+}*/

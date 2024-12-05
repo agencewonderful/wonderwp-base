@@ -3,9 +3,9 @@
 
 :root {
   --menu-item-height: 60px;
-  --menu-item-color-active: var(--color-theme-primary);
+  --menu-item-color-active: $color-theme-primary;
   --menu-item-bgcolor-active: transparent;
-  --menu-item-parent-color: var(--color-theme-primary);
+  --menu-item-parent-color: $color-theme-primary;
   --menu-item-parent-bgcolor: transparent;
 }
 
@@ -81,7 +81,7 @@
           margin: 1rem;
           border-right: 2px solid;
           border-bottom: 2px solid;
-          border-color: var(--color-theme-base);
+          border-color: $color-theme-base;
           transform: rotate(-45deg);
           transition: transform 0.4s;
           transform-origin: center;
@@ -108,7 +108,6 @@
 
       ul.level1 li {
         font-family: var(--font-theme-base);
-        font-size: 1.4rem;
 
         a {
           height: 4rem;

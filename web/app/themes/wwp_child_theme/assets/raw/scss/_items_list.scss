@@ -25,31 +25,53 @@
     }
 }
 
+/* Default list parent style */
+/* ------------------------- */
+
+.items-list {
+  $gutter         : 2rem;
+  $gutterTablet   : 2rem;
+  $col            : 3;
+  $colTablet      : 2;
+
+  display: flex;
+  gap: $gutter;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > * {
+    flex: 0 0 calc(100% / $col);
+  }
+
+  > * .item {
+    height: 100%;
+    padding: 0;
+  }
+}
+
 
 /* Default list parent style */
 /* ------------------------- */
 //Variables:
-$gutter         : 2rem; //Largeur gouttière
-$gutterTablet   : 2rem;
-$col            : 3; //Nombre de colonnes
+$gutter         : 1rem;
+$gutterTablet   : 1rem;
+$col            : 3;
 $colTablet      : 2;
 
 .items-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: $gutter;
   padding-left: 0;
   list-style: none;
-  margin-right: -$gutter;
-  margin-left: -$gutter;
 
   //Au cas ou .item est un enfant direct de .items-list
   li,
   > .item {
     flex: 0 1 auto;
-    flex-basis: calc(100% * 1 / #{$col} - #{$gutter * 2} - .01px);
-    margin-right: $gutter;
-    margin-left: $gutter;
+    flex-basis: calc(100% * 1 / #{$col} - 11px);
   }
 
   //Au cas ou .item n'est pas un enfant direct de .items-list
