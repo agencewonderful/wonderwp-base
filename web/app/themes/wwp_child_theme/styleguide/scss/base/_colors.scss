@@ -14,18 +14,18 @@
 
 //Styleguide Colors
 $styleguide-colors: (
-  "base": #2E2632, //var(--wp--preset--color--base)
-  "background-base": #FFFFFF, //var(--wp--preset--color--background)
-  "brand": #C81F3B, //var(--wp--preset--color--brand)
-  "primary": #FF503A, //var(--wp--preset--color--primary)
-  "secondary": #5175e2, //var(--wp--preset--color--secondary)
-  "tertiary": #FF9999, //var(--wp--preset--color--tertiary)
-  "quaternary": #A574BE, //var(--wp--preset--color--quaternary)
-  "verylightgrey": #F7F7FA, //var(--wp--preset--color--verylightgrey)
-  "grey": #C2C3C8, //var(--wp--preset--color--grey)
-  "lightgrey": #ECEDF0, //var(--wp--preset--color--lightgrey)
-  "mediumgrey": #DEE0E3, //var(--wp--preset--color--mediumgrey)
-  "darkgrey": #97989B, //var(--wp--preset--color--darkgrey)
+  "base": $color-theme-base, //var(--wp--preset--color--contrast)
+  "background-base": $background-theme-base, //var(--wp--preset--color--base)
+  "brand": $color-theme-brand, //$color-theme-brand
+  "primary": $color-theme-primary, //$color-theme-primary
+  "secondary": $color-theme-secondary, //$color-theme-secondary
+  "tertiary": $color-theme-tertiary, //$color-theme-tertiary
+  "quaternary": $color-theme-quaternary, //$color-theme-quaternary
+  "verylightgrey": $color-theme-grey-verylight, //$color-theme-grey-verylight
+  "grey": $color-theme-grey, //$color-theme-grey
+  "lightgrey": $color-theme-grey-light, //$color-theme-grey-light
+  "mediumgrey": $color-theme-grey-medium, //$color-theme-grey-medium
+  "darkgrey": $color-theme-grey-dark, //$color-theme-grey-dark
   "white": white
 );
 
@@ -106,4 +106,10 @@ $styleguide-colors: (
     background: #fff;
     font-size: .8em;
   }
+}
+
+// BODY
+body {
+  color: $color-theme-base;
+  background-color: $background-theme-base;
 }

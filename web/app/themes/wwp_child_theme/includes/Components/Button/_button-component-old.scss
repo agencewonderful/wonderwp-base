@@ -51,8 +51,8 @@
 a.wp-block-button__link {
   @extend %btn;
   color: white;
-  background-color: var(--wp--preset--color--primary);
-  box-shadow: 0 0 0 2px var(--wp--preset--color--primary);
+  background-color: $color-theme-primary;
+  box-shadow: 0 0 0 2px $color-theme-primary;
 
   // EXTERNAL LINK
   &[target="_blank"] {
@@ -67,7 +67,7 @@ a.wp-block-button__link {
   }
 
   &:focus, .no-touch &:hover, &:active {
-    color: var(--wp--preset--color--primary);
+    color: $color-theme-primary;
     background-color: white;
 
     &[target="_blank"]::after {
@@ -150,17 +150,17 @@ a[class*="btn"] {
 .btn-submit {
   @extend .btn;
   color: white;
-  background-color: $color-base;
-  box-shadow: 0 0 0 2px $color-base;
+  background-color: $color-theme-base;
+  box-shadow: 0 0 0 2px $color-theme-base;
 
   .no-touch &:hover,
   &:focus {
-    color: $color-base;
+    color: $color-theme-base;
     background-color: white;
   }
 }
 form [type="submit"] {
-  box-shadow: 0 0 0 2px $color-base inset; //Filet à l'intérieur quand est dans un formulaire
+  box-shadow: 0 0 0 2px $color-theme-base inset; //Filet à l'intérieur quand est dans un formulaire
 }
 
 // Bouton En savoir plus
@@ -173,7 +173,7 @@ form [type="submit"] {
   font-size: 1.2rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--wp--preset--color--base);
+  color: var(--wp--preset--color--contrast);
   background: none;
   box-shadow: none;
   text-decoration: none;
@@ -191,7 +191,7 @@ form [type="submit"] {
     display: block;
     height: 26px;
     width: 26px;
-    background-color: var(--wp--preset--color--primary);
+    background-color: $color-theme-primary;
     border-radius: 50%;
     transform: translateY(-50%) scale(1);
     transform-origin: center;

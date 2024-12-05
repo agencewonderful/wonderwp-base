@@ -1,29 +1,29 @@
 /// CONTENT BASE STYLES ///
-@import "../../fonts/fonts";
-@import "../../../styleguide/scss/variables";
-@import "../../../styleguide/scss/mixins";
-@import "../../../styleguide/scss/knacss/_vendor/reboot";
-@import "../../../styleguide/scss/knacss/_library/base";
-@import "../../../styleguide/scss/atoms/text";
-@import "../../../styleguide/scss/atoms/headings";
-@import "../../../styleguide/scss/atoms/excerpt";
-@import "../../../includes/Components/Button/button-component";
-@import "layout";
+//@import "../../fonts/fonts";
+//@import "../../../styleguide/scss/variables";
+//@import "../../../styleguide/scss/mixins";
+//@import "../../../styleguide/scss/knacss/_vendor/reboot";
+//@import "../../../styleguide/scss/knacss/_library/base";
+//@import "../../../styleguide/scss/atoms/text";
+//@import "../../../styleguide/scss/atoms/headings";
+//@import "../../../styleguide/scss/atoms/excerpt";
+//@import "../../../includes/Components/Button/button-component";
+//@import "layout";
 
 
 /*--------------------------------------*/
 /// LOAD COMPONENTS STYLES HERE ///
-@import "../../../includes/Components/Card/card-component";
+//@import "../../../includes/Components/Card/card-component";
 /*--------------------------------------*/
 
-html :where(.editor-styles-wrapper) {
+/*html :where(.editor-styles-wrapper) {
 
   h1, h2, h3 {
     font-weight: normal;
   }
 
   p {
-    font-size: medium;
+    font-size: $font-size-base;
   }
 }
 
@@ -38,23 +38,23 @@ html :where(.editor-styles-wrapper) {
 
 // GUTENBERG BLOCKS
 .block-editor-block-list__block {
-  font-family: var(--wp--preset--font-family--regular);
-  font-size: normal;
-  color: var(--wp--preset--color--base);
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $color-theme-base;
 }
 
 .wp-block-wwp-gutenberg-utils-section-block,
 .wp-block-wwp-gutenberg-utils-container-block {
-  border-color: var(--admin-theme-color-secondary);
+  border-color: $color-theme-grey-medium;
 }
 
 .block-editor-block-list__block.components-placeholder {
   box-shadow: none !important;
-  border: 1px solid var(--admin-theme-color-secondary) !important;
+  border: 1px solid $color-theme-grey-medium !important;
 }
 
 .wp-block-wwp-gutenberg-utils-section-block .block-etiquette {
-  background: var(--admin-theme-color-primary);
+  background: $color-theme-grey-medium;
 }
 
 [class^="wp-block-wwp-gutenberg-utils-molecule-"] {
@@ -71,6 +71,6 @@ html :where(.editor-styles-wrapper) {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: white;
-    background-color: var(--admin-theme-color-primary);
+    background-color: $color-theme-grey-medium;
   }
-}
+}*/

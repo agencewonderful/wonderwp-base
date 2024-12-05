@@ -4,13 +4,13 @@
 /* ----------------------------- */
 
 .h1-like {
-  @extend h1;
+  @extend h1 !optional;
 }
 
 .h2-like {
-  @extend h2;
+  @extend h2 !optional;
 }
 
 .h3-like {
-  @extend h3;
+  @extend h3 !optional;
 }

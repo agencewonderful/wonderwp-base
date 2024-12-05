@@ -1,31 +1,31 @@
 /* scss/atoms/_text.scss */
 
 address, blockquote, dl, ol, p, pre, ul {
-  margin-top: .75em;
-  margin-bottom: .75em;
+  //margin-top: .75em;
+  //margin-bottom: .75em;
 }
 
 /* Knacss override */
 a {
-  color: currentColor;
+  //color: currentColor;
 }
 
 /* Baseline for default links */
 a:not([class]) {
   /* Relatively sized thickness and offset */
-  text-decoration-thickness: 0.07em; /*max(0.08em, 1px)*/
-  text-underline-offset: 0.2em;
+  //text-decoration-thickness: 0.07em; /*max(0.08em, 1px)*/
+  //text-underline-offset: 0.2em;
 }
 
 /* Produces a visible focus state based on the heuristics of the user's input modality */
 :focus-visible {
-  --outline-size: 0.15em; /*max(2px, 0.15em)*/
-
-  outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid) var(--outline-color, currentColor);
-  outline-offset: var(--outline-offset, var(--outline-size));
+  //--outline-size: 0.15em; /*max(2px, 0.15em)*/
+//
+  //outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid) var(--outline-color, currentColor);
+  //outline-offset: var(--outline-offset, var(--outline-size));
 }
 
 b, strong {
-  font-family: var(--wp--preset--font-family--medium);
-  font-weight: normal;
+  //font-family: var(--wp--preset--font-family--medium);
+  //font-weight: $weight-bold;
 }

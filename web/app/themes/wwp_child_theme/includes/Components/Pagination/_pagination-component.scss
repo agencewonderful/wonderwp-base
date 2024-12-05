@@ -3,7 +3,7 @@
 /* ----------------------------- */
 
 :root {
-  --pagination-color: var(--wp--preset--color--base)
+  --pagination-color: var(--wp--preset--color--contrast)
 }
 
 .pagination,
@@ -100,6 +100,6 @@
   }
 
   @media (max-width: $tiny) {
-    font-size: 1.4rem;
+    //font-size: 1.4rem;
   }
 }

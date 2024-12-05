@@ -1,37 +1,40 @@
-// Fix pour boutons créés dans des composants
-// Reprise styles générés dans theme.json
+// ----------------
+// Fix for buttons created in components
+// Takeover of styles generated in theme.json
+// ----------------
+
 .btn {
-  font-family: var(--wp--preset--font-family--medium);
+/*  font-family: var(--wp--preset--font-family--medium);
   font-size: var(--wp--preset--font-size--medium);
   line-height: var(--wp--custom--line-height--body);
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem 2rem;
-  color: var(--wp--preset--color--background);
-  background: var(--wp--preset--color--primary);
+  color: $background-theme-base;
+  background: $color-theme-primary;
   transition: all 0.3s;
 
   &:hover,
   &:focus {
-    color:var(--wp--preset--color--primary) !important;
-    background: var(--wp--preset--color--background) !important;
-  }
+    color:$color-theme-primary !important;
+    background: $background-theme-base !important;
+  }*/
 }
 
 // Bouton En savoir plus
 .wp-block-read-more,
 .btn--inline .wp-block-button__link {
-  position: relative;
+/*  position: relative;
   min-height: auto;
   margin: 2rem 0;
   padding: 5px 0 5px 40px;
-  font-family: var(--wp--preset--font-family--regular);
+  font-family: var(--wp--preset--font-family--base);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   background: none;
   box-shadow: none;
   font-size: var(--wp--preset--font-size--small) !important;
-  color: var(--wp--preset--color--base) !important;
+  color: $color-theme-base !important;
   text-decoration: none !important;
   border: none;
 
@@ -48,7 +51,7 @@
     display: block;
     height: 26px;
     width: 26px;
-    background-color: var(--wp--preset--color--primary);
+    background-color: $color-theme-primary;
     border-radius: 50%;
     transform: translateY(-50%) scale(1);
     transform-origin: center;
@@ -66,5 +69,12 @@
     &::before {
       transform: translateY(-50%) scale(1.2);
     }
-  }
+  }*/
+}
+
+/// CONSERVER POUR HERITAGE COMPOSANTS
+.btn--inline {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }

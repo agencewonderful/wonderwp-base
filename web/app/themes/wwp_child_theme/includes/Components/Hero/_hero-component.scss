@@ -192,7 +192,7 @@
   // Si couleur de thème
   &.is-color-primary {
     .title::after {
-      background-color: var(--wp--preset--color--primary);
+      background-color: $color-theme-primary;
     }
   }
 

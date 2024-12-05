@@ -1,19 +1,18 @@
 // Accordion
-:root {
-  --accordion-color: var(--wp--preset--color--base);
-  --accordion-bgcolor: white;
-  --accordion-btn-color: var(--wp--preset--color--primary);
-  --accordion-hovercolor: var(--wp--preset--color--base);
-  --accordion-hoverbackground: white;
-  --accordion-activecolor: var(--wp--preset--color--base);
-  --accordion-activebackground: white;
-  --accordion-border-radius: var(--border-radius-theme);
-  --accordion-box-shadow: var(--box-shadow-theme-small);
-}
+
+$accordion-color: $color-theme-base;
+$accordion-bgcolor: white;
+$accordion-btn-color: $color-theme-primary;
+$accordion-hovercolor: $color-theme-base;
+$accordion-hoverbackground: white;
+$accordion-activecolor: $color-theme-base;
+$accordion-activebackground: white;
+$accordion-border-radius: $border-radius-theme;
+$accordion-box-shadow: $box-shadow-theme-small;
 
 .js-accordion {
   button, div {
-    width: 100%;
+    //width: 100%;
   }
 }
 
@@ -24,25 +23,25 @@
   margin: 1rem 0 0 0;
   padding: 0 3rem;
   text-align: left;
-  color: var(--accordion-color);
+  color: $accordion-color;
   font-weight: $weight-medium;
   text-transform: none;
-  background-color: var(--accordion-bgcolor);
+  background-color: $accordion-bgcolor;
   white-space: normal;
   min-height: 9rem;
   height: initial;
   border: 0;
   font-size: 1.3rem;
-  border-radius: var(--accordion-border-radius);
-  box-shadow: var(--accordion-box-shadow);
+  border-radius: $accordion-border-radius;
+  box-shadow: $accordion-box-shadow;
   cursor: pointer;
 
   .no-touch &:hover,
   &:focus,
   &:active {
-    color: var(--accordion-hovercolor);
-    background-color: var(--accordion-hoverbackground);
-    //box-shadow: var(--box-shadow-theme-small--active);
+    color: $accordion-hovercolor;
+    background-color: $accordion-hoverbackground;
+    //box-shadow: $box-shadow-theme-small--active;
   }
 
   &:focus {
@@ -65,9 +64,9 @@
   }
 
   &[aria-expanded="true"] {
-    font-family: var(--font-theme-secondary);
-    color: var(--accordion-activecolor);
-    background-color: var(--accordion-activebackground);
+    font-family: $font-family-secondary;
+    color: $accordion-activecolor;
+    background-color: $accordion-activebackground;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 
@@ -89,12 +88,11 @@
   background: #fff;
   position: relative;
   z-index: -1;
-  border: 1px solid var(--accordion-bgcolor);
+  border: 1px solid $accordion-bgcolor;
   padding: 0 4rem 0 3.5rem;
-  border-bottom-right-radius: var(--accordion-border-radius);
-  border-bottom-left-radius: var(--accordion-border-radius);
-  font-size: 1.5rem;
-  box-shadow: var(--box-shadow-theme);
+  border-bottom-right-radius: $accordion-border-radius;
+  border-bottom-left-radius: $accordion-border-radius;
+  box-shadow: $box-shadow-theme;
   overflow: hidden;
   transition: all .4s ease-out;
 
@@ -111,7 +109,7 @@
 
   &[aria-hidden="false"] {
     padding: 1rem 4rem 4rem 3.5rem;
-    box-shadow: var(--accordion-box-shadow);
+    box-shadow: $accordion-box-shadow;
   }
 }
 

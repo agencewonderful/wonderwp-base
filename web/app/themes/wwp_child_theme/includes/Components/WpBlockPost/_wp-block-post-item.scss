@@ -17,6 +17,6 @@
 
   .no-touch &:hover,
   .no-touch &:focus {
-    box-shadow: var(--box-shadow-theme-active);
+    box-shadow: $box-shadow-theme-active;
   }
 }

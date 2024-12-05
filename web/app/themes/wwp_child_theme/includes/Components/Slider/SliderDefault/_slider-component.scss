@@ -123,7 +123,7 @@
     }
 
     &.tns-nav-active {
-      background-color: var(--wp--preset--color--primary) !important;
+      background-color: $color-theme-primary !important;
       transform: scale(1.5);
     }
   }
