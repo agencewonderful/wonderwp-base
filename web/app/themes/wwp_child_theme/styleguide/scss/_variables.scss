@@ -1,6 +1,6 @@
 // Config file and project variables
-@import "_variables_themes";
-@import "_variables_fallbacks";
+@use "variables_theme" as *;
+@use "variables_fallbacks" as *;
 
 // ----------------
 // Breakpoints zone
@@ -54,8 +54,8 @@ $line-height-heading  : 1.1;
 // ----------
 
 // Theme colors variables
-$color-theme-base           : var(--wp--preset--color--contrast); //Black
 $background-theme-base      : var(--wp--preset--color--base); //White
+$color-theme-base           : var(--wp--preset--color--contrast); //Black
 $color-theme-primary        : var(--wp--preset--color--accent-1); //Orange
 $color-theme-secondary      : var(--wp--preset--color--accent-2); //Gris
 $color-theme-tertiary       : var(--wp--preset--color--accent-3); //Orange clair
