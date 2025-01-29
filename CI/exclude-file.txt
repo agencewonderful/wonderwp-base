@@ -5,6 +5,7 @@
 - .htaccess
 - .gitignore
 - *.nfs*
+- *.scss
 
 ## Uneeded / Unwanted files
 
@@ -47,6 +48,7 @@
 - node_modules/
 - static_templates/
 - web/doc
+- web/app/cache
 - web/app/plugins/wwp-generator
 - web/app/plugins/wwp-maintenance
 - web/app/languages/

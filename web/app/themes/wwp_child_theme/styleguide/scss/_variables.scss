@@ -54,13 +54,13 @@ $line-height-heading  : 1.1;
 // ----------
 
 // Theme colors variables
-$background-theme-base      : var(--wp--preset--color--base); //White
-$color-theme-base           : var(--wp--preset--color--contrast); //Black
-$color-theme-primary        : var(--wp--preset--color--accent-1); //Orange
-$color-theme-secondary      : var(--wp--preset--color--accent-2); //Gris
-$color-theme-tertiary       : var(--wp--preset--color--accent-3); //Orange clair
-$color-theme-quaternary     : var(--wp--preset--color--accent-4); //Violet
-$color-theme-brand          : var(--wp--preset--color--brand); //Red
+$color-theme-base           : var(--wp--preset--color--base); //Black
+$background-theme-base      : var(--wp--preset--color--background); //White
+$color-theme-brand          : var(--wp--preset--color--brand); //Orange (idem Primary)
+$color-theme-primary        : var(--wp--preset--color--primary); //Orange
+$color-theme-secondary      : var(--wp--preset--color--secondary); //Gris
+$color-theme-tertiary       : var(--wp--preset--color--tertiary); //Orange clair
+$color-theme-quaternary     : var(--wp--preset--color--quaternary); //Violet
 $color-theme-grey           : var(--wp--preset--color--grey); //Gris
 $color-theme-grey-verylight : var(--wp--preset--color--verylightgrey); //Gris très clair
 $color-theme-grey-light     : var(--wp--preset--color--lightgrey); //Gris clair
@@ -71,17 +71,19 @@ $color-theme-black          : $color-theme-base;
 // Old color variable matching
 $color-base             : $color-theme-base;
 $background-base        : $background-theme-base;
+$color-brand            : $color-theme-brand;
 $color-primary          : $color-theme-primary;
 $color-secondary        : $color-theme-secondary;
 $color-tertiary         : $color-theme-tertiary;
 $color-quaternary       : $color-theme-quaternary;
-$color-theme-brand      : $color-theme-brand;
 $color-grey             : $color-theme-grey;
 $color-grey-verylight   : $color-theme-grey-verylight;
 $color-grey-light       : $color-theme-grey-light;
 $color-grey-medium      : $color-theme-grey-medium;
 $color-grey-dark        : $color-theme-grey-dark;
 $color-black            : $color-theme-black;
+$color-theme-blue       : #0275D8;
+$color-theme-mediumblue : #5BC0DE;
 
 // Alert's colors
 $color-success: #155724;
@@ -239,7 +241,7 @@ $table-footer-background    : transparent !default;
 $variants-list: (
         (primary,    var(--wp--preset--color--primary),    white,    0 0 0 2px var(--wp--preset--color--primary) inset),
         (brand,      $color-theme-brand,      white,    0 0 0 2px $color-theme-brand inset),
-        (black,      $color-theme-base,      white,    0 0 0 2px $color-theme-base inset),
+        (base,       $color-theme-base,      white,    0 0 0 2px $color-theme-base inset),
         (white,      white,             $color-theme-base,    0 0 0 2px $color-theme-base inset),
         (success,    $color-success-50,    $color-success,    0 0 0 2px $color-success inset),
         (info,       $color-info-50,       $color-info,    0 0 0 2px $color-info inset),
@@ -302,6 +304,9 @@ $error-bg: lighten($color-error, 30%);
 // ---------------
 // Plugins zone
 // ---------------
+
+// ALERT
+$alertHeight: 48px;
 
 // RGPD color theme
 $rgpd-color: $color-primary !default;

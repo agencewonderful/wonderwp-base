@@ -14,8 +14,8 @@
 
 //Styleguide Colors
 $styleguide-colors: (
-  "base": $color-theme-base, //var(--wp--preset--color--contrast)
-  "background-base": $background-theme-base, //var(--wp--preset--color--base)
+  "base": $color-theme-base, //var(--wp--preset--color--base)
+  "background": $background-theme-base, //var(--wp--preset--color--background)
   "brand": $color-theme-brand, //$color-theme-brand
   "primary": $color-theme-primary, //$color-theme-primary
   "secondary": $color-theme-secondary, //$color-theme-secondary
@@ -72,25 +72,15 @@ $styleguide-colors: (
 }
 
 /* Color block properties */
-.colors:before,
-.colors:after {
-  content: " ";
-  display: table;
-}
-
-.colors:after {
-  clear: both;
-}
-
 .colors {
-  *zoom: 1;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .color {
-  width: 100px;
-  height: 130px;
-  float: left;
-  margin-right: 10px;
+  flex: 0 0 7rem;
+  height: 9rem;
   font-size: 12px;
   border: 1px solid red;
   display: flex;

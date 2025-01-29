@@ -4,6 +4,7 @@
 // ----------------------
 
 :root {
+  //Colors
   --color-black: $color-theme-base;
   --color-theme-base: $color-theme-base;
   --color-theme-primary: $color-theme-primary;
@@ -17,12 +18,14 @@
   --color-theme-grey-medium: $color-theme-grey-medium;
   --color-theme-grey-dark: $color-theme-grey-dark;
   --color-theme-black: $color-theme-black;
-  --color-theme-blue: $color-theme-blue;
-  --color-alert: $color-alert-danger;
+  --color-alert: $color-danger;
   --color-lightgrey: $color-theme-grey-light;
   --color-grey: $color-theme-grey;
   --color-mediumgrey: $color-theme-grey-medium;
   --color-darkgrey: $color-theme-grey-dark;
-  --color-mediumblue: $color-mediumblue;
+  --color-theme-blue: $color-theme-blue;
+  --color-mediumblue: $color-theme-mediumblue;
+
+  //Fonts
   --font-theme-secondary: $font-family-secondary;
 }
