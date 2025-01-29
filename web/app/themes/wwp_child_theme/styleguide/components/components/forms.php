@@ -1,5 +1,5 @@
 <!-- components/components/forms.php -->
-<p class="subTitle">Formulaire de base. Par les afficher, IL FAUT IMPERATIVEMENT UN FORMULAIRE AVEC l'ID 6</p>
+<p class="subTitle">Formulaire de base. Par les afficher, IL FAUT IMPERATIVEMENT UN FORMULAIRE AVEC l'ID 7</p>
 <?php echo do_shortcode("[wwpmodule slug='wwp-contact' form='7']"); ?>
 <br>
 <br>
