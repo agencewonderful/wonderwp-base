@@ -2,14 +2,6 @@
 /* ==Footer      */
 /* ----------------------------- */
 
-
-:root {
-  --footer-top-color: $color-theme-base;
-  --footer-top-background-color: $color-theme-grey;
-  --footer-bottom-color: white;
-  --footer-bottom-background-color: $color-theme-base;
-}
-
 $footer-content-height: 75px;
 $footer-logo-height: 75px;
 $footer-logo-width: 158px;
@@ -114,8 +106,8 @@ $colPaddingSmall: 3rem;
 //Footer haut
 .footer-content-top {
   height: $footer-content-height;
-  color: var(--footer-top-color);
-  background-color: var(--footer-top-background-color);
+  color: var(--wp--preset--color--base);
+  background-color: var(--wp--preset--color--lightgrey);
 
   a.logo {
     display: flex;
@@ -181,11 +173,11 @@ $colPaddingSmall: 3rem;
 .footer-content-bottom {
   padding-top: 2rem;
   padding-bottom: 4rem;
-  background-color: var(--footer-bottom-background-color);
+  background-color: var(--wp--preset--color--base);
 
   *,
   a {
-    color: var(--footer-bottom-color) !important;
+    color: var(--wp--preset--color--background) !important;
   }
 
   .container-l {
