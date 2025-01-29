@@ -1,22 +1,18 @@
 // Sticky Header
 
-/* Variables */
-$stickedHeaderHeight: calc(var(--header-height) / 2);
-$alertHeight: 48px; // Si bandeau alerte (web/app/plugins/wwp-alerte/public/css/alerte.scss)
-
 @media (min-width: $medium) {
 
   body {
 
     //Quand ajout de la classe .stickable sur body
     &.stickable {
-      padding-top: var(--header-height);
+      padding-top: $header-height;
 
       .site-header {
         position: fixed;
         top: 0;
         left: 0;
-        height: var(--header-height);
+        height: $header-height;
         width: 100%;
 
         > * {
@@ -25,28 +21,29 @@ $alertHeight: 48px; // Si bandeau alerte (web/app/plugins/wwp-alerte/public/css/
       }
 
       &.has-wwp-alerte {
-        padding-top: calc(var(--header-height) + #{$alertHeight});
+        padding-top: calc(#{$header-height} + #{$header-height} / 2);
 
         .site-header {
           top: $alertHeight;
         }
-      } // Si bandeau alerte
+      }
+
+      // Si bandeau alerte
     }
 
     //Lors du scroll, le header devient sticky
     &.has-stuck-header {
-      padding-top: var(--header-height);
+      padding-top: $header-height;
 
       .site-header {
-        height: $stickedHeaderHeight;
+        height: calc(#{$header-height} / 2);
 
-        a.logo {
-          flex: 0 0 15rem;
+        ul.header-menu li.m0 > a {
+          height: calc(#{$header-height} / 2);
         }
 
-        ul.header-menu li > a {
-          height: $stickedHeaderHeight;
-          //padding: 0 11px;
+        ul.header-menu ul.level1 {
+          top: calc(#{$header-height} / 2);
         }
       }
     }

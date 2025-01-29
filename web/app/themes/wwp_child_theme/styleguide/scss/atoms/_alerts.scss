@@ -21,18 +21,30 @@
   color: $alert-success;
   background-color: $alert-success-bg;
   border-bottom-color: $alert-success;
+
+  a.wwp-alerte-link-more::after {
+    background-color: $alert-success;
+  }
 }
 
 .alert-info {
   color: $alert-info;
   background-color: $alert-info-bg;
   border-bottom-color: $alert-info;
+
+  a.wwp-alerte-link-more::after {
+    background-color: $alert-info;
+  }
 }
 
 .alert-warning {
   color: $alert-warning;
   background-color: $alert-warning-bg;
   border-bottom-color: $alert-warning;
+
+  a.wwp-alerte-link-more::after {
+    background-color: $alert-warning;
+  }
 }
 
 .alert-danger,
@@ -41,4 +53,8 @@
   color: $alert-error;
   background-color: $alert-error-bg;
   border-bottom-color: $alert-error;
+
+  a.wwp-alerte-link-more::after {
+    background-color: $alert-error;
+  }
 }

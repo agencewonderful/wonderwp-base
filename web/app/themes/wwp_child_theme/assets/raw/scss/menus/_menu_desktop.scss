@@ -18,6 +18,7 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
   .navigation-wrapper ul.header-menu {
     display: flex;
     justify-content: center;
+    gap: 4rem;
     margin: 0;
     padding-left: 0;
     list-style: none;
@@ -73,7 +74,6 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
         display: flex;
         align-items: center;
         height: $header-height; //Permet de postionner les enfants
-        margin-right: 4rem;
         padding: 0;
         border-bottom: 2px solid transparent;
       }
@@ -81,7 +81,6 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
       &.page_item_has_children {
 
         > a {
-          margin-right: 6rem;
           color: $menu-item-m0-color-active;
 
           &::after {
@@ -129,10 +128,6 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
       top: $header-height;
       z-index: 1;
 
-      body.has-stuck-header & {
-        top: calc($header-height / 2);
-      }
-
       li {
         margin-left: 0;
         min-width: 320px;
@@ -165,7 +160,7 @@ $menu-item-m1-bgcolor-active: $color-theme-secondary;
 
       //Pour IE11
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        top: calc($header-height / 2);
+        top: calc(#{$header-height} / 2);
       }
     }
 
