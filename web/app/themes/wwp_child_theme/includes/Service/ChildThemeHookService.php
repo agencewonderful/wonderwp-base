@@ -17,11 +17,8 @@ class ChildThemeHookService extends ThemeHookService
     {
         parent::register();
 
-        //$viewService = $this->manager->getService(ServiceInterface::VIEW_SERVICE_NAME);
-        //add_action( 'wwp_after_footer', array($viewService,'prepareCookies'));
         add_filter('wwp.mailer.setBody', [$this, 'includeMailTemplate']);
         add_action('wp_footer', [$this, 'loadJsonTpls']);
-        add_action('wp_loaded', [$this, 'setHasCookie']);
         add_filter('jsonAssetsExporter.json', [$this, 'mergeSassFiles']);
         add_filter('body_class', [$this, 'addBodyClassForPostThumb']);
         add_action('wp_footer', [$this, 'deregisterWpEmbed']);
@@ -74,19 +71,6 @@ class ChildThemeHookService extends ThemeHookService
         $templates['loaders'] = $loaderComp->getTemplates();
 
         echo '<script type="content/json" id="jsTemplates">' . json_encode($templates) . '</script>';
-    }
-
-    public function setHasCookie()
-    {
-        $request    = Request::getInstance();
-        $cookieName = 'AcceptsCookie';
-        $setCookie  = $request->getSession()->get($cookieName);
-
-        if (!empty($setCookie)) {
-            $cookie = new Cookie($cookieName, true, time() + (60 * 60 * 24 * 30 * 6), '/'); //Expires in 6 months
-            setcookie($cookie->getName(), $cookie->getValue(), $cookie->getExpiresTime(), $cookie->getPath());
-            $request->getSession()->set($cookieName, '');
-        }
     }
 
     public function mergeSassFiles($json)
