@@ -162,7 +162,7 @@
   .card-readmore-link,
   .wp-block-read-more {
     order: 2;
-    @extend .wp-block-button__link;
+    //@extend .wp-block-button__link;
     align-self: flex-start;
     font-size: 0.9em;
     margin-top: $spacer-small;
