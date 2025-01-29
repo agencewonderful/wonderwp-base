@@ -16,6 +16,7 @@
             ".\/web\/app\/plugins\/wwp-map\/public\/scss\/_map_2021.scss"
         ],
         "critical": [
+            ".\/web\/app\/plugins\/wwp-tracker\/\/public\/scss\/critical.scss",
             ".\/web\/app\/themes\/wwp_child_theme\/assets\/raw\/scss\/critical.scss"
         ],
         "admin": [
@@ -27,7 +28,6 @@
             ".\/web\/app\/plugins\/wwp-espace-restreint\/\/admin\/scss\/_admin.scss",
             ".\/web\/app\/plugins\/wwp-galerie\/\/admin\/css\/galerie-form.scss",
             ".\/web\/app\/plugins\/wwp-gutenberg-utils\/\/admin\/scss\/_gutenberg-utils-admin.scss",
-            ".\/web\/app\/plugins\/wwp-jeux\/\/admin\/css\/_jeux.scss",
             ".\/web\/app\/plugins\/wwp-map\/\/admin\/scss\/mapEditor.scss",
             ".\/web\/app\/plugins\/wwp-newsletter\/admin\/scss\/_nlBo.scss",
             ".\/web\/app\/plugins\/wwp-rgpd\/\/admin\/scss\/rgpd_admin.scss",
@@ -75,7 +75,6 @@
             ".\/web\/app\/plugins\/wwp-emploi\/\/admin\/js\/emploi-form.js",
             ".\/web\/app\/plugins\/wwp-espace-restreint\/\/admin\/js\/roleEditor.js",
             ".\/web\/app\/plugins\/wwp-galerie\/\/admin\/js\/galerie-form.js",
-            ".\/web\/app\/plugins\/wwp-jeux\/\/admin\/js\/jeux.js",
             ".\/web\/app\/plugins\/wwp-map\/\/admin\/js\/RepeatableCollection.js",
             ".\/web\/app\/plugins\/wwp-map\/\/admin\/js\/PointForm.js",
             ".\/web\/app\/plugins\/wwp-map\/\/admin\/js\/CollectionForm.js",
@@ -101,7 +100,6 @@
             ".\/web\/app\/plugins\/wwp-event\/public\/js\/event.js",
             ".\/web\/app\/plugins\/wwp-faq\/\/public\/js\/faq.js",
             ".\/web\/app\/plugins\/wwp-galerie\/\/public\/js\/GalerieModalComponent.js",
-            ".\/web\/app\/plugins\/wwp-jeux\/\/public\/js\/jeux.js",
             ".\/web\/app\/plugins\/wwp-newsletter\/public\/js\/newsletter.js",
             ".\/web\/app\/plugins\/wwp-newsroom\/public\/js\/wwp-newsroom.js",
             ".\/web\/app\/plugins\/wwp-parcours\/\/public\/js\/ParcoursComponent.js",
