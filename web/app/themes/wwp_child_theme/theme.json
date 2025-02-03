@@ -652,13 +652,15 @@
         "h1": {
           "typography": {
             "fontSize": "var:preset|font-size|x-large",
-            "lineHeight": "1.1"
+            "lineHeight": "1.1",
+            "fontWeight": "700"
           }
         },
         "h2": {
           "typography": {
             "fontSize": "var:preset|font-size|x-large",
-            "lineHeight": "1.1"
+            "lineHeight": "1.1",
+            "fontWeight": "700"
           },
           "spacing": {
             "margin": {

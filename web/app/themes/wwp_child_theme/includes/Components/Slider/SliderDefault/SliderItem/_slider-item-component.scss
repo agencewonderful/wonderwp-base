@@ -12,6 +12,8 @@
   .slider-title {
     margin-top: 0;
     margin-bottom: 2rem;
+    font-size: var(--wp--preset--font-size--x-large);
+    font-weight: 700;
     color: white;
   }
 
@@ -20,7 +22,8 @@
     color: white;
   }
 
-  .btn {
+  .btn,
+  .wp-block-button__link {
     position: absolute;
     bottom: 7rem;
     left: 50%;
