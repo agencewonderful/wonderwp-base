@@ -4,4 +4,8 @@
  * Slug: wwp_child_theme/footer
  * Categories: footer
  */
-get_footer();
+if (isEditorContext()) {
+    echo 'Footer';
+} else {
+    get_footer();
+}

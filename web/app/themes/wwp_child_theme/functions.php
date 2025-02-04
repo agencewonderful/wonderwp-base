@@ -21,3 +21,8 @@ function getSvgIcon($iconName)
 {
     return \WonderWp\Theme\Child\Service\ChildThemeShortcodeService::getSvgIcon($iconName);
 }
+
+function isEditorContext()
+{
+    return !empty($_GET) && isset($_GET['context']) && $_GET['context'] === 'edit' && !empty($_GET['_locale']) && $_GET['_locale'] === 'user';
+}

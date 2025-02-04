@@ -4,5 +4,9 @@
  * Slug: wwp_child_theme/header
  * Categories: header
  */
-get_header();
+if(isEditorContext()){
+    echo 'Header';
+} else {
+    get_header();
+}
 
