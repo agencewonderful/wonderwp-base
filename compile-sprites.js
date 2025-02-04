@@ -26,9 +26,12 @@ var Spriter = require("svg-sprite"),
             mode: {
                 view: {			// Activate the «view» mode
                     bust: false,
+                    sprite: 'svg/sprite.view.svg',
                     prefix			: ".svg-%s",
                     render: {
-                        scss: true		// Activate Sass output (with default options)
+                      scss: {
+                        template: path.join(__dirname, 'config','webpack','sprite.template.scss')
+                      }
                     }
                 },
                 symbol: true

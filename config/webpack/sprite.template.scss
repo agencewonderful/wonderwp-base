@@ -1,0 +1,18 @@
+$sprite-path: "svg/sprite.view.svg" !default;
+
+%svg-common {
+    background: url("#{$sprite-path}") no-repeat;
+}
+
+{{#shapes}}
+.svg-{{name}} {
+    @extend %svg-common;
+    background-position: {{position.relative.x}}% {{position.relative.y}}%;
+}
+
+.svg-{{name}}-dims {
+    width: {{width.outer}}px;
+    height: {{height.outer}}px;
+}
+
+{{/shapes}} 
