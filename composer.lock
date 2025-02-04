@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "302e3feccefcb1fcd5f7831dfe15ac90",
+    "content-hash": "78987b67baddf55eb4f381959955386f",
     "packages": [
         {
             "name": "agencewonderful/wonderwp-plugin-core",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wonderwp-plugin.git",
-                "reference": "739d78566d75ca91c10f040ca2840a85f760a37f"
+                "reference": "4fbff1665540700193e2e5c3eab5d1a952bc704c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wonderwp-plugin/zipball/739d78566d75ca91c10f040ca2840a85f760a37f",
-                "reference": "739d78566d75ca91c10f040ca2840a85f760a37f",
+                "url": "https://api.github.com/repos/agencewonderful/wonderwp-plugin/zipball/4fbff1665540700193e2e5c3eab5d1a952bc704c",
+                "reference": "4fbff1665540700193e2e5c3eab5d1a952bc704c",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
                 "source": "https://github.com/agencewonderful/wonderwp-plugin/tree/develop",
                 "issues": "https://github.com/agencewonderful/wonderwp-plugin/issues"
             },
-            "time": "2025-01-28T16:48:07+00:00"
+            "time": "2025-01-31T16:11:13+00:00"
         },
         {
             "name": "agencewonderful/wonderwp-theme-core",
@@ -99,12 +99,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wwp-actu.git",
-                "reference": "c34f722d935ce0057a00988c204635cbd68f7f53"
+                "reference": "41de6db048e48a6342ba8701887cea4bf784ebbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-actu/zipball/c34f722d935ce0057a00988c204635cbd68f7f53",
-                "reference": "c34f722d935ce0057a00988c204635cbd68f7f53",
+                "url": "https://api.github.com/repos/agencewonderful/wwp-actu/zipball/41de6db048e48a6342ba8701887cea4bf784ebbe",
+                "reference": "41de6db048e48a6342ba8701887cea4bf784ebbe",
                 "shasum": ""
             },
             "require": {
@@ -124,10 +124,10 @@
             ],
             "description": "Plugin wwp-actu",
             "support": {
-                "source": "https://github.com/agencewonderful/wwp-actu/tree/develop",
+                "source": "https://github.com/agencewonderful/wwp-actu/tree/4.0.0",
                 "issues": "https://github.com/agencewonderful/wwp-actu/issues"
             },
-            "time": "2024-10-17T14:00:35+00:00"
+            "time": "2025-02-04T13:59:28+00:00"
         },
         {
             "name": "agencewonderful/wwp-alerte",
@@ -457,12 +457,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wwp-faq.git",
-                "reference": "54d9ba4d85737471943fa5c50c9a9a19680b639b"
+                "reference": "99483d63417cf0177f1a6781f977d258df4faae5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-faq/zipball/54d9ba4d85737471943fa5c50c9a9a19680b639b",
-                "reference": "54d9ba4d85737471943fa5c50c9a9a19680b639b",
+                "url": "https://api.github.com/repos/agencewonderful/wwp-faq/zipball/99483d63417cf0177f1a6781f977d258df4faae5",
+                "reference": "99483d63417cf0177f1a6781f977d258df4faae5",
                 "shasum": ""
             },
             "require": {
@@ -482,10 +482,10 @@
             ],
             "description": "Plugin wwp-faq",
             "support": {
-                "source": "https://github.com/agencewonderful/wwp-faq/tree/develop",
+                "source": "https://github.com/agencewonderful/wwp-faq/tree/4.0.0",
                 "issues": "https://github.com/agencewonderful/wwp-faq/issues"
             },
-            "time": "2024-10-17T14:03:16+00:00"
+            "time": "2025-02-04T14:01:28+00:00"
         },
         {
             "name": "agencewonderful/wwp-galerie",
@@ -790,12 +790,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wwp-parcours.git",
-                "reference": "d7397cd2df2449ff6df3225ba01fa2121ea82eb7"
+                "reference": "b0682acd348c6262d661451050d209dcfd6623ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-parcours/zipball/d7397cd2df2449ff6df3225ba01fa2121ea82eb7",
-                "reference": "d7397cd2df2449ff6df3225ba01fa2121ea82eb7",
+                "url": "https://api.github.com/repos/agencewonderful/wwp-parcours/zipball/b0682acd348c6262d661451050d209dcfd6623ae",
+                "reference": "b0682acd348c6262d661451050d209dcfd6623ae",
                 "shasum": ""
             },
             "require": {
@@ -818,7 +818,7 @@
                 "source": "https://github.com/agencewonderful/wwp-parcours/tree/develop",
                 "issues": "https://github.com/agencewonderful/wwp-parcours/issues"
             },
-            "time": "2024-10-09T08:22:14+00:00"
+            "time": "2025-02-04T16:21:43+00:00"
         },
         {
             "name": "agencewonderful/wwp-partenaires",
@@ -1002,43 +1002,6 @@
             "time": "2024-11-05T20:22:16+00:00"
         },
         {
-            "name": "agencewonderful/wwp-social",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:agencewonderful/wwp-social.git",
-                "reference": "aedd88bb6b081eede78447bf07a3b9d7e4ce8132"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-social/zipball/aedd88bb6b081eede78447bf07a3b9d7e4ce8132",
-                "reference": "aedd88bb6b081eede78447bf07a3b9d7e4ce8132",
-                "shasum": ""
-            },
-            "require": {
-                "agencewonderful/wonderwp-plugin-core": "dev-develop@dev",
-                "wp-cli/wp-cli": "^1.1|^2.4"
-            },
-            "type": "wordpress-plugin",
-            "autoload": {
-                "psr-4": {
-                    "WonderWp\\Plugin\\Social\\": "includes"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Jeremy Desvaux",
-                    "email": "jeremy.desvaux@wonderful.fr"
-                }
-            ],
-            "description": "Plugin wwp-social",
-            "support": {
-                "source": "https://github.com/agencewonderful/wwp-social/tree/develop",
-                "issues": "https://github.com/agencewonderful/wwp-social/issues"
-            },
-            "time": "2024-10-17T14:07:50+00:00"
-        },
-        {
             "name": "agencewonderful/wwp-stats",
             "version": "dev-develop",
             "source": {
@@ -1116,12 +1079,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wwp-translator.git",
-                "reference": "d9ae66683b471ceab3b77e996f7e96f5afedf3ec"
+                "reference": "eefb911e473ab016b707acf63eafc73fa1e806ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-translator/zipball/d9ae66683b471ceab3b77e996f7e96f5afedf3ec",
-                "reference": "d9ae66683b471ceab3b77e996f7e96f5afedf3ec",
+                "url": "https://api.github.com/repos/agencewonderful/wwp-translator/zipball/eefb911e473ab016b707acf63eafc73fa1e806ae",
+                "reference": "eefb911e473ab016b707acf63eafc73fa1e806ae",
                 "shasum": ""
             },
             "require": {
@@ -1144,7 +1107,7 @@
                 "source": "https://github.com/agencewonderful/wwp-translator/tree/develop",
                 "issues": "https://github.com/agencewonderful/wwp-translator/issues"
             },
-            "time": "2025-01-28T16:49:35+00:00"
+            "time": "2025-02-03T09:03:56+00:00"
         },
         {
             "name": "agencewonderful/wwp-trombinoscope",
@@ -3338,25 +3301,24 @@
         },
         {
             "name": "gedmo/doctrine-extensions",
-            "version": "v3.17.1",
+            "version": "v3.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine-extensions/DoctrineExtensions.git",
-                "reference": "eabb45018c5a4362b46c5beae3881261da89f900"
+                "reference": "964db6c4fb5b0fc8aa25cc31b17471b4963460c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine-extensions/DoctrineExtensions/zipball/eabb45018c5a4362b46c5beae3881261da89f900",
-                "reference": "eabb45018c5a4362b46c5beae3881261da89f900",
+                "url": "https://api.github.com/repos/doctrine-extensions/DoctrineExtensions/zipball/964db6c4fb5b0fc8aa25cc31b17471b4963460c6",
+                "reference": "964db6c4fb5b0fc8aa25cc31b17471b4963460c6",
                 "shasum": ""
             },
             "require": {
                 "behat/transliterator": "^1.2",
                 "doctrine/collections": "^1.2 || ^2.0",
-                "doctrine/common": "^2.13 || ^3.0",
                 "doctrine/deprecations": "^1.0",
                 "doctrine/event-manager": "^1.2 || ^2.0",
-                "doctrine/persistence": "^2.2 || ^3.0",
+                "doctrine/persistence": "^2.2 || ^3.0 || ^4.0",
                 "php": "^7.4 || ^8.0",
                 "psr/cache": "^1 || ^2 || ^3",
                 "psr/clock": "^1",
@@ -3364,6 +3326,7 @@
             },
             "conflict": {
                 "doctrine/annotations": "<1.13 || >=3.0",
+                "doctrine/common": "<2.13 || >=4.0",
                 "doctrine/dbal": "<3.7 || >=5.0",
                 "doctrine/mongodb-odm": "<2.3 || >=3.0",
                 "doctrine/orm": "<2.14.0 || 2.16.0 || 2.16.1 || >=4.0"
@@ -3371,17 +3334,18 @@
             "require-dev": {
                 "doctrine/annotations": "^1.13 || ^2.0",
                 "doctrine/cache": "^1.11 || ^2.0",
+                "doctrine/common": "^2.13 || ^3.0",
                 "doctrine/dbal": "^3.7 || ^4.0",
                 "doctrine/doctrine-bundle": "^2.3",
                 "doctrine/mongodb-odm": "^2.3",
                 "doctrine/orm": "^2.14.0 || ^3.0",
                 "friendsofphp/php-cs-fixer": "^3.14.0",
                 "nesbot/carbon": "^2.71 || ^3.0",
-                "phpstan/phpstan": "^1.11",
-                "phpstan/phpstan-doctrine": "^1.4",
-                "phpstan/phpstan-phpunit": "^1.4",
+                "phpstan/phpstan": "^2.1.1",
+                "phpstan/phpstan-doctrine": "^2.0.1",
+                "phpstan/phpstan-phpunit": "^2.0.3",
                 "phpunit/phpunit": "^9.6",
-                "rector/rector": "^1.1",
+                "rector/rector": "^2.0.6",
                 "symfony/console": "^5.4 || ^6.0 || ^7.0",
                 "symfony/doctrine-bridge": "^5.4 || ^6.0 || ^7.0",
                 "symfony/phpunit-bridge": "^6.0 || ^7.0",
@@ -3443,7 +3407,7 @@
             "support": {
                 "email": "gediminas.morkevicius@gmail.com",
                 "issues": "https://github.com/doctrine-extensions/DoctrineExtensions/issues",
-                "source": "https://github.com/doctrine-extensions/DoctrineExtensions/tree/v3.17.1",
+                "source": "https://github.com/doctrine-extensions/DoctrineExtensions/tree/v3.18.0",
                 "wiki": "https://github.com/Atlantic18/DoctrineExtensions/tree/main/doc"
             },
             "funding": [
@@ -3464,7 +3428,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-07T22:30:27+00:00"
+            "time": "2025-02-01T22:28:13+00:00"
         },
         {
             "name": "getbrevo/brevo-php",
@@ -5143,44 +5107,99 @@
             "time": "2024-05-24T10:39:05+00:00"
         },
         {
-            "name": "respect/validation",
-            "version": "1.1.31",
+            "name": "respect/stringifier",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Respect/Validation.git",
-                "reference": "45d109fc830644fecc1145200d6351ce4f2769d0"
+                "url": "https://github.com/Respect/Stringifier.git",
+                "reference": "e55af3c8aeaeaa2abb5fa47a58a8e9688cc23b59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Respect/Validation/zipball/45d109fc830644fecc1145200d6351ce4f2769d0",
-                "reference": "45d109fc830644fecc1145200d6351ce4f2769d0",
+                "url": "https://api.github.com/repos/Respect/Stringifier/zipball/e55af3c8aeaeaa2abb5fa47a58a8e9688cc23b59",
+                "reference": "e55af3c8aeaeaa2abb5fa47a58a8e9688cc23b59",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.8",
+                "malukenho/docheader": "^0.1.7",
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/stringify.php"
+                ],
+                "psr-4": {
+                    "Respect\\Stringifier\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Respect/Stringifier Contributors",
+                    "homepage": "https://github.com/Respect/Stringifier/graphs/contributors"
+                }
+            ],
+            "description": "Converts any value to a string",
+            "homepage": "http://respect.github.io/Stringifier/",
+            "keywords": [
+                "respect",
+                "stringifier",
+                "stringify"
+            ],
+            "support": {
+                "issues": "https://github.com/Respect/Stringifier/issues",
+                "source": "https://github.com/Respect/Stringifier/tree/0.2.0"
+            },
+            "time": "2017-12-29T19:39:25+00:00"
+        },
+        {
+            "name": "respect/validation",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Respect/Validation.git",
+                "reference": "48b38bd91e0badbc2c4381dce726b09fd68850d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Respect/Validation/zipball/48b38bd91e0badbc2c4381dce726b09fd68850d9",
+                "reference": "48b38bd91e0badbc2c4381dce726b09fd68850d9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "respect/stringifier": "^0.2.0",
                 "symfony/polyfill-mbstring": "^1.2"
             },
             "require-dev": {
-                "egulias/email-validator": "~1.2 || ~2.1",
-                "mikey179/vfsstream": "^1.5",
-                "phpunit/phpunit": "~4.0 || ~5.0",
-                "symfony/validator": "~2.6.9",
-                "zendframework/zend-validator": "~2.3"
+                "egulias/email-validator": "^3.0",
+                "giggsey/libphonenumber-for-php-lite": "^8.13",
+                "malukenho/docheader": "^1.0",
+                "mikey179/vfsstream": "^1.6",
+                "phpstan/phpstan": "^1.9",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "phpstan/phpstan-phpunit": "^1.3",
+                "phpunit/phpunit": "^9.6",
+                "psr/http-message": "^1.0",
+                "respect/coding-standard": "^4.0",
+                "squizlabs/php_codesniffer": "^3.7"
             },
             "suggest": {
-                "egulias/email-validator": "Strict (RFC compliant) email validation",
+                "egulias/email-validator": "Improves the Email rule if available",
                 "ext-bcmath": "Arbitrary Precision Mathematics",
+                "ext-fileinfo": "File Information",
                 "ext-mbstring": "Multibyte String Functions",
-                "friendsofphp/php-cs-fixer": "Fix PSR2 and other coding style issues",
-                "symfony/validator": "Use Symfony validator through Respect\\Validation",
-                "zendframework/zend-validator": "Use Zend Framework validator through Respect\\Validation"
+                "giggsey/libphonenumber-for-php-lite": "Enables the phone rule if available"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Respect\\Validation\\": "library/"
@@ -5188,7 +5207,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "authors": [
                 {
@@ -5205,9 +5224,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Respect/Validation/issues",
-                "source": "https://github.com/Respect/Validation/tree/1.1.31"
+                "source": "https://github.com/Respect/Validation/tree/2.4.0"
             },
-            "time": "2019-05-28T06:10:06+00:00"
+            "time": "2025-01-07T00:34:58+00:00"
         },
         {
             "name": "robrichards/wse-php",
@@ -6196,31 +6215,30 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v5.4.48",
+            "version": "v6.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "3f38b8af283b830e1363acd79e5bc3412d055341"
+                "reference": "bd1bcfb0eba14de22c4d086c5023e608f37366ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/3f38b8af283b830e1363acd79e5bc3412d055341",
-                "reference": "3f38b8af283b830e1363acd79e5bc3412d055341",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/bd1bcfb0eba14de22c4d086c5023e608f37366ed",
+                "reference": "bd1bcfb0eba14de22c4d086c5023e608f37366ed",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.5",
+                "php": ">=8.1",
                 "symfony/deprecation-contracts": "^2.1|^3",
-                "symfony/polyfill-mbstring": "~1.1",
-                "symfony/polyfill-php80": "^1.16"
+                "symfony/polyfill-mbstring": "~1.1"
             },
             "require-dev": {
-                "predis/predis": "^1.0|^2.0",
-                "symfony/cache": "^4.4|^5.0|^6.0",
+                "predis/predis": "~1.0",
+                "symfony/cache": "^5.4|^6.0",
                 "symfony/dependency-injection": "^5.4|^6.0",
-                "symfony/expression-language": "^4.4|^5.0|^6.0",
+                "symfony/expression-language": "^5.4|^6.0",
                 "symfony/http-kernel": "^5.4.12|^6.0.12|^6.1.4",
-                "symfony/mime": "^4.4|^5.0|^6.0",
+                "symfony/mime": "^5.4|^6.0",
                 "symfony/rate-limiter": "^5.2|^6.0"
             },
             "suggest": {
@@ -6252,7 +6270,7 @@
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-foundation/tree/v5.4.48"
+                "source": "https://github.com/symfony/http-foundation/tree/v6.1.12"
             },
             "funding": [
                 {
@@ -6268,7 +6286,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-13T18:58:02+00:00"
+            "time": "2023-01-30T15:43:30+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -7691,26 +7709,26 @@
         },
         {
             "name": "wonderwp/api",
-            "version": "1.2.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/API.git",
-                "reference": "7204cb02ce66eecd56fe3235234c2035e4a2b91b"
+                "reference": "7596227eb11b793e0be84e0c2f78e7a06fe99f2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/API/zipball/7204cb02ce66eecd56fe3235234c2035e4a2b91b",
-                "reference": "7204cb02ce66eecd56fe3235234c2035e4a2b91b",
+                "url": "https://api.github.com/repos/wonderwp/API/zipball/7596227eb11b793e0be84e0c2f78e7a06fe99f2e",
+                "reference": "7596227eb11b793e0be84e0c2f78e7a06fe99f2e",
                 "shasum": ""
             },
             "require": {
                 "doctrine/annotations": "^1.12",
-                "php": ">=7.1",
-                "wonderwp/http-foundation": "^1.0",
-                "wonderwp/service": "^1.0"
+                "php": ">=8.0",
+                "wonderwp/http-foundation": "dev-feature/increase_http_foundation_lib_version",
+                "wonderwp/service": "dev-feature/php_8"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^4.7"
+                "johnpbloch/wordpress": "^6.0"
             },
             "type": "library",
             "autoload": {
@@ -7744,34 +7762,34 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/API/issues",
-                "source": "https://github.com/wonderwp/API/tree/1.2.0"
+                "source": "https://github.com/wonderwp/API/tree/feature/php_8"
             },
-            "time": "2021-08-20T16:08:30+00:00"
+            "time": "2025-02-04T13:37:02+00:00"
         },
         {
             "name": "wonderwp/asset",
-            "version": "2.1.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Asset.git",
-                "reference": "e34880a0bbfa9ada6061234d8574fd1c299f5f59"
+                "reference": "567c58478a942f2e741cc9e49b96633660e95641"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Asset/zipball/e34880a0bbfa9ada6061234d8574fd1c299f5f59",
-                "reference": "e34880a0bbfa9ada6061234d8574fd1c299f5f59",
+                "url": "https://api.github.com/repos/wonderwp/Asset/zipball/567c58478a942f2e741cc9e49b96633660e95641",
+                "reference": "567c58478a942f2e741cc9e49b96633660e95641",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
+                "php": ">=8.0",
                 "symfony/asset": "5.3.4",
-                "wonderwp/logging": "^1.0",
-                "wonderwp/service": "^1.0"
+                "wonderwp/logging": "dev-feature/php_8",
+                "wonderwp/service": "dev-feature/php_8"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^5.8",
+                "johnpbloch/wordpress": "^6.0",
                 "phpunit/phpunit": "9.5.7",
-                "wonderwp/functions": "dev-develop"
+                "wonderwp/functions": "dev-dev-feature/php_8"
             },
             "type": "library",
             "autoload": {
@@ -7806,26 +7824,26 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Asset/issues",
-                "source": "https://github.com/wonderwp/Asset/tree/2.1.0"
+                "source": "https://github.com/wonderwp/Asset/tree/feature/php_8"
             },
-            "time": "2023-10-11T10:39:13+00:00"
+            "time": "2025-02-04T13:36:53+00:00"
         },
         {
             "name": "wonderwp/autoload-wwp",
-            "version": "1.3.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/AutoLoader.git",
-                "reference": "6081ca4a4dfc1c23b1b142c958e637d4f2d25375"
+                "reference": "162cb70d141ad9243f4d46f5fcc46cefa66cdedf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/AutoLoader/zipball/6081ca4a4dfc1c23b1b142c958e637d4f2d25375",
-                "reference": "6081ca4a4dfc1c23b1b142c958e637d4f2d25375",
+                "url": "https://api.github.com/repos/wonderwp/AutoLoader/zipball/162cb70d141ad9243f4d46f5fcc46cefa66cdedf",
+                "reference": "162cb70d141ad9243f4d46f5fcc46cefa66cdedf",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0"
             },
             "type": "wordpress-muplugin",
             "notification-url": "https://packagist.org/downloads/",
@@ -7852,29 +7870,70 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/AutoLoader/issues",
-                "source": "https://github.com/wonderwp/AutoLoader/tree/1.3.0"
+                "source": "https://github.com/wonderwp/AutoLoader/tree/feature/php_8"
             },
-            "time": "2021-08-23T10:00:18+00:00"
+            "time": "2025-02-04T11:29:53+00:00"
         },
         {
-            "name": "wonderwp/cache",
-            "version": "1.1.0",
+            "name": "wonderwp/block-type",
+            "version": "dev-feature/blocktype_definition",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wonderwp/Cache.git",
-                "reference": "1b015245474191c9dacef82456742b83efa4144c"
+                "url": "https://github.com/wonderwp/BlockType.git",
+                "reference": "977ef81bcc0169698cffcf380584fb8167f14380"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Cache/zipball/1b015245474191c9dacef82456742b83efa4144c",
-                "reference": "1b015245474191c9dacef82456742b83efa4144c",
+                "url": "https://api.github.com/repos/wonderwp/BlockType/zipball/977ef81bcc0169698cffcf380584fb8167f14380",
+                "reference": "977ef81bcc0169698cffcf380584fb8167f14380",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WonderWp\\Component\\BlockType\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Desvaux",
+                    "email": "jeremy.desvaux@wonderful.fr"
+                }
+            ],
+            "description": "WonderWp Block Type Component",
+            "support": {
+                "issues": "https://github.com/wonderwp/BlockType/issues",
+                "source": "https://github.com/wonderwp/BlockType/tree/feature/blocktype_definition"
+            },
+            "time": "2025-02-04T13:36:44+00:00"
+        },
+        {
+            "name": "wonderwp/cache",
+            "version": "dev-feature/php_8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wonderwp/Cache.git",
+                "reference": "e90b1e356f003da96c3c1d9c8b994f7f1b63574e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wonderwp/Cache/zipball/e90b1e356f003da96c3c1d9c8b994f7f1b63574e",
+                "reference": "e90b1e356f003da96c3c1d9c8b994f7f1b63574e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^4.7"
+                "johnpbloch/wordpress": "^6.0"
             },
             "type": "library",
             "autoload": {
@@ -7908,29 +7967,87 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Cache/issues",
-                "source": "https://github.com/wonderwp/Cache/tree/1.1.0"
+                "source": "https://github.com/wonderwp/Cache/tree/feature/php_8"
             },
-            "time": "2021-08-20T16:12:11+00:00"
+            "time": "2025-02-04T13:36:34+00:00"
         },
         {
-            "name": "wonderwp/customposttype",
-            "version": "1.5.0",
+            "name": "wonderwp/custom-fields",
+            "version": "dev-feature/php8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wonderwp/CPT.git",
-                "reference": "bccbd4cd49d3d2e96ff0f03cd8e17bae34c0e3d7"
+                "url": "https://github.com/wonderwp/CustomFields.git",
+                "reference": "155338a8b6157a8c6cad652f088ac9759c81b15b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/CPT/zipball/bccbd4cd49d3d2e96ff0f03cd8e17bae34c0e3d7",
-                "reference": "bccbd4cd49d3d2e96ff0f03cd8e17bae34c0e3d7",
+                "url": "https://api.github.com/repos/wonderwp/CustomFields/zipball/155338a8b6157a8c6cad652f088ac9759c81b15b",
+                "reference": "155338a8b6157a8c6cad652f088ac9759c81b15b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0",
+                "wonderwp/response": "dev-feature/php8"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^4.7"
+                "johnpbloch/wordpress": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WonderWp\\Component\\CustomFields\\": "src"
+                },
+                "exclude-from-classmap": [
+                    "/tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Desvaux",
+                    "homepage": "https://jdmweb.com"
+                },
+                {
+                    "name": "WonderWp Community",
+                    "homepage": "http://wonderwp.net/Contribution/Contributors.html"
+                }
+            ],
+            "description": "WonderWp Custom Fields Component",
+            "homepage": "https://github.com/wonderwp/CustomFields",
+            "keywords": [
+                "WonderWp",
+                "custom fields",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/wonderwp/CustomFields/issues",
+                "source": "https://github.com/wonderwp/CustomFields/tree/feature/php8"
+            },
+            "time": "2025-02-04T13:36:19+00:00"
+        },
+        {
+            "name": "wonderwp/customposttype",
+            "version": "dev-feature/php_8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wonderwp/CPT.git",
+                "reference": "4ee3ab26f83580430cf96138c1d0389a230aaa73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wonderwp/CPT/zipball/4ee3ab26f83580430cf96138c1d0389a230aaa73",
+                "reference": "4ee3ab26f83580430cf96138c1d0389a230aaa73",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0",
+                "wonderwp/response": "dev-feature/php8"
+            },
+            "require-dev": {
+                "johnpbloch/wordpress": "^6.0"
             },
             "type": "library",
             "autoload": {
@@ -7955,7 +8072,7 @@
                     "homepage": "http://wonderwp.net/Contribution/Contributors.html"
                 }
             ],
-            "description": "WonderWp CPT Component",
+            "description": "WonderWp Custom Post Types Component",
             "homepage": "https://github.com/wonderwp/CPT",
             "keywords": [
                 "WonderWp",
@@ -7965,26 +8082,26 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/CPT/issues",
-                "source": "https://github.com/wonderwp/CPT/tree/1.5.0"
+                "source": "https://github.com/wonderwp/CPT/tree/feature/php_8"
             },
-            "time": "2023-05-29T12:07:47+00:00"
+            "time": "2025-02-04T13:36:11+00:00"
         },
         {
             "name": "wonderwp/dependency-injection",
-            "version": "1.1.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/DependencyInjection.git",
-                "reference": "efa16d4aa8d3d32ade4177a94d67b93b2c6c5dbf"
+                "reference": "a78b83c811f62ca8d1c9c581d42e5f4f691cfd83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/DependencyInjection/zipball/efa16d4aa8d3d32ade4177a94d67b93b2c6c5dbf",
-                "reference": "efa16d4aa8d3d32ade4177a94d67b93b2c6c5dbf",
+                "url": "https://api.github.com/repos/wonderwp/DependencyInjection/zipball/a78b83c811f62ca8d1c9c581d42e5f4f691cfd83",
+                "reference": "a78b83c811f62ca8d1c9c581d42e5f4f691cfd83",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
+                "php": ">=8.0",
                 "pimple/pimple": "^3.0"
             },
             "type": "library",
@@ -8021,30 +8138,30 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/DependencyInjection/issues",
-                "source": "https://github.com/wonderwp/DependencyInjection/tree/1.1.0"
+                "source": "https://github.com/wonderwp/DependencyInjection/tree/feature/php_8"
             },
-            "time": "2021-08-20T16:16:29+00:00"
+            "time": "2024-10-03T13:09:58+00:00"
         },
         {
             "name": "wonderwp/filter",
-            "version": "1.1.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Filter.git",
-                "reference": "319c861a7efcb721049ffa57bc5aa0def2bb19fb"
+                "reference": "ff9cdf73cdabf8d03e6f5eaa9874f65017041a0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Filter/zipball/319c861a7efcb721049ffa57bc5aa0def2bb19fb",
-                "reference": "319c861a7efcb721049ffa57bc5aa0def2bb19fb",
+                "url": "https://api.github.com/repos/wonderwp/Filter/zipball/ff9cdf73cdabf8d03e6f5eaa9874f65017041a0b",
+                "reference": "ff9cdf73cdabf8d03e6f5eaa9874f65017041a0b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0"
             },
             "require-dev": {
-                "wonderwp/dependency-injection": "^1.0",
-                "wonderwp/http-foundation": "^1.0"
+                "wonderwp/dependency-injection": "dev-feature/php_8",
+                "wonderwp/http-foundation": "dev-feature/increase_http_foundation_lib_version"
             },
             "type": "library",
             "autoload": {
@@ -8078,31 +8195,31 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Filter/issues",
-                "source": "https://github.com/wonderwp/Filter/tree/1.1.0"
+                "source": "https://github.com/wonderwp/Filter/tree/feature/php_8"
             },
-            "time": "2021-08-20T16:19:51+00:00"
+            "time": "2024-10-03T13:29:24+00:00"
         },
         {
             "name": "wonderwp/form",
-            "version": "1.6.0",
+            "version": "dev-feature/increase_validation_lib_version",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Form.git",
-                "reference": "f63977fddeb17476d7e24b6a2eb2f4471e58657b"
+                "reference": "11437aa0cfc3f170b1de9ae8e15d1bc6a92ebfc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Form/zipball/f63977fddeb17476d7e24b6a2eb2f4471e58657b",
-                "reference": "f63977fddeb17476d7e24b6a2eb2f4471e58657b",
+                "url": "https://api.github.com/repos/wonderwp/Form/zipball/11437aa0cfc3f170b1de9ae8e15d1bc6a92ebfc2",
+                "reference": "11437aa0cfc3f170b1de9ae8e15d1bc6a92ebfc2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "respect/validation": "^1.1",
-                "wonderwp/dependency-injection": "^1.0"
+                "php": ">=8.0",
+                "respect/validation": "^2.2",
+                "wonderwp/dependency-injection": "dev-feature/php_8"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^4.7"
+                "johnpbloch/wordpress": "^6.0"
             },
             "type": "library",
             "autoload": {
@@ -8138,26 +8255,26 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Form/issues",
-                "source": "https://github.com/wonderwp/Form/tree/1.6.0"
+                "source": "https://github.com/wonderwp/Form/tree/feature/increase_validation_lib_version"
             },
-            "time": "2024-02-21T17:21:45+00:00"
+            "time": "2025-02-04T13:35:59+00:00"
         },
         {
             "name": "wonderwp/functions",
-            "version": "1.1.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Functions.git",
-                "reference": "1357376ec34d1c510484a19c1c1c9f0359ee1043"
+                "reference": "996e9cdcdbb3156bb787507024f9932f4785aa3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Functions/zipball/1357376ec34d1c510484a19c1c1c9f0359ee1043",
-                "reference": "1357376ec34d1c510484a19c1c1c9f0359ee1043",
+                "url": "https://api.github.com/repos/wonderwp/Functions/zipball/996e9cdcdbb3156bb787507024f9932f4785aa3d",
+                "reference": "996e9cdcdbb3156bb787507024f9932f4785aa3d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0"
             },
             "type": "library",
             "autoload": {
@@ -8194,29 +8311,29 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Functions/issues",
-                "source": "https://github.com/wonderwp/Functions/tree/1.1.0"
+                "source": "https://github.com/wonderwp/Functions/tree/feature/php_8"
             },
-            "time": "2021-08-20T16:23:17+00:00"
+            "time": "2024-10-03T13:11:31+00:00"
         },
         {
             "name": "wonderwp/generator-wwp",
-            "version": "2.3.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Generator.git",
-                "reference": "17f87b54f5bc09e639978c071b0b4c5e316df7f1"
+                "reference": "e8ea2153b8e5918b2c197646c65e85c9ac7b33bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Generator/zipball/17f87b54f5bc09e639978c071b0b4c5e316df7f1",
-                "reference": "17f87b54f5bc09e639978c071b0b4c5e316df7f1",
+                "url": "https://api.github.com/repos/wonderwp/Generator/zipball/e8ea2153b8e5918b2c197646c65e85c9ac7b33bc",
+                "reference": "e8ea2153b8e5918b2c197646c65e85c9ac7b33bc",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "wonderwp/dependency-injection": "^1.0",
-                "wonderwp/http-foundation": "^1.0",
-                "wonderwp/task": "^1.0",
+                "php": ">=8.0",
+                "wonderwp/dependency-injection": "dev-feature/php_8",
+                "wonderwp/http-foundation": "dev-feature/increase_http_foundation_lib_version",
+                "wonderwp/task": "dev-feature/php_8",
                 "wp-cli/wp-cli": "^2.5"
             },
             "type": "wordpress-muplugin",
@@ -8249,31 +8366,31 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Generator/issues",
-                "source": "https://github.com/wonderwp/Generator/tree/2.3.0"
+                "source": "https://github.com/wonderwp/Generator/tree/feature/php_8"
             },
-            "time": "2022-03-29T14:10:42+00:00"
+            "time": "2024-10-03T13:33:48+00:00"
         },
         {
             "name": "wonderwp/hook",
-            "version": "1.1.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Hook.git",
-                "reference": "bceda6eecfefa761c0e5314c203b7d1a7d043218"
+                "reference": "139b922911e8555fb60ddd8d6d26bb056f3036fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Hook/zipball/bceda6eecfefa761c0e5314c203b7d1a7d043218",
-                "reference": "bceda6eecfefa761c0e5314c203b7d1a7d043218",
+                "url": "https://api.github.com/repos/wonderwp/Hook/zipball/139b922911e8555fb60ddd8d6d26bb056f3036fb",
+                "reference": "139b922911e8555fb60ddd8d6d26bb056f3036fb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "wonderwp/dependency-injection": "^1.0",
-                "wonderwp/service": "^1.0"
+                "php": ">=8.0",
+                "wonderwp/dependency-injection": "dev-feature/php_8",
+                "wonderwp/service": "dev-feature/php_8"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^4.7"
+                "johnpbloch/wordpress": "^6.0"
             },
             "type": "library",
             "autoload": {
@@ -8307,29 +8424,29 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Hook/issues",
-                "source": "https://github.com/wonderwp/Hook/tree/1.1.0"
+                "source": "https://github.com/wonderwp/Hook/tree/feature/php_8"
             },
-            "time": "2021-08-20T16:24:55+00:00"
+            "time": "2025-02-04T13:35:51+00:00"
         },
         {
             "name": "wonderwp/http",
-            "version": "1.1.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Http.git",
-                "reference": "e5e411ebdca6c6f876d8ac4fe88ee94eddd12cea"
+                "reference": "5e0401d05d52c1356ec2dfe9b69546d6326bffa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Http/zipball/e5e411ebdca6c6f876d8ac4fe88ee94eddd12cea",
-                "reference": "e5e411ebdca6c6f876d8ac4fe88ee94eddd12cea",
+                "url": "https://api.github.com/repos/wonderwp/Http/zipball/5e0401d05d52c1356ec2dfe9b69546d6326bffa4",
+                "reference": "5e0401d05d52c1356ec2dfe9b69546d6326bffa4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^4.7"
+                "johnpbloch/wordpress": "^6.0"
             },
             "type": "library",
             "autoload": {
@@ -8363,28 +8480,28 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Http/issues",
-                "source": "https://github.com/wonderwp/Http/tree/1.1.0"
+                "source": "https://github.com/wonderwp/Http/tree/feature/php_8"
             },
-            "time": "2021-08-20T16:28:45+00:00"
+            "time": "2025-02-04T13:35:15+00:00"
         },
         {
             "name": "wonderwp/http-foundation",
-            "version": "1.1.1",
+            "version": "dev-feature/increase_http_foundation_lib_version",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/HttpFoundation.git",
-                "reference": "026bea8594c11eb1eff0c8dc5e88adad09aa80ed"
+                "reference": "b5346b6e63fab09219f00014e64f7cff06f4f18d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/HttpFoundation/zipball/026bea8594c11eb1eff0c8dc5e88adad09aa80ed",
-                "reference": "026bea8594c11eb1eff0c8dc5e88adad09aa80ed",
+                "url": "https://api.github.com/repos/wonderwp/HttpFoundation/zipball/b5346b6e63fab09219f00014e64f7cff06f4f18d",
+                "reference": "b5346b6e63fab09219f00014e64f7cff06f4f18d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "symfony/http-foundation": "^5.3",
-                "wonderwp/dependency-injection": "^1.0"
+                "php": ">=8.0",
+                "symfony/http-foundation": "^5.3|^6.0",
+                "wonderwp/dependency-injection": "dev-feature/php_8"
             },
             "type": "library",
             "autoload": {
@@ -8420,26 +8537,26 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/HttpFoundation/issues",
-                "source": "https://github.com/wonderwp/HttpFoundation/tree/1.1.1"
+                "source": "https://github.com/wonderwp/HttpFoundation/tree/feature/increase_http_foundation_lib_version"
             },
-            "time": "2023-05-09T16:34:45+00:00"
+            "time": "2024-10-03T13:30:01+00:00"
         },
         {
             "name": "wonderwp/logging",
-            "version": "1.2.1",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Logging.git",
-                "reference": "098b237c6f96baee9873e5e508336855bb80f51a"
+                "reference": "793871cb010152c098ed09dcf2213b69a20c352b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Logging/zipball/098b237c6f96baee9873e5e508336855bb80f51a",
-                "reference": "098b237c6f96baee9873e5e508336855bb80f51a",
+                "url": "https://api.github.com/repos/wonderwp/Logging/zipball/793871cb010152c098ed09dcf2213b69a20c352b",
+                "reference": "793871cb010152c098ed09dcf2213b69a20c352b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0"
             },
             "type": "library",
             "autoload": {
@@ -8474,30 +8591,30 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Logging/issues",
-                "source": "https://github.com/wonderwp/Logging/tree/1.2.1"
+                "source": "https://github.com/wonderwp/Logging/tree/feature/php_8"
             },
-            "time": "2022-03-29T14:05:03+00:00"
+            "time": "2025-02-04T13:35:41+00:00"
         },
         {
             "name": "wonderwp/mailing",
-            "version": "1.3.2",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Mailing.git",
-                "reference": "453b157bc27f137a7e83e768cbfaf750a424e80b"
+                "reference": "ab5ca5eeb00c24f57cd885c8993ee0ace201a12e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Mailing/zipball/453b157bc27f137a7e83e768cbfaf750a424e80b",
-                "reference": "453b157bc27f137a7e83e768cbfaf750a424e80b",
+                "url": "https://api.github.com/repos/wonderwp/Mailing/zipball/ab5ca5eeb00c24f57cd885c8993ee0ace201a12e",
+                "reference": "ab5ca5eeb00c24f57cd885c8993ee0ace201a12e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0"
             },
             "require-dev": {
-                "wonderwp/dependency-injection": "^1.0",
-                "wonderwp/http-foundation": "^1.0"
+                "wonderwp/dependency-injection": "dev-feature/php_8",
+                "wonderwp/http-foundation": "dev-feature/increase_http_foundation_lib_version"
             },
             "type": "library",
             "autoload": {
@@ -8533,31 +8650,31 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Mailing/issues",
-                "source": "https://github.com/wonderwp/Mailing/tree/1.3.2"
+                "source": "https://github.com/wonderwp/Mailing/tree/feature/php_8"
             },
-            "time": "2024-09-23T15:24:03+00:00"
+            "time": "2025-02-04T13:35:33+00:00"
         },
         {
             "name": "wonderwp/media",
-            "version": "1.3.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Media.git",
-                "reference": "017ef6a370bb87b720093f153a37c26cf794e93b"
+                "reference": "8eb4b50840db698831885cdcfd4eebc621ed86ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Media/zipball/017ef6a370bb87b720093f153a37c26cf794e93b",
-                "reference": "017ef6a370bb87b720093f153a37c26cf794e93b",
+                "url": "https://api.github.com/repos/wonderwp/Media/zipball/8eb4b50840db698831885cdcfd4eebc621ed86ba",
+                "reference": "8eb4b50840db698831885cdcfd4eebc621ed86ba",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "wonderwp/dependency-injection": "^1.0",
-                "wonderwp/http-foundation": "^1.0"
+                "php": ">=8.0",
+                "wonderwp/dependency-injection": "dev-feature/php_8",
+                "wonderwp/http-foundation": "dev-feature/increase_http_foundation_lib_version"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^4.7"
+                "johnpbloch/wordpress": "^6.0"
             },
             "type": "library",
             "autoload": {
@@ -8592,26 +8709,26 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Media/issues",
-                "source": "https://github.com/wonderwp/Media/tree/1.3.0"
+                "source": "https://github.com/wonderwp/Media/tree/feature/php_8"
             },
-            "time": "2022-07-28T10:22:18+00:00"
+            "time": "2024-10-03T13:30:19+00:00"
         },
         {
             "name": "wonderwp/notification",
-            "version": "1.1.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Notification.git",
-                "reference": "6cac19b4459ddb0bc34fc78a9c397b59347e0403"
+                "reference": "844e4764fc377b3d7896a01e9c4906cad4b04d5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Notification/zipball/6cac19b4459ddb0bc34fc78a9c397b59347e0403",
-                "reference": "6cac19b4459ddb0bc34fc78a9c397b59347e0403",
+                "url": "https://api.github.com/repos/wonderwp/Notification/zipball/844e4764fc377b3d7896a01e9c4906cad4b04d5b",
+                "reference": "844e4764fc377b3d7896a01e9c4906cad4b04d5b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0"
             },
             "type": "library",
             "autoload": {
@@ -8645,31 +8762,31 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Notification/issues",
-                "source": "https://github.com/wonderwp/Notification/tree/1.1.0"
+                "source": "https://github.com/wonderwp/Notification/tree/feature/php_8"
             },
-            "time": "2021-08-20T16:39:07+00:00"
+            "time": "2024-10-03T13:12:30+00:00"
         },
         {
             "name": "wonderwp/panel",
-            "version": "1.2.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Panel.git",
-                "reference": "1b7256365fd73191c78354f38e105963df8101eb"
+                "reference": "68ffcc7280ecffc027cecae251df6bda06f770e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Panel/zipball/1b7256365fd73191c78354f38e105963df8101eb",
-                "reference": "1b7256365fd73191c78354f38e105963df8101eb",
+                "url": "https://api.github.com/repos/wonderwp/Panel/zipball/68ffcc7280ecffc027cecae251df6bda06f770e2",
+                "reference": "68ffcc7280ecffc027cecae251df6bda06f770e2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^4.7",
-                "wonderwp/dependency-injection": "^1.0",
-                "wonderwp/http-foundation": "^1.0"
+                "johnpbloch/wordpress": "^6.0",
+                "wonderwp/dependency-injection": "dev-feature/php_8",
+                "wonderwp/http-foundation": "dev-feature/increase_http_foundation_lib_version"
             },
             "type": "library",
             "autoload": {
@@ -8703,43 +8820,43 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Panel/issues",
-                "source": "https://github.com/wonderwp/Panel/tree/1.2.0"
+                "source": "https://github.com/wonderwp/Panel/tree/feature/php_8"
             },
-            "time": "2021-08-20T16:40:51+00:00"
+            "time": "2025-02-04T13:35:05+00:00"
         },
         {
             "name": "wonderwp/plugin-skeleton",
-            "version": "1.5.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/PluginSkeleton.git",
-                "reference": "48111d0f94d5091689cda75e1cb0af5687e8d3cc"
+                "reference": "f81684cd38193792dfdb3176856fa9ec2d2176e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/PluginSkeleton/zipball/48111d0f94d5091689cda75e1cb0af5687e8d3cc",
-                "reference": "48111d0f94d5091689cda75e1cb0af5687e8d3cc",
+                "url": "https://api.github.com/repos/wonderwp/PluginSkeleton/zipball/f81684cd38193792dfdb3176856fa9ec2d2176e6",
+                "reference": "f81684cd38193792dfdb3176856fa9ec2d2176e6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "wonderwp/api": "^1.1",
-                "wonderwp/asset": "^2.0",
-                "wonderwp/cache": "^1.0",
-                "wonderwp/dependency-injection": "^1.0",
-                "wonderwp/generator-wwp": "^2.0",
-                "wonderwp/hook": "^1.0",
-                "wonderwp/http-foundation": "^1.0",
-                "wonderwp/mailing": "^1.1",
-                "wonderwp/notification": "^1.0",
-                "wonderwp/routing": "^1.0",
-                "wonderwp/search": "^1.1",
-                "wonderwp/service": "^1.0",
-                "wonderwp/shortcode": "^1.0",
-                "wonderwp/task": "^1.0"
+                "php": ">=8.0",
+                "wonderwp/api": "dev-feature/php_8",
+                "wonderwp/asset": "dev-feature/php_8",
+                "wonderwp/cache": "dev-feature/php_8",
+                "wonderwp/dependency-injection": "dev-feature/php_8",
+                "wonderwp/generator-wwp": "dev-feature/php_8",
+                "wonderwp/hook": "dev-feature/php_8",
+                "wonderwp/http-foundation": "dev-feature/increase_http_foundation_lib_version",
+                "wonderwp/mailing": "dev-feature/php_8",
+                "wonderwp/notification": "dev-feature/php_8",
+                "wonderwp/routing": "dev-feature/php_8",
+                "wonderwp/search": "dev-feature/php_8",
+                "wonderwp/service": "dev-feature/php_8",
+                "wonderwp/shortcode": "dev-feature/php_8",
+                "wonderwp/task": "dev-feature/php_8"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^4.7"
+                "johnpbloch/wordpress": "^6.0"
             },
             "type": "library",
             "autoload": {
@@ -8774,29 +8891,29 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/PluginSkeleton/issues",
-                "source": "https://github.com/wonderwp/PluginSkeleton/tree/1.5.0"
+                "source": "https://github.com/wonderwp/PluginSkeleton/tree/feature/php_8"
             },
-            "time": "2023-10-11T10:44:28+00:00"
+            "time": "2025-02-04T13:35:25+00:00"
         },
         {
             "name": "wonderwp/repository",
-            "version": "1.3.1",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Repository.git",
-                "reference": "090426277def724e91bf2df005bf369d4597d2be"
+                "reference": "bdccb42ecac248853121541269aba302d139b1d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Repository/zipball/090426277def724e91bf2df005bf369d4597d2be",
-                "reference": "090426277def724e91bf2df005bf369d4597d2be",
+                "url": "https://api.github.com/repos/wonderwp/Repository/zipball/bdccb42ecac248853121541269aba302d139b1d4",
+                "reference": "bdccb42ecac248853121541269aba302d139b1d4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^4.7"
+                "johnpbloch/wordpress": "^6.0"
             },
             "type": "library",
             "autoload": {
@@ -8830,31 +8947,87 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Repository/issues",
-                "source": "https://github.com/wonderwp/Repository/tree/1.3.1"
+                "source": "https://github.com/wonderwp/Repository/tree/feature/php_8"
             },
-            "time": "2023-07-10T16:06:52+00:00"
+            "time": "2024-10-03T13:30:50+00:00"
         },
         {
-            "name": "wonderwp/routing",
-            "version": "1.1.1",
+            "name": "wonderwp/response",
+            "version": "dev-feature/php8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wonderwp/Routing.git",
-                "reference": "82b75c41e2463054027beca903bd5c87a80d1811"
+                "url": "https://github.com/wonderwp/Response.git",
+                "reference": "0b6c3e36f5a7153628200ebd6d98ed85c22389d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Routing/zipball/82b75c41e2463054027beca903bd5c87a80d1811",
-                "reference": "82b75c41e2463054027beca903bd5c87a80d1811",
+                "url": "https://api.github.com/repos/wonderwp/Response/zipball/0b6c3e36f5a7153628200ebd6d98ed85c22389d4",
+                "reference": "0b6c3e36f5a7153628200ebd6d98ed85c22389d4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "wonderwp/http-foundation": "^1.0",
-                "wonderwp/service": "^1.0"
+                "php": ">=8.0"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^4.7"
+                "johnpbloch/wordpress": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WonderWp\\Component\\Response\\": "src"
+                },
+                "exclude-from-classmap": [
+                    "/tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Desvaux",
+                    "homepage": "https://jdmweb.com"
+                },
+                {
+                    "name": "WonderWp Community",
+                    "homepage": "http://wonderwp.net/Contribution/Contributors.html"
+                }
+            ],
+            "description": "WonderWp Response Component",
+            "homepage": "https://github.com/wonderwp/response",
+            "keywords": [
+                "WonderWp",
+                "response",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/wonderwp/Response/issues",
+                "source": "https://github.com/wonderwp/Response/tree/0.1.0"
+            },
+            "time": "2024-11-26T09:29:54+00:00"
+        },
+        {
+            "name": "wonderwp/routing",
+            "version": "dev-feature/php_8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wonderwp/Routing.git",
+                "reference": "d50dc6a7facdeaf9e08a80888a2ee223b0840516"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wonderwp/Routing/zipball/d50dc6a7facdeaf9e08a80888a2ee223b0840516",
+                "reference": "d50dc6a7facdeaf9e08a80888a2ee223b0840516",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0",
+                "wonderwp/http-foundation": "dev-feature/increase_http_foundation_lib_version",
+                "wonderwp/service": "dev-feature/php_8"
+            },
+            "require-dev": {
+                "johnpbloch/wordpress": "^6.0"
             },
             "type": "library",
             "autoload": {
@@ -8891,27 +9064,27 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Routing/issues",
-                "source": "https://github.com/wonderwp/Routing/tree/1.1.1"
+                "source": "https://github.com/wonderwp/Routing/tree/feature/php_8"
             },
-            "time": "2023-11-13T15:20:28+00:00"
+            "time": "2025-02-04T13:34:21+00:00"
         },
         {
             "name": "wonderwp/sanitizer",
-            "version": "1.0.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Sanitizer.git",
-                "reference": "21be027a4887c3fbd016434c81c058e5722c7cb1"
+                "reference": "59141bfb15200c57e94e2c2bd7c86bb0155df366"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Sanitizer/zipball/21be027a4887c3fbd016434c81c058e5722c7cb1",
-                "reference": "21be027a4887c3fbd016434c81c058e5722c7cb1",
+                "url": "https://api.github.com/repos/wonderwp/Sanitizer/zipball/59141bfb15200c57e94e2c2bd7c86bb0155df366",
+                "reference": "59141bfb15200c57e94e2c2bd7c86bb0155df366",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "wonderwp/dependency-injection": "^1.0"
+                "php": ">=8.0",
+                "wonderwp/dependency-injection": "dev-feature/php_8"
             },
             "require-dev": {
                 "johnpbloch/wordpress": "^6.0",
@@ -8950,31 +9123,31 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Sanitizer/issues",
-                "source": "https://github.com/wonderwp/Sanitizer/tree/1.0.0"
+                "source": "https://github.com/wonderwp/Sanitizer/tree/feature/php_8"
             },
-            "time": "2023-03-29T21:18:06+00:00"
+            "time": "2025-02-04T13:34:11+00:00"
         },
         {
             "name": "wonderwp/search",
-            "version": "1.3.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Search.git",
-                "reference": "2044d446bf026266b8fe5f49a010744090fbb8c0"
+                "reference": "9d6ffa4f6c5394d03dd0bd56bd1835c8e68c839a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Search/zipball/2044d446bf026266b8fe5f49a010744090fbb8c0",
-                "reference": "2044d446bf026266b8fe5f49a010744090fbb8c0",
+                "url": "https://api.github.com/repos/wonderwp/Search/zipball/9d6ffa4f6c5394d03dd0bd56bd1835c8e68c839a",
+                "reference": "9d6ffa4f6c5394d03dd0bd56bd1835c8e68c839a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "wonderwp/dependency-injection": "^1.0",
-                "wonderwp/media": "^1.0"
+                "php": ">=8.0",
+                "wonderwp/dependency-injection": "dev-feature/php_8",
+                "wonderwp/media": "dev-feature/php_8"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^4.7"
+                "johnpbloch/wordpress": "^6.0"
             },
             "type": "library",
             "autoload": {
@@ -9008,27 +9181,27 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Search/issues",
-                "source": "https://github.com/wonderwp/Search/tree/1.3.0"
+                "source": "https://github.com/wonderwp/Search/tree/feature/php_8"
             },
-            "time": "2022-07-04T09:31:51+00:00"
+            "time": "2025-02-04T13:34:03+00:00"
         },
         {
             "name": "wonderwp/service",
-            "version": "1.1.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Service.git",
-                "reference": "2ea3b3c5772d5ae2a3eac9b7f8b7612419ba7f6c"
+                "reference": "902dab3353ad720d60acf0e850df134956e200e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Service/zipball/2ea3b3c5772d5ae2a3eac9b7f8b7612419ba7f6c",
-                "reference": "2ea3b3c5772d5ae2a3eac9b7f8b7612419ba7f6c",
+                "url": "https://api.github.com/repos/wonderwp/Service/zipball/902dab3353ad720d60acf0e850df134956e200e4",
+                "reference": "902dab3353ad720d60acf0e850df134956e200e4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "wonderwp/dependency-injection": "^1.0"
+                "php": ">=8.0",
+                "wonderwp/dependency-injection": "dev-feature/php_8"
             },
             "type": "library",
             "autoload": {
@@ -9062,26 +9235,26 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Service/issues",
-                "source": "https://github.com/wonderwp/Service/tree/1.1.0"
+                "source": "https://github.com/wonderwp/Service/tree/feature/php_8"
             },
-            "time": "2021-08-20T16:48:12+00:00"
+            "time": "2024-12-12T09:21:19+00:00"
         },
         {
             "name": "wonderwp/shortcode",
-            "version": "1.1.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/ShortCode.git",
-                "reference": "4d5b9a1c7f60baca52661dea6eadd6e8b0cb8342"
+                "reference": "e9df5796b4bc7694a71577e4adfdab07f45e618b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/ShortCode/zipball/4d5b9a1c7f60baca52661dea6eadd6e8b0cb8342",
-                "reference": "4d5b9a1c7f60baca52661dea6eadd6e8b0cb8342",
+                "url": "https://api.github.com/repos/wonderwp/ShortCode/zipball/e9df5796b4bc7694a71577e4adfdab07f45e618b",
+                "reference": "e9df5796b4bc7694a71577e4adfdab07f45e618b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0"
             },
             "type": "library",
             "autoload": {
@@ -9116,26 +9289,26 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/ShortCode/issues",
-                "source": "https://github.com/wonderwp/ShortCode/tree/1.1.0"
+                "source": "https://github.com/wonderwp/ShortCode/tree/feature/php_8"
             },
-            "time": "2021-08-20T16:49:32+00:00"
+            "time": "2025-02-04T13:33:54+00:00"
         },
         {
             "name": "wonderwp/task",
-            "version": "1.1.0",
+            "version": "dev-feature/php_8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/Task.git",
-                "reference": "aabf4c3e7ca2ba1d4c6448ddc966694683d4896b"
+                "reference": "9b7eea86df01983e5f6e6f126ddf763a9667ab68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Task/zipball/aabf4c3e7ca2ba1d4c6448ddc966694683d4896b",
-                "reference": "aabf4c3e7ca2ba1d4c6448ddc966694683d4896b",
+                "url": "https://api.github.com/repos/wonderwp/Task/zipball/9b7eea86df01983e5f6e6f126ddf763a9667ab68",
+                "reference": "9b7eea86df01983e5f6e6f126ddf763a9667ab68",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0"
             },
             "type": "library",
             "autoload": {
@@ -9171,32 +9344,89 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Task/issues",
-                "source": "https://github.com/wonderwp/Task/tree/1.1.0"
+                "source": "https://github.com/wonderwp/Task/tree/feature/php_8"
             },
-            "time": "2021-08-20T16:51:02+00:00"
+            "time": "2025-02-04T13:33:46+00:00"
         },
         {
-            "name": "wonderwp/template",
-            "version": "1.2.0",
+            "name": "wonderwp/taxonomy",
+            "version": "dev-feature/php8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wonderwp/Template.git",
-                "reference": "f1cefd9d4d854d8e0b17036a4c9815fe5afe38d0"
+                "url": "https://github.com/wonderwp/Taxonomy.git",
+                "reference": "8da3bf85aaa2008defe695dca803d735bbbad0e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/Template/zipball/f1cefd9d4d854d8e0b17036a4c9815fe5afe38d0",
-                "reference": "f1cefd9d4d854d8e0b17036a4c9815fe5afe38d0",
+                "url": "https://api.github.com/repos/wonderwp/Taxonomy/zipball/8da3bf85aaa2008defe695dca803d735bbbad0e3",
+                "reference": "8da3bf85aaa2008defe695dca803d735bbbad0e3",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=8.0",
+                "wonderwp/response": "dev-feature/php8"
             },
             "require-dev": {
-                "wonderwp/dependency-injection": "^1.0",
-                "wonderwp/form": "^1.0",
-                "wonderwp/http-foundation": "^1.0",
-                "wonderwp/notification": "^1.0"
+                "johnpbloch/wordpress": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WonderWp\\Component\\Taxonomy\\": "src"
+                },
+                "exclude-from-classmap": [
+                    "/tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Desvaux",
+                    "homepage": "https://jdmweb.com"
+                },
+                {
+                    "name": "WonderWp Community",
+                    "homepage": "http://wonderwp.net/Contribution/Contributors.html"
+                }
+            ],
+            "description": "WonderWp Taxonomy Component",
+            "homepage": "https://github.com/wonderwp/Taxonomy",
+            "keywords": [
+                "WonderWp",
+                "taxonomy",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/wonderwp/Taxonomy/issues",
+                "source": "https://github.com/wonderwp/Taxonomy/tree/feature/php8"
+            },
+            "time": "2025-02-04T13:33:38+00:00"
+        },
+        {
+            "name": "wonderwp/template",
+            "version": "dev-feature/php_8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wonderwp/Template.git",
+                "reference": "5dbab833fa4aa4b77d5bb52f65336f38484032fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wonderwp/Template/zipball/5dbab833fa4aa4b77d5bb52f65336f38484032fb",
+                "reference": "5dbab833fa4aa4b77d5bb52f65336f38484032fb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "wonderwp/dependency-injection": "dev-feature/php_8",
+                "wonderwp/form": "dev-feature/increase_validation_lib_version",
+                "wonderwp/http-foundation": "dev-feature/increase_http_foundation_lib_version",
+                "wonderwp/notification": "dev-feature/php_8"
             },
             "type": "library",
             "autoload": {
@@ -9230,59 +9460,62 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/Template/issues",
-                "source": "https://github.com/wonderwp/Template/tree/1.2.0"
+                "source": "https://github.com/wonderwp/Template/tree/feature/php_8"
             },
-            "time": "2021-08-20T16:52:08+00:00"
+            "time": "2025-02-04T13:33:25+00:00"
         },
         {
             "name": "wonderwp/wonderwp",
-            "version": "dev-develop",
+            "version": "dev-feature",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/wonderwp.git",
-                "reference": "72170a4aface4dfff6db6cb624a1fad75bf8f626"
+                "reference": "e2783b6aeb46f1d865a96cb1993928dcf3674ade"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/wonderwp/zipball/72170a4aface4dfff6db6cb624a1fad75bf8f626",
-                "reference": "72170a4aface4dfff6db6cb624a1fad75bf8f626",
+                "url": "https://api.github.com/repos/wonderwp/wonderwp/zipball/e2783b6aeb46f1d865a96cb1993928dcf3674ade",
+                "reference": "e2783b6aeb46f1d865a96cb1993928dcf3674ade",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "wonderwp/api": "^1.2",
-                "wonderwp/asset": "^2.0",
-                "wonderwp/autoload-wwp": "^1.3",
-                "wonderwp/cache": "^1.1",
-                "wonderwp/customposttype": "^1.3",
-                "wonderwp/dependency-injection": "^1.1",
-                "wonderwp/filter": "^1.1",
-                "wonderwp/form": "^1.5",
-                "wonderwp/functions": "^1.1",
-                "wonderwp/generator-wwp": "^2.3",
-                "wonderwp/hook": "^1.1",
-                "wonderwp/http": "^1.1",
-                "wonderwp/http-foundation": "^1.1",
-                "wonderwp/logging": "^1.2",
-                "wonderwp/mailing": "^1.3",
-                "wonderwp/media": "^1.2",
-                "wonderwp/notification": "^1.1",
-                "wonderwp/panel": "^1.2",
-                "wonderwp/plugin-skeleton": "^1.4",
-                "wonderwp/repository": "^1.3",
-                "wonderwp/routing": "^1.1",
-                "wonderwp/sanitizer": "^1.0",
-                "wonderwp/search": "^1.2",
-                "wonderwp/service": "^1.1",
-                "wonderwp/shortcode": "^1.1",
-                "wonderwp/task": "^1.1",
-                "wonderwp/template": "^1.2"
+                "php": ">=8.0",
+                "wonderwp/api": "dev-feature/php_8",
+                "wonderwp/asset": "dev-feature/php_8",
+                "wonderwp/autoload-wwp": "dev-feature/php_8",
+                "wonderwp/block-type": "dev-feature/blocktype_definition",
+                "wonderwp/cache": "dev-feature/php_8",
+                "wonderwp/custom-fields": "dev-feature/php8",
+                "wonderwp/customposttype": "dev-feature/php_8",
+                "wonderwp/dependency-injection": "dev-feature/php_8",
+                "wonderwp/filter": "dev-feature/php_8",
+                "wonderwp/form": "dev-feature/increase_validation_lib_version",
+                "wonderwp/functions": "dev-feature/php_8",
+                "wonderwp/generator-wwp": "dev-feature/php_8",
+                "wonderwp/hook": "dev-feature/php_8",
+                "wonderwp/http": "dev-feature/php_8",
+                "wonderwp/http-foundation": "dev-feature/increase_http_foundation_lib_version",
+                "wonderwp/logging": "dev-feature/php_8",
+                "wonderwp/mailing": "dev-feature/php_8",
+                "wonderwp/media": "dev-feature/php_8",
+                "wonderwp/notification": "dev-feature/php_8",
+                "wonderwp/panel": "dev-feature/php_8",
+                "wonderwp/plugin-skeleton": "dev-feature/php_8",
+                "wonderwp/repository": "dev-feature/php_8",
+                "wonderwp/response": "dev-feature/php8",
+                "wonderwp/routing": "dev-feature/php_8",
+                "wonderwp/sanitizer": "dev-feature/php_8",
+                "wonderwp/search": "dev-feature/php_8",
+                "wonderwp/service": "dev-feature/php_8",
+                "wonderwp/shortcode": "dev-feature/php_8",
+                "wonderwp/task": "dev-feature/php_8",
+                "wonderwp/taxonomy": "dev-feature/php8",
+                "wonderwp/template": "dev-feature/php_8"
             },
             "require-dev": {
-                "johnpbloch/wordpress": "^4.7",
+                "johnpbloch/wordpress": "^6.0",
                 "phpunit/phpunit": "^5.1"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -9312,9 +9545,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wonderwp/wonderwp/issues",
-                "source": "https://github.com/wonderwp/wonderwp/tree/1.6.0"
+                "source": "https://github.com/wonderwp/wonderwp/tree/feature"
             },
-            "time": "2023-04-28T20:24:38+00:00"
+            "time": "2025-02-04T13:51:39+00:00"
         },
         {
             "name": "wp-cli/cache-command",
@@ -11552,16 +11785,16 @@
         },
         {
             "name": "wp-media/wp-rocket",
-            "version": "v3.18",
+            "version": "3.18.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-media/wp-rocket.git",
-                "reference": "cd0de8445046d9eeefc08f068f93d1f343ea3600"
+                "reference": "a9a0f9616d3a40445916575686c45a9cb1edff44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-media/wp-rocket/zipball/cd0de8445046d9eeefc08f068f93d1f343ea3600",
-                "reference": "cd0de8445046d9eeefc08f068f93d1f343ea3600",
+                "url": "https://api.github.com/repos/wp-media/wp-rocket/zipball/a9a0f9616d3a40445916575686c45a9cb1edff44",
+                "reference": "a9a0f9616d3a40445916575686c45a9cb1edff44",
                 "shasum": ""
             },
             "require": {
@@ -11591,12 +11824,12 @@
                 "psr/container": "1.1.1",
                 "roave/security-advisories": "dev-master",
                 "szepeviktor/phpstan-wordpress": "^1.3",
-                "woocommerce/action-scheduler": "^3.8",
+                "woocommerce/action-scheduler": "3.9.0",
                 "wp-coding-standards/wpcs": "^3",
                 "wp-media/background-processing": "^1.3",
                 "wp-media/monolog": "^0.0",
                 "wp-media/phpunit": "^3",
-                "wp-media/rocket-lazyload-common": "^3.0.11",
+                "wp-media/rocket-lazyload-common": "^3.0.17",
                 "wp-media/wp-imagify-partner": "^1.0",
                 "wpackagist-plugin/amp": "^1.1.4",
                 "wpackagist-plugin/cloudflare": "4.12.7",
@@ -11675,7 +11908,7 @@
                 "issues": "https://github.com/wp-media/wp-rocket/issues",
                 "source": "https://github.com/wp-media/wp-rocket"
             },
-            "time": "2025-01-06T15:54:15+00:00"
+            "time": "2025-02-04T15:19:33+00:00"
         },
         {
             "name": "wpackagist-plugin/animate-on-scroll",
@@ -13638,13 +13871,13 @@
         "agencewonderful/wwp-rgpd": 20,
         "agencewonderful/wwp-search": 20,
         "agencewonderful/wwp-slider": 20,
-        "agencewonderful/wwp-social": 20,
         "agencewonderful/wwp-stats": 20,
         "agencewonderful/wwp-tracker": 20,
         "agencewonderful/wwp-translator": 20,
         "agencewonderful/wwp-trombinoscope": 20,
         "agencewonderful/wwp-video": 20,
-        "agencewonderful/wwp-vote": 20
+        "agencewonderful/wwp-vote": 20,
+        "wonderwp/wonderwp": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
