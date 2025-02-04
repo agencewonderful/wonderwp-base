@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "wonderwp base poc",
   "engines": {
-    "node": ">=16 <17"
+    "node": ">=20 <21"
   },
   "engineStrict": true,
   "scripts": {
@@ -25,12 +25,14 @@
   "homepage": "https://github.com/wdfproje/wonderwp-base#readme",
   "devDependencies": {
     "@symfony/webpack-encore": "^1.6.1",
+    "@wordpress/scripts": "^30.6.0",
     "autoprefixer": "^10.3.7",
-    "node-sass": "^7.0.3",
+    "mkdirp": "^3.0.1",
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.1.1",
     "postcss-nested": "^5.0.6",
-    "postcss-preset-env": "^7.0",
+    "postcss-preset-env": "^7.7.1",
+    "sass": "^1.49.9",
     "sass-loader": "^12.1.0",
     "svg-sprite": "^2.0",
     "vinyl": "^2.2.1",
