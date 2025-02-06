@@ -202,7 +202,7 @@ pipeline {
 	            try {
 	        	    sh 'npm install';
                 } catch(exc){
-                    handleException('npm install failed',exc);
+                    handleException('npm install failed.',exc);
                 }
 	        } else {
 	        	echo 'skipped npm install';
