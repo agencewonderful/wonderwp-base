@@ -30,6 +30,7 @@ class ChildThemeHookService extends ThemeHookService
         add_action('wwp.styleguide.head', [$assetManipulatorService, 'enqueueCritical']);
         add_action('wwp.styleguide.head', [$assetManipulatorService, 'enqueueStyleGuideStyles']);
         add_action('wwp.styleguide.footer', [$assetManipulatorService, 'enqueueStyleGuideJavaScripts']);
+        add_action('after_setup_theme', [$assetManipulatorService, 'enqueueBlockStyles']);
 
         //Customizer
         $this->registerCustomizerHooks();

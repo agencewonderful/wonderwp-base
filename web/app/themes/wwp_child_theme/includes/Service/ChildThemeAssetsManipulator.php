@@ -29,4 +29,23 @@ class ChildThemeAssetsManipulator extends AssetManipulatorService
             wp_print_scripts();
         }
     }
+
+    /**
+     * Enqueues individual block stylesheets.
+     *
+     * @since 1.0
+     */
+    public function enqueueBlockStyles(): void
+    {
+        $themeBlockStyles = $this->getThemeBlockStyles('/assets/final/theme/css/blocks');
+        if (!empty($themeBlockStyles)) {
+            foreach ($themeBlockStyles as $blockName => $styleAttributes) {
+                // Enqueue individual block stylesheets.
+                wp_enqueue_block_style(
+                    $blockName,
+                    $styleAttributes
+                );
+            }
+        }
+    }
 }
