@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+:root {
+  font-size: 62.5%;
+}
+
+@import "theme-commons";
+@import "css-sprites";
+
 //@import "web/app/themes/wwp_child_theme/assets/fonts/fonts_critical";
 
 @import "../../../styleguide/scss/variables";

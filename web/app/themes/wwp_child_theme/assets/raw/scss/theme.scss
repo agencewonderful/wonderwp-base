@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+@import "theme-commons";
+@import "css-sprites";
+
 //@import "../../../assets/fonts/_fonts";
 
 @import '../../../styleguide/scss/main';
@@ -9,24 +12,24 @@
 @import "menus/megamenu/megamenu";
 @import "menus/barre-menu-mobile/barre-menu-mobile";
 
-@import '../../../includes/Components/components';
+//@import '../../../includes/Components/components';
 
 @import "layout";
-@import "utilities";
+//@import "utilities";
 
-@import "content";
+//@import "content";
 @import "before-footer";
 @import "footer";
 
 @import "items_list";
 
 @import "plugins/vendors";
-@import "../../../plugins/wwp-actu/public/scss/actus-list";
+/*@import "../../../plugins/wwp-actu/public/scss/actus-list";
 @import "../../../plugins/wwp-event/public/scss/events-list";
-@import "../../../plugins/wwp-faq/public/scss/faq-list";
+@import "../../../plugins/wwp-faq/public/scss/faq-list";*/
 
-@import "gutenberg";
+//@import "gutenberg";
 
-@import "pages/homepage";
+//@import "pages/homepage";
 
 //@import "../../../plugins/generateblocks/scss/generateblocks";
