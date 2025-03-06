@@ -106,7 +106,6 @@
             ".\/web\/app\/plugins\/wwp-rgpd\/\/public\/js\/rgpd.js",
             ".\/web\/app\/plugins\/wwp-search\/\/public\/js\/SearchComponent.js",
             ".\/web\/app\/plugins\/wwp-search\/\/public\/js\/SearchTriggerComponent.js",
-            ".\/web\/app\/plugins\/wwp-social\/\/public\/js\/SocialWall.js",
             ".\/web\/app\/plugins\/wwp-tracker\/\/public\/js\/TrackerComponent.js",
             ".\/web\/app\/plugins\/wwp-tracker\/\/public\/js\/TrackerEventEmitter.js",
             ".\/web\/app\/plugins\/wwp-tracker\/\/public\/js\/TrackerManager.js",

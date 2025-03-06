@@ -115,7 +115,6 @@
             "WonderWp\\Plugin\\Parcours\\Child\\": "web\/app\/themes\/wwp_child_theme\/plugins\/wwp-parcours\/includes",
             "WonderWp\\Plugin\\Partenaires\\Child\\": "web\/app\/themes\/wwp_child_theme\/plugins\/wwp-partenaires\/includes",
             "WonderWp\\Plugin\\RGPD\\Child\\": "web\/app\/themes\/wwp_child_theme\/plugins\/wwp-rgpd\/includes",
-            "WonderWp\\Plugin\\Social\\Child\\": "web\/app\/themes\/wwp_child_theme\/plugins\/wwp-social\/includes",
             "WonderWp\\Plugin\\Trombinoscope\\Child\\": "web\/app\/themes\/wwp_child_theme\/plugins\/wwp-trombinoscope\/includes",
             "WonderWp\\Plugin\\Video\\Child\\": "web\/app\/themes\/wwp_child_theme\/plugins\/wwp-video\/includes",
             "WonderWp\\Plugin\\Vote\\Child\\": "web\/app\/themes\/wwp_child_theme\/plugins\/wwp-vote\/includes",
