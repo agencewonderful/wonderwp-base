@@ -1,18 +1,19 @@
-$sprite-path: "svg/sprite.view.svg" !default;
+$base-asset-path: "/app/themes/wwp_child_theme" !default;
+$sprite-path: "#{$base-asset-path}/assets/final/svg/view/svg/sprite.view.svg";
 
 %svg-common {
     background: url("#{$sprite-path}") no-repeat;
 }
 
 {{#shapes}}
-.svg-{{name}} {
+%svg-{{name}} {
     @extend %svg-common;
     background-position: {{position.relative.x}}% {{position.relative.y}}%;
 }
 
-.svg-{{name}}-dims {
+%svg-{{name}}-dims {
     width: {{width.outer}}px;
     height: {{height.outer}}px;
 }
 
-{{/shapes}} 
+{{/shapes}}
