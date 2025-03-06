@@ -1,0 +1,7 @@
+@use "../../../theme-commons" as *;
+@use "../../../css-sprites" as * with (
+  $base-asset-path: "/web/app/themes/wwp_child_theme"
+);
+.wp-block-buttons {
+
+}
