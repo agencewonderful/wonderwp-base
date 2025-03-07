@@ -11,7 +11,9 @@
     "watch": "encore dev --watch -c ./config/webpack/webpack.modern.config.js & encore dev --watch -c ./config/webpack/webpack.legacy.config.js",
     "build:prod": "NODE_ENV=production encore production --progress -c config/webpack/webpack.modern.config.js & encore production --progress -c config/webpack/webpack.legacy.config.js & wait",
     "build": "encore dev --progress -c config/webpack/webpack.modern.config.js & encore dev --progress -c config/webpack/webpack.legacy.config.js & wait",
-    "sprites": "node compile-sprites.js"
+    "sprites": "node compile-sprites.js",
+    "build:theme": "wp-scripts build --webpack-src-dir=web/app/themes/wwp_child_theme/assets/raw --output-path=web/app/themes/wwp_child_theme/assets/final/theme --config=web/app/themes/wwp_child_theme/webpack.config.js",
+    "start:theme": "wp-scripts start --webpack-src-dir=web/app/themes/wwp_child_theme/assets/raw --output-path=web/app/themes/wwp_child_theme/assets/final/theme --config=web/app/themes/wwp_child_theme/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,7 @@
   "homepage": "https://github.com/wdfproje/wonderwp-base#readme",
   "devDependencies": {
     "@symfony/webpack-encore": "^1.6.1",
-    "@wordpress/scripts": "^30.6.0",
+    "@wordpress/scripts": "^30.10.0",
     "autoprefixer": "^10.3.7",
     "mkdirp": "^3.0.1",
     "postcss-import": "^14.0.2",

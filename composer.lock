@@ -56,12 +56,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wonderwp-theme.git",
-                "reference": "ff90b3bede220b05fa5e353fa43fbeaf9bd030e9"
+                "reference": "3da2e52e2669d48a65257a4a8f3b9f0165ef1fd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wonderwp-theme/zipball/ff90b3bede220b05fa5e353fa43fbeaf9bd030e9",
-                "reference": "ff90b3bede220b05fa5e353fa43fbeaf9bd030e9",
+                "url": "https://api.github.com/repos/agencewonderful/wonderwp-theme/zipball/3da2e52e2669d48a65257a4a8f3b9f0165ef1fd2",
+                "reference": "3da2e52e2669d48a65257a4a8f3b9f0165ef1fd2",
                 "shasum": ""
             },
             "require": {
@@ -91,7 +91,7 @@
                 "source": "https://github.com/agencewonderful/wonderwp-theme/tree/develop",
                 "issues": "https://github.com/agencewonderful/wonderwp-theme/issues"
             },
-            "time": "2025-01-27T14:50:10+00:00"
+            "time": "2025-02-06T09:51:23+00:00"
         },
         {
             "name": "agencewonderful/wwp-actu",
