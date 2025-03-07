@@ -421,12 +421,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wwp-event.git",
-                "reference": "7ef271fc3d6242b9a236d093ac0786a94f57af1b"
+                "reference": "8cf25ae1e46ab7136aa6640704fba8f1557205e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-event/zipball/7ef271fc3d6242b9a236d093ac0786a94f57af1b",
-                "reference": "7ef271fc3d6242b9a236d093ac0786a94f57af1b",
+                "url": "https://api.github.com/repos/agencewonderful/wwp-event/zipball/8cf25ae1e46ab7136aa6640704fba8f1557205e3",
+                "reference": "8cf25ae1e46ab7136aa6640704fba8f1557205e3",
                 "shasum": ""
             },
             "require": {
@@ -449,7 +449,7 @@
                 "source": "https://github.com/agencewonderful/wwp-event/tree/develop",
                 "issues": "https://github.com/agencewonderful/wwp-event/issues"
             },
-            "time": "2024-10-11T06:36:23+00:00"
+            "time": "2025-02-06T08:30:14+00:00"
         },
         {
             "name": "agencewonderful/wwp-faq",

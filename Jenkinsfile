@@ -70,19 +70,17 @@ def finalizeDistantMigration(creds){
             returnStdout: true
         );
         if (doctrinePluginList?.trim()) {
+            remoteCommand+=" && WP_CLI_PHP=php"+phpVersion+" vendor/wp-cli/wp-cli/bin/wp plugin deactivate wwp-cache";
             remoteCommand+=" && WP_CLI_PHP=php"+phpVersion+" vendor/wp-cli/wp-cli/bin/wp plugin deactivate ${doctrinePluginList}";
             remoteCommand+=" && WP_CLI_PHP=php"+phpVersion+" vendor/wp-cli/wp-cli/bin/wp plugin activate ${doctrinePluginList}";
+            remoteCommand+=" && WP_CLI_PHP=php"+phpVersion+" vendor/wp-cli/wp-cli/bin/wp plugin activate wwp-cache";
             remoteCommand+=" && WP_CLI_PHP=php"+phpVersion+" vendor/wp-cli/wp-cli/bin/wp rewrite flush";
         }
     }
-
-    if(creds.cacheEnabled == true){
-      remoteCommand+=" && WP_CLI_PHP=php"+phpVersion+" vendor/wp-cli/wp-cli/bin/wp wwp-cache:rebuild";
-    }
+    remoteCommand+=" && WP_CLI_PHP=php"+phpVersion+" vendor/wp-cli/wp-cli/bin/wp wwp-cache:rebuild";
 
     remoteCommand+=" && exit\"";
 
-    sh "ssh wonderful@wdf-02.ovea.com sudo /etc/init.d/php"+phpVersion+"-fpm reload";
     sh remoteCommand;
   } else {
     echo "Distant migration not needed";
