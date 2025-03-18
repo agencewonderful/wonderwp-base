@@ -4,32 +4,19 @@
   font-size: 62.5%;
 }
 
-@import "theme-commons";
-@import "css-sprites";
+@import "theme_commons";
+@import "css_sprites";
 
-//@import "web/app/themes/wwp_child_theme/assets/fonts/fonts_critical";
-
-@import "../../../styleguide/scss/variables";
-@import "../../../styleguide/scss/mixins";
-//@import "../../../styleguide/scss/knacss/_vendor/reboot";
-//@import "../../../styleguide/scss/knacss/_library/base";
-@import "../../../styleguide/scss/knacss/components/skip-links";
-
-@import "../../../styleguide/scss/base/base";
-@import "../../../styleguide/scss/atoms/headings";
-
-//$sprite-path: "/app/themes/wwp_child_theme/assets/final/svg/view/svg/sprite.view.svg";
-//@import "../../../assets/final/svg/view/sprite.scss";
+@import "skip_links";
+@import "utilities";
 
 @import "header";
-
-@import "layout";
-
+@import "entry_header";
 @import "menus/menu_base";
 @import "menus/menu_desktop";
 
-@import "langswitcher";
+@import "../../../plugins/wwp-tracker/public/scss/tracker";
 
-@import "entry-header";
+@import "footer";
 
 @import "../../../includes/Components/NoAjaxTransition/noajax-transition";

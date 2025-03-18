@@ -1,103 +1,6 @@
-///// CSS UTILITIES /////
-
-@import "utils_margins";
-
-// Child images
-/*.img-wrap,
-.img-wrapper,
-.video-wrapper {
-
-  img,
-  a img,
-  a {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-bottom: 0;
-  }
-}*/
-
-/// FLEXBOX COLUMNS ///
-
-/* flexbox layout (knacss addons)*/
-.flex-container,
-.d-flex {
-/*  display: flex;
-  flex-wrap: nowrap;
-
-  @media (max-width: $small - 1) {
-    display: block;
-
-    div {
-      width: 100% !important;
-      margin-left: 0 !important;
-    }
-
-    div:not(:last-child) {
-      margin-bottom: 2rem;
-    }
-  }*/
-}
-
-.flex-container--center,
-.flex-center {
-/*  @extend .flex-container;
-  justify-content: center;
-
-  @media (max-width: 1000px) {
-
-  }
-
-  @media (max-width: $small) {
-    flex-direction: row; // For Bloc with 2 girls
-    flex-wrap: wrap;
-  }*/
-}
-
-.flex-container--spacebetween,
-.flex-spacebetween {
-/*  @extend .flex-container;
-  justify-content: space-between;*/
-}
-
-.flex-container--flexend,
-.flex-flexend {
-/*  @extend .flex-container;
-  justify-content: flex-end;*/
-}
-
-/// Positioning utilities ///
-.relative {
-  position: relative;
-
-  > * {
-    z-index: 1;
-  }
-}
-
-.index {
-
-  &-1 {
-    position: relative;
-    z-index: 1;
-  }
-
-  &-nega {
-    position: relative;
-    z-index: -2;
-  }
-}
-
-// Wordpress
-.alignleft,
-.alignright {
-  @media (max-width: $medium - 1) {
-    float: none;
-    margin-right: 0;
-    margin-left: 0;
-    width: 100%;
-  }
-}
+/* ----------------------------- */
+/* ==CSS UTILITIES            */
+/* ----------------------------- */
 
 // Remove style for phone numbers for iOS
 a[href^="tel"] {
@@ -105,6 +8,76 @@ a[href^="tel"] {
   text-decoration: none;
 }
 
-.is-hidden {
+// HEADINGS
+.h1-like {
+  @extend h1 !optional;
+}
+
+.h2-like {
+  @extend h2 !optional;
+}
+
+.h3-like {
+  @extend h3 !optional;
+}
+
+/// Hide elements ///
+@media (min-width: $medium) {
+
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+// Elements to hide on small devices
+@media (max-width: $tiny - 1) {
+  .hide-tiny {
+    display: none !important;
+  }
+}
+
+@media (max-width: $small - 1) {
+  .hide-small {
+    display: none !important;
+  }
+}
+
+@media (max-width: $medium - 1) {
+  .hide-medium,
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: $large - 1) {
+  .hide-large {
+    display: none !important;
+  }
+  .display-block-large {
+    display: block !important;
+  }
+}
+
+@media (max-width: $very-large - 1) {
+  .hide-very-large {
+    display: none !important;
+  }
+}
+
+/* invisible for all */
+.is-hidden,
+div.is-hidden,
+.js-hidden,
+[hidden] {
   display: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
 }

@@ -1,5 +1,5 @@
 /* ----------------------------- */
-/* ==Footer      */
+/* ==FOOTER      */
 /* ----------------------------- */
 
 $footer-content-height: 75px;
@@ -272,7 +272,7 @@ $colPaddingSmall: 3rem;
   }
 
   a::after {
-    @include svgIcon('edit');
+    //@include svgIcon('edit');
     transform: scale(.8);
   }
 

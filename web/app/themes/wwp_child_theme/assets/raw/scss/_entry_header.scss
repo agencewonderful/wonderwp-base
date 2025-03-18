@@ -1,12 +1,14 @@
-/* Variables */
-:root {
-  --header-image-height: 520px;
-}
+/* ----------------------------- */
+/* ==ENTRY HEADER                */
+/* ----------------------------- */
+
+$header-image-height: 520px;
+
 
 .post-thumbnail {
   position: relative;
   z-index: 0;
-  height: var(--header-image-height);
+  height: $header-image-height;
   overflow: hidden;
 
   //Filtre d'opacité par-dessus image

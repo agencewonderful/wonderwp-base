@@ -1,0 +1,19 @@
+/* ----------------------------- */
+/* ==RGPD PLUGIN THEME CUSTOM    */
+/* ----------------------------- */
+
+.consents-form-wrap {
+  max-width: var(--wp--style--global--content-size);
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  button,
+  a.btn {
+    margin: 1rem;
+  }
+
+  // GUTENBERG OVERRIDE
+  .wp-container-core-group-is-layout-3.alignfull > & {
+    margin-left: auto !important;
+  }
+}
