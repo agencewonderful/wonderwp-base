@@ -1,0 +1,260 @@
+@use "../../../theme_commons" as *;
+@use "../../../css_sprites" as * with (
+  $base-asset-path: "/web/app/themes/wwp_child_theme"
+);
+
+
+/* ----------------------------- */
+/* ==BUTTONS - CUSTOM STYLES     */
+/* ----------------------------- */
+
+:root :where(.is-layout-flow) > .wp-block-buttons,
+:root :where(.is-layout-constrained) > .wp-block-buttons,
+:root :where(.is-layout-flow) > :last-child:where(.wp-block-buttons) {
+  margin-top: var(--wp--preset--spacing--30);
+  margin-bottom: var(--wp--preset--spacing--30);
+}
+
+.wp-block-button .wp-block-button__link,
+:root :where(.wp-block-button .wp-block-button__link),
+:root :where(.wp-element-button, .wp-block-button__link),
+.btn {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 17px 30px 17px 60px;
+  line-height: 1;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $color-theme-black;
+  background-color: transparent;
+  text-decoration: none;
+  border: 2px solid;
+  border-radius: 4px;
+  transition: background-color 0.4s, border-color 0.4s;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 22px;
+    height: 15px;
+    width: 18px;
+    @include svgIcon('arrow-btn--black');
+  }
+
+  &:hover,
+  .no-touch &:focus {
+    color: $color-theme-white !important;
+    background-color: $color-theme-black;
+
+    &::before {
+      @include svgIcon('arrow-btn--white');
+    }
+  }
+}
+
+// BUTTONS ON MOBILE
+@media (max-width: $medium - 1) {
+
+  :root :where(.is-layout-flow) > :last-child:where(.wp-block-buttons) {
+    margin-bottom: var(--wp--preset--spacing--50) !important;
+  }
+
+  .wp-block-button .wp-block-button__link,
+  :root :where(.wp-block-button .wp-block-button__link), .btn {
+    margin-top: 0;
+  }
+}
+
+
+/// VARIATIONS OUTLINE ///
+
+// OUTLINE BLACK
+.wp-block-button.is-style-outline .wp-block-button__link,
+.btn.btn-primary {
+  color: $color-theme-black;
+  border-color: $color-theme-black;
+
+  &::before {
+    @include svgIcon('arrow-btn--black');
+  }
+
+  &:hover,
+  .no-touch &:focus {
+    color: $color-theme-white !important;
+    background-color: $color-theme-black !important;
+    border-color: $color-theme-black !important;
+
+    &::before {
+      @include svgIcon('arrow-btn--white');
+    }
+  }
+}
+
+// OUTLINE WHITE
+.wp-block-button.is-style-outline .wp-block-button__link.has-verylightgrey-border-color,
+.wp-block-button.is-style-outline .wp-block-button__link.has-white-border-color {
+  color: $color-theme-white !important;
+  background-color: transparent !important;
+  border-color: $color-theme-white !important;
+
+  &::before {
+    @include svgIcon('arrow-btn--white');
+  }
+
+  &:hover,
+  .no-touch &:focus {
+    color: $color-theme-black !important;
+    background-color: $color-theme-white !important;
+
+    &::before {
+      @include svgIcon('arrow-btn--black');
+    }
+  }
+}
+
+// OUTLINE GOLD
+.wp-block-button.is-style-outline .wp-block-button__link.has-secondary-border-color {
+  color: $color-theme-white !important;
+  border-color: $color-theme-secondary !important;
+
+  &::before {
+    @include svgIcon('arrow-btn--gold');
+  }
+
+  &:hover,
+  .no-touch &:focus {
+    color: $color-theme-black !important;
+    background-color: $color-theme-secondary !important;
+
+    &::before {
+      @include svgIcon('arrow-btn--black');
+    }
+  }
+}
+
+// OUTLINE RED
+.wp-block-button.is-style-outline .wp-block-button__link.has-primary-border-color,
+.wp-block-button.is-style-outline .wp-block-button__link.has-brand-border-color {
+  border-color: $color-theme-primary !important;
+  color: $color-theme-primary !important;
+
+  &::before {
+    @include svgIcon('arrow-btn--red');
+  }
+
+  &:hover,
+  .no-touch &:focus {
+    color: $color-theme-white !important;
+    background-color: $color-theme-primary !important;
+
+    &::before {
+      @include svgIcon('arrow-btn--white');
+    }
+  }
+}
+
+/// VARIATIONS PLAIN ///
+
+// PLAIN BLACK
+.wp-block-button.is-style-fill .has-black-background-color {
+  border-color: $color-theme-black !important;
+  color: $color-theme-white !important;
+
+  &::before {
+    @include svgIcon('arrow-btn--white');
+  }
+
+  &:hover,
+  .no-touch &:focus {
+    color: $color-theme-black !important;
+    background-color: $color-theme-white !important;
+    border-color: $color-theme-white !important;
+
+    &::before {
+      @include svgIcon('arrow-btn--black');
+    }
+  }
+}
+
+// PLAIN WHITE
+.wp-block-button.is-style-fill .has-verylightgrey-background-color {
+  border-color: $color-theme-white !important;
+  color: $color-theme-black !important;
+
+  &::before {
+    @include svgIcon('arrow-btn--black');
+  }
+
+  &:hover,
+  .no-touch &:focus {
+    color: $color-theme-white !important;
+    background-color: $color-theme-black !important;
+    border-color: $color-theme-black !important;
+
+    &::before {
+      @include svgIcon('arrow-btn--white');
+    }
+  }
+}
+
+// PLAIN YELLOW
+.wp-block-button.is-style-fill .has-secondary-background-color {
+  border-color: $color-theme-secondary !important;
+  color: $color-theme-black !important;
+
+  &::before {
+    @include svgIcon('arrow-btn--black');
+  }
+
+  &:hover,
+  .no-touch &:focus {
+    color: $color-theme-secondary !important;
+    background-color: $color-theme-black !important;
+    border-color: $color-theme-black !important;
+
+    &::before {
+      @include svgIcon('arrow-btn--gold');
+    }
+  }
+}
+
+// PLAIN RED
+.wp-block-button.is-style-fill .has-primary-background-color,
+.wp-block-button.is-style-fill .has-brand-background-color,
+.wp-block-button.is-style-search-btn .wp-block-button__link {
+  border-color: $color-theme-primary !important;
+  color: $color-theme-white !important;
+
+  &::before {
+    @include svgIcon('arrow-btn--white');
+  }
+
+  &:hover,
+  .no-touch &:focus {
+    color: $color-theme-primary !important;
+    background-color: $color-theme-white !important;
+
+    &::before {
+      @include svgIcon('arrow-btn--red');
+    }
+  }
+}
+
+/// VARIATIONS BUTTONS ///
+.wp-block-button.is-back-button .wp-block-button__link::before {
+  transform: rotate(180deg) translateY(50%);
+}
+
+.wp-block-button.is-style-search-btn {
+  .wp-block-button__link {
+    background-color: $color-theme-primary;
+    border-radius: $radius-regular;
+    padding: 1rem 1.5rem;
+
+    &::before, &:hover::before {
+      content: none;
+    }
+  }
+}

@@ -12,8 +12,6 @@
 
 </div><!-- .site-content -->
 
-<?php if (!\WonderWp\Functions\isAjax()): ?>
-
     <div class="before-footer">
         <div class="container-s">
             <?php do_action('wwp_before_footer'); ?>
@@ -79,11 +77,3 @@
     </footer><!-- .site-footer -->
 
     </div><!-- .site -->
-
-    <?php do_action('wwp_after_footer'); ?>
-
-    <?php wp_footer(); ?>
-
-    </body>
-    </html>
-<?php endif; /* isAjax */ ?>

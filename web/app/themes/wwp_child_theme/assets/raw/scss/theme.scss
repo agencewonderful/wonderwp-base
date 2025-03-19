@@ -1,8 +1,12 @@
 @charset "UTF-8";
 
-//@import "../../../assets/fonts/_fonts";
+@import "../../fonts/fonts";
 
-@import '../../../styleguide/scss/main';
+@import "theme_commons";
+@import "css_sprites";
+@import "utilities";
+@import "fallbacks_socle";
+@import "gutenberg";
 
 @import 'menus/menu_mobile';
 @import "menus/menu_mobile_accordion/menu_mobile_accordion";
@@ -10,23 +14,15 @@
 @import "menus/barre-menu-mobile/barre-menu-mobile";
 
 @import '../../../includes/Components/components';
-
-@import "layout";
-@import "utilities";
+@import "../../../includes/BlockComponents/Actus/actu-card";
 
 @import "content";
-@import "before-footer";
+@import "before_footer";
 @import "footer";
 
-@import "items_list";
+//@import "items_list";
 
 @import "plugins/vendors";
-@import "../../../plugins/wwp-actu/public/scss/actus-list";
-@import "../../../plugins/wwp-event/public/scss/events-list";
-@import "../../../plugins/wwp-faq/public/scss/faq-list";
-
-@import "gutenberg";
+@import "../../../plugins/wwp-rgpd/public/scss/consents_form";
 
 @import "pages/homepage";
-
-//@import "../../../plugins/generateblocks/scss/generateblocks";

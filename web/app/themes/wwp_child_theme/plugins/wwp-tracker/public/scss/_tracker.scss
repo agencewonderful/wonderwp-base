@@ -1,0 +1,45 @@
+/* ----------------------------- */
+/* ==TRACKER OVERRIDE            */
+/* ----------------------------- */
+
+.module-tracker {
+
+  // Modale consents
+  .trackers-cookie-container {
+
+    .title {
+      color: $color-theme-black;
+    }
+
+    form.wwpform .submitFormField button {
+      padding: 20px 20px 20px 40px;
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+
+      &::before {
+        left: 14px;
+      }
+    }
+  }
+
+  @media (max-width: $medium - 1) {
+    width: calc(100vw - 4rem);
+
+    .trackers-cookie-container {
+      width: calc(100% - 6rem);
+
+      form.wwpform .submitFormField {
+        flex-direction: column;
+        margin: 0;
+
+        button {
+          justify-content: flex-start;
+          width: 100%;
+          margin-right: 0;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

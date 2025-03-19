@@ -17,32 +17,26 @@ class ChildThemeHookService extends ThemeHookService
     {
         parent::register();
 
+        /** @var ChildThemeAssetsManipulator $assetManipulatorService */
+        $assetManipulatorService = $this->manager->getService('asset_manipulator');
+
         add_filter('wwp.mailer.setBody', [$this, 'includeMailTemplate']);
-        add_action('wp_footer', [$this, 'loadJsonTpls']);
         add_filter('jsonAssetsExporter.json', [$this, 'mergeSassFiles']);
+
+        //Header
         add_filter('body_class', [$this, 'addBodyClassForPostThumb']);
+        add_filter('wp_head', [$assetManipulatorService, 'addCriticalJsSupport']);
+
+        //Footer
+        add_action('wp_footer', [$this, 'loadJsonTpls']);
         add_action('wp_footer', [$this, 'deregisterWpEmbed']);
         add_action('wwp_after_footer', [$this, 'injectFixedMobileMenu']);
 
         //Styleguide
-        /** @var ChildThemeAssetsManipulator $assetManipulatorService */
-        $assetManipulatorService = $this->manager->getService('asset_manipulator');
         add_action('wwp.styleguide.head', [$assetManipulatorService, 'enqueueCritical']);
         add_action('wwp.styleguide.head', [$assetManipulatorService, 'enqueueStyleGuideStyles']);
         add_action('wwp.styleguide.footer', [$assetManipulatorService, 'enqueueStyleGuideJavaScripts']);
         add_action('after_setup_theme', [$assetManipulatorService, 'enqueueBlockStyles']);
-
-        //Customizer
-        $this->registerCustomizerHooks();
-    }
-
-    protected function registerCustomizerHooks()
-    {
-        $customizer = $this->manager->getService('customizer');
-        add_action('customize_register', [$this, 'registerCustomizer']);
-        add_filter('body_class', [$customizer, 'stickyHeaderHook']);
-        add_filter('wwp-main-nav-class', [$customizer, 'mobileMenuVariationClassHook']);
-        add_filter('wwp-header-logo', [$customizer, 'changeHeaderLogoHook']);
     }
 
     public function includeMailTemplate($mailBody)
@@ -119,14 +113,6 @@ class ChildThemeHookService extends ThemeHookService
     {
         wp_deregister_script('wp-embed');
         wp_deregister_script('admin-bar');
-    }
-
-    public function registerCustomizer(WP_Customize_Manager $wp_customize)
-    {
-        /** @var ThemeCustomizerService $customizer */
-        $customizer = $this->manager->getService('customizer');
-        $customizer->setWpCustomize($wp_customize);
-        $customizer->register();
     }
 
     public function injectFixedMobileMenu()

@@ -1,0 +1,14 @@
+// Override base path for block compilation context
+$base-asset-path: "/app/themes/wwp_child_theme" !default;
+@use "../../final/svg/view/sprite" with (
+  $base-asset-path: $base-asset-path
+);
+
+// SVG Icons
+@mixin svgIcon($iconName) {
+  display: inline-block;
+  content: '';
+  background-repeat: no-repeat;
+  @extend %svg-#{$iconName} !optional;
+  @extend %svg-#{$iconName}-dims !optional;
+}

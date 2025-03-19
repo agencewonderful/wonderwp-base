@@ -1,0 +1,281 @@
+// Config file and project variables
+@use 'sass:color';
+@use "variables_theme" as *;
+
+// Assets path
+$get-path-to-assets: "/app/themes/wwp_child_theme/assets";
+$get-path-to-styleguide: "/app/themes/wwp_child_theme/styleguide";
+
+// ----------------
+// Breakpoints zone
+// ----------------
+
+// Warning: cannot be defined in css variables !! Use pixels instead
+$verytiny           : 320px !default;
+$extra-small        : 385px !default; // .container-xs
+$tiny               : 480px !default;
+$small              : 660px !default;
+$medium             : 782px !default; //.container-s - Gutenberg breakpoints
+$large              : 960px; //.container - var(--wp--style--global--content-size) !default;
+$very-large         : 1200px !default;
+$extra-large        : 1280px !default; //.container-l - var(--wp--style--global--wide-size) !default;
+$extra-extra-large  : 1440px !default; //.container-xl - var(--wp--style--global--extra-wide-size) !default;
+
+$gutter: 16px;
+
+// ----------
+// Fonts zone
+// ----------
+// Font families
+$font-family-base       : var(--wp--preset--font-family--base);
+$font-family-headings   : var(--wp--preset--font-family--base);
+$font-family-secondary  : var(--wp--preset--font-family--base);
+$font-theme-bold        : var(--wp--preset--font-family--base);
+$font-family-monospace  : var(--wp-preset--font-family--fira-code);
+
+// Font weights
+$weight-thin      : 100;
+$weight-light     : 300;
+$weight-regular   : 400;
+$weight-medium    : 500;
+$weight-semibold  : 600;
+$weight-bold      : 700;
+$weight-extrabold : 800;
+$weight-black     : 900;
+
+// Font sizes (1.6rem value is "16px" equivalent)
+$font-size-small    : var(--wp--preset--font-size--small);
+$font-size-base     : var(--wp--preset--font-size--medium);
+$font-size-large    : var(--wp--preset--font-size--large);
+$font-size-xlarge  : var(--wp--preset--font-size--x-large);
+$font-size-xxlarge  : var(--wp--preset--font-size--xx-large);
+
+// Line heights
+$line-height-base     : 1.4;
+$line-height-s        : 1;
+$line-height-l        : 1.7;
+$line-height-heading  : 1.1;
+
+// ----------
+// Color zone
+// ----------
+
+// Theme colors variables
+$color-theme-base           : var(--wp--preset--color--base); //Anthracite #202228
+$background-theme-base      : var(--wp--preset--color--background); //White
+$color-theme-primary        : var(--wp--preset--color--primary); //Sang
+$color-theme-secondary      : var(--wp--preset--color--secondary); //Or
+$color-theme-tertiary       : var(--wp--preset--color--tertiary); //Ardoise
+$color-theme-grey           : var(--wp--preset--color--grey); //Gris
+$color-theme-grey-light     : var(--wp--preset--color--lightgrey); //Gris clair
+$color-theme-grey-verylight : var(--wp--preset--color--verylightgrey); //Gris très clair
+$color-theme-grey-medium    : var(--wp--preset--color--mediumgrey); //Gris moyen
+$color-theme-grey-dark      : var(--wp--preset--color--darkgrey); //Gris foncé
+$color-theme-brand          : var(--wp--preset--color--brand); //Sang
+$color-theme-white          : $background-theme-base; //White
+$color-theme-black          : $color-theme-base; //Black
+
+// Old color variable matching
+$color-base             : $color-theme-base;
+$background-base        : $background-theme-base;
+$color-brand            : $color-theme-brand;
+$color-primary          : $color-theme-primary;
+$color-secondary        : $color-theme-secondary;
+$color-tertiary         : $color-theme-tertiary;
+$color-grey             : $color-theme-grey;
+$color-grey-verylight   : $color-theme-grey-verylight;
+$color-grey-light       : $color-theme-grey-light;
+$color-grey-medium      : $color-theme-grey-medium;
+$color-grey-dark        : $color-theme-grey-dark;
+$color-black            : $color-theme-black;
+$color-theme-blue       : #0275D8;
+$color-theme-mediumblue : #5BC0DE;
+
+// Alerts colors
+$color-success  : #5CB85C;
+$color-info     : #5BC0DE;
+$color-warning  : #F0AD4E;
+$color-danger   : #D9534F;
+$color-error    : #D9534F;
+
+$alert-success: $color-success;
+$alert-success-bg: color.adjust($color-success, $lightness: 35%);
+
+$alert-info: $color-info;
+$alert-info-bg: color.adjust($color-info, $lightness: 30%);
+
+$alert-warning: $color-warning;
+$alert-warning-bg: color.adjust($color-warning, $lightness: 30%);
+
+$alert-error: $color-error;
+$alert-error-bg: color.adjust($color-error,  $lightness: 30%);
+
+// Faded colors
+$color-inverse  : $color-theme-grey-dark;
+$color-ghost    : transparent;
+$color-muted    : $color-theme-grey-light;
+
+// Default margin-bottom (vertical rythm)
+$margin-bottom-base     : 3rem !default;
+$headings-margin-bottom : $margin-bottom-base /2 !default;
+$paragraph-margin-bottom: $margin-bottom-base !default;
+
+// Activate hyphenation on small screens
+$hyphens: false !default;
+
+// Theme border-radius
+$border-radius-theme: 6px;
+$radius-regular: 2rem;
+
+// Theme box-shadow
+$box-shadow-theme: 0 12px 30px 0 rgba(41, 57, 95, 0.30);
+$box-shadow-theme-active: 0 16px 40px 0 rgba(41, 57, 95, 0.50);
+$box-shadow-theme-low: 0 2px 6px 0 rgba(41, 57, 95, 0.30); //create a new box-shadow for lower elevation elements
+$box-shadow-theme-active-low: 0 4px 12px 0 rgba(41, 57, 95, 0.50);
+$box-shadow-theme-small: 0 0 10px 0 rgba(41, 57, 95, 0.50);
+$box-shadow-theme-small--active: 0 0 5px 5px rgba(41, 57, 95, 0.50);
+
+// ------------
+// Spacing zone
+// ------------
+
+// Grid gutters (for .has-gutter-* classes)
+$grid-gutters: (
+  '': 1rem,
+  '-l': 2rem,
+  '-xl': 4rem
+) !default;
+
+// Spacings
+$spacer-tiny: var(--wp--preset--spacing--20);
+$spacer-extrasmall: var(--wp--preset--spacing--30);
+$spacer-small: var(--wp--preset--spacing--40);
+$spacer-regular: var(--wp--preset--spacing--50);
+$spacer-medium: var(--wp--preset--spacing--50); //Used in components
+$spacer-large: var(--wp--preset--spacing--60);
+$spacer-extralarge: var(--wp--preset--spacing--70);
+$spacer-ultralarge: var(--wp--preset--spacing--80);
+
+// z-indexes
+$zindex-navigation   : 1000 !default;
+$zindex-dropdown     : 2000 !default;
+$zindex-popover      : 3000 !default;
+$zindex-tooltip      : 4000 !default;
+$zindex-modal        : 5000 !default;
+$zindex-notification : 6000 !default;
+$zindex-debug        : 7000 !default;
+
+// Component: forms (ne surtout pas les déplacer dans le fichier forms.scss car utilisées à d'autres endroits
+$forms-color                : var(--wp--preset--color--darkgrey) !default;
+$forms-bgcolor              : transparent !default;
+$label-color                : $color-theme-base !default;
+$input-color                : $color-theme-base !default;
+$input-bgcolor              : $background-theme-base !default;
+$placeholder-color          : $color-theme-base !default;
+
+$fieldset-padding           : 2rem;
+$fieldset-bgcolor           : var(--wp--preset--color--secondary);
+$fieldset-border            : 1px solid var(--wp--preset--color--primary);
+
+$forms-padding              : 0 !default;
+
+$input-height               : 45px !default; // Same as button height
+$input-font-size            : 1em !default;
+$label-font-size            : 1em !default;
+$placeholder-font-size      : 1em !default;
+$input-box-shadow           : 0 0 0 1px $color-theme-base inset;
+$input-border-radius        : $border-radius-theme;
+
+$select-arrow-color         : $color-theme-base !default;
+$select-arrow-bgcolor       : $color-theme-base !default;
+$select-arrow-active-color  : $color-theme-base !default;
+$select-bgcolor             : $color-theme-base !default;
+$select-active-color        : $color-theme-base !default;
+$select-active-bgcolor      : $color-theme-base !default;
+
+$textarea-height            : ($input-height * 2) !default;
+
+$checkbox-color             : $color-theme-base !default;
+$checkbox-size              : 2rem;
+$checkbox-innersize         : 16px;
+$checkbox-border-radius     : 5px;
+
+$switch-color               : $color-theme-base !default;
+$switch-size                : 3rem;
+$switch-border-radius       : 3em;
+
+// ---------------
+// Components zone
+// ---------------
+
+// Component: links
+$link-color            : $color-theme-base !default;
+$link-color-hover      : var(--wp--preset--color--darkgrey) !default;
+$link-decoration       : underline;
+$link-decoration-hover : underline;
+
+// Global border-radius
+$global-border-radius: 0 !default;
+
+// Component: quotes
+$quote-color     : $color-theme-base !default;
+
+// Component: arrows
+$arrow-color     : $color-theme-base !default;
+
+// Component: tables
+$table-border               : $color-theme-base !default;
+$table-caption-color        : $color-theme-base !default;
+$table-background           : transparent !default;
+$table-head-color           : $color-theme-base !default;
+$table-head-background      : transparent !default;
+$table-footer-color         : $color-theme-base !default;
+$table-footer-background    : transparent !default;
+
+// Buttons
+$button-height          : $input-height;
+$button-height-small    : 40px !default;
+$button-height-large    : 70px !default;
+$button-box-shadow      : none; //0 5px 14px 0 rgba(0, 0, 0, 0.09)
+$button-border-radius   : $border-radius-theme;
+
+// Component: tabs
+$tabs-border            : $color-theme-grey-light !default;
+$tabs-active-border     : $color-theme-grey-dark !default;
+$tabs-color             : $color-theme-base !default;
+$tabs-active-color      : $color-theme-grey-dark !default;
+$tabs-background        : transparent !default;
+$tabs-active-background : transparent !default;
+$tabs-border-radius     : $border-radius-theme;
+
+// Component: nav burger button
+$burger-btn-size          : 60px; //width of whole button
+$burger-color             : $color-theme-base !default;
+$burger-background        : transparent !default; //behind stripes
+$burger-hover-background  : transparent !default;
+$burger-size              : 25px;
+$burger-weight            : 3px; //width of stripes
+$burger-padding           : 0;
+$burger-bgcolor           : $color-theme-grey-medium !default; //bg color of whole button
+
+// ---------------
+// Layout
+// ---------------
+$header-height: 80px;
+$header-height-mobile: 80px;
+$header-bg-color: white;
+$desktopheaderHeight: 80px;
+
+// ---------------
+// Plugins zone
+// ---------------
+
+// ALERT
+$alertHeight: 48px;
+
+// RGPD color theme
+$rgpd-color: $color-primary !default;
+
+// Newsletter form - colors override
+/*$nl-color: red;
+$nl-bgcolor: blue;*/

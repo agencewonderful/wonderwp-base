@@ -1,0 +1,25 @@
+/* ----------------------------- */
+/* ==SKIP LINKS                 */
+/* ----------------------------- */
+
+/* styling skip links */
+.skip-links {
+  position: absolute;
+  z-index: 17;
+
+  a {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 1em;
+    background: black;
+    color: white !important;
+    text-decoration: none;
+
+    &:focus {
+      position: static;
+      overflow: visible;
+      clip: auto;
+    }
+  }
+}

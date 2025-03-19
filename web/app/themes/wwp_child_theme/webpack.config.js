@@ -49,7 +49,7 @@ module.exports = {
   ...{
     entry: {
       ...defaultConfig.entry(),
-      ...getStyleEntryPoints("css/blocks", "assets/raw/block-stylesheets"),
+      ...getStyleEntryPoints("css/blocks", "assets/raw/scss/block-stylesheets"),
     }
   }
 };
