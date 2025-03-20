@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78987b67baddf55eb4f381959955386f",
+    "content-hash": "65e243560f9ea157de0006a35b79eeab",
     "packages": [
         {
             "name": "agencewonderful/wonderwp-plugin-core",
@@ -11996,60 +11996,6 @@
             "time": "2025-03-17T10:12:41+00:00"
         },
         {
-            "name": "wpackagist-plugin/animate-on-scroll",
-            "version": "1.0.7",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/animate-on-scroll/",
-                "reference": "tags/1.0.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/animate-on-scroll.1.0.7.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/animate-on-scroll/"
-        },
-        {
-            "name": "wpackagist-plugin/custom-block-patterns",
-            "version": "1.4.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/custom-block-patterns/",
-                "reference": "tags/1.4.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-block-patterns.1.4.0.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/custom-block-patterns/"
-        },
-        {
-            "name": "wpackagist-plugin/generateblocks",
-            "version": "1.9.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/generateblocks/",
-                "reference": "tags/1.9.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/generateblocks.1.9.1.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/generateblocks/"
-        },
-        {
             "name": "wpackagist-plugin/hyperlink-group-block",
             "version": "1.17.6",
             "source": {
@@ -12102,24 +12048,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/secupress/"
-        },
-        {
-            "name": "wpackagist-plugin/simple-custom-css",
-            "version": "4.0.7",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/simple-custom-css/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/simple-custom-css.zip?timestamp=1741712257"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/simple-custom-css/"
         },
         {
             "name": "wpackagist-plugin/wp-media-library-categories",

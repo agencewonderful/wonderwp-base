@@ -1,13 +1,6 @@
 {
   "name": "wonderwp/site",
   "type": "project",
-  "authors": [
-    {
-      "name": "Jeremy Desvaux",
-      "email": "jeremy.desvaux@wonderful.fr",
-      "homepage": "https://github.com/jeremy-wdf"
-    }
-  ],
   "config": {
     "preferred-install": {
       "wonderwp/*": "source",
@@ -15,7 +8,11 @@
       "*": "dist"
     },
     "sort-packages": true,
-    "optimize-autoloader": true
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "composer\/installers": true,
+      "johnpbloch\/wordpress-core-installer": true
+    }
   },
   "repositories": [
     {
@@ -34,9 +31,9 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": ">=8.0",
+    "php": ">=8.3",
     "composer/installers": "^1.9",
-    "deliciousbrains-plugin/wp-migrate-db-pro": "^2.0",
+    "deliciousbrains-plugin/wp-migrate-db-pro": "^2.6",
     "johnpbloch/wordpress": "^6.0",
     "oscarotero/env": "^1.0",
     "roots/wp-password-bcrypt": "1.0.0",
@@ -44,7 +41,8 @@
     "wpackagist-plugin/secupress": "^2.0",
     "wpackagist-plugin/wp-nested-pages": "^3.0",
     "twig/twig": "^2.0",
-    "vlucas/phpdotenv": "^2.0.1",
+    "vlucas/phpdotenv": "^5.4",
+    "wonderwp\/wonderwp": "dev-feature@dev",
     "wpackagist-plugin/imagify": "^2.0"
   },
   "require-dev": {
