@@ -2,7 +2,7 @@
     "site": {
         "id": 1,
         "title": "WonderWp Demo Site",
-        "url": "https:\/\/local.wonderwp.com",
+        "url": "https:\/\/local.wdf-socle.com",
         "assets_src": "\/app\/themes\/wwp_child_theme\/assets\/raw",
         "assets_dest": "\/app\/themes\/wwp_child_theme\/assets\/final",
         "prefix": ".\/web",
@@ -76,6 +76,7 @@
             ".\/web\/app\/plugins\/wwp-emploi\/\/admin\/js\/emploi-form.js",
             ".\/web\/app\/plugins\/wwp-espace-restreint\/\/admin\/js\/roleEditor.js",
             ".\/web\/app\/plugins\/wwp-galerie\/\/admin\/js\/galerie-form.js",
+            ".\/web\/app\/plugins\/wwp-generator\/\/admin\/js\/generator.js",
             ".\/web\/app\/plugins\/wwp-jeux\/\/admin\/js\/jeux.js",
             ".\/web\/app\/plugins\/wwp-map\/\/admin\/js\/RepeatableCollection.js",
             ".\/web\/app\/plugins\/wwp-map\/\/admin\/js\/PointForm.js",

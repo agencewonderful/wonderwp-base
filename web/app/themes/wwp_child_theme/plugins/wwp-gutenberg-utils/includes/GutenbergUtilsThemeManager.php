@@ -20,12 +20,6 @@ class GutenbergUtilsThemeManager extends GutenbergUtilsManager
 {
     public function register(Container $container)
     {
-
-        $this->setConfig('blocksToRegister',[
-            AccordionBlock::class,
-            AccordionPaneBlock::class
-        ]);
-
         $this->setConfig('moleculesToRegister',[
             CardComponent::class,
             ButtonComponent::class,

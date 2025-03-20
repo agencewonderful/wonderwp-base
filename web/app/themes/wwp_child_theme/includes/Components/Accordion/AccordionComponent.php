@@ -2,7 +2,7 @@
 
 namespace WonderWp\Theme\Child\Components\Accordion;
 
-use WonderWp\Plugin\GutenbergUtils\Bloc\AccordionBlock\AccordionRow;
+use WonderWp\Plugin\GutenbergUtils\Mappers\AccordionRow;
 use WonderWp\Theme\Core\Component\AbstractComponent;
 use function WonderWp\Functions\array_merge_recursive_distinct;
 use function WonderWp\Functions\paramsToHtml;

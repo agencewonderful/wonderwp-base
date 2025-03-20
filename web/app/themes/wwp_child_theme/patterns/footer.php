@@ -4,8 +4,75 @@
  * Slug: wwp_child_theme/footer
  * Categories: footer
  */
-if (isEditorContext()) {
-    echo 'Footer';
-} else {
-    get_footer();
-}
+?>
+<?php if(isEditorContext()): ?>
+    Footer
+<?php else : ?>
+
+    <div class="before-footer">
+        <div class="container-s">
+            <?php do_action('wwp_before_footer'); ?>
+        </div>
+    </div>
+
+
+    <footer id="colophon" class="site-footer" role="contentinfo">
+
+        <div class="footer-content-top">
+            <div class="container-l">
+
+                <div class="first-col">
+                    <?php
+                    echo '<a href="/" class="logo" aria-label="' . trad('back.to.home', WWP_THEME_TEXTDOMAIN) . '"><img src="' . apply_filters('wwp-header-logo', '/app/themes/wwp_child_theme/assets/raw/images/logo-site-white.svg') . '" alt="Mon site - accueil"></a>'
+                    ?>
+                </div>
+
+                <?php
+                //Menu du footer
+                //Pour fonctionner automatiquement, créer un footer appelé "Footer fr_FR" pour la France dans apparence/menus dans le BO
+                $footerMenuName = 'Footer ' . get_locale();
+                if (is_nav_menu($footerMenuName)) {
+                    echo '<nav role="navigation" aria-label="Menu footer principal">';
+                    wp_nav_menu(['menu' => $footerMenuName]);
+                    echo '</nav>';
+                }
+                ?>
+
+                <div class="third-col">
+                    <?php
+                    //Reseaux sociaux
+                    $rs = new \WonderWp\Theme\Child\Components\ReseauxSociaux\ReseauxSociauxComponent();
+                    echo $rs->getMarkup();
+                    ?>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-content-bottom">
+            <div class="container-l">
+
+                <div class="first-col">
+                    <address><?php echo trad('footer.address.trad', WWP_THEME_TEXTDOMAIN) ?></address>
+                </div>
+
+                <?php
+                //Menu du footer 2
+                //Créer un footer appelé "Footer fr_FR 2" pour la France dans apparence/menus dans le BO
+                $footerMenuName = 'Footer ' . get_locale() . ' 2';
+                if (is_nav_menu($footerMenuName)) {
+                    echo '<nav role="navigation" aria-label="Menu footer secondaire">';
+                    wp_nav_menu(['menu' => $footerMenuName]);
+                    echo '</nav>';
+                }
+                ?>
+
+                <div class="third-col"></div>
+            </div>
+        </div>
+
+    </footer><!-- .site-footer -->
+
+    </div><!-- .site -->
+
+<?php endif; ?>
