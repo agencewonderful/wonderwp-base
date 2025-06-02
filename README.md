@@ -2,7 +2,7 @@
 
 * PHP >= 8.3
 * Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
-* node >= 16
+* node >= 20
 
 - This site is set to be run on PHP 8.0 and node 16.
 - It requires composer. [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
