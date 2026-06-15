@@ -17,6 +17,12 @@ function wwp_theme_setup()
     $setupManager->run();
 }
 
+if(!function_exists('trad')) {
+    function trad($key, $domain = WWP_THEME_TEXTDOMAIN) {
+        return __($key, $domain);
+    }
+}
+
 function getSvgIcon($iconName)
 {
     return \WonderWp\Theme\Child\Service\ChildThemeShortcodeService::getSvgIcon($iconName);
