@@ -199,7 +199,7 @@ pipeline {
 
 	        if(env.runNpm=='true'){
 	            try {
-	        	    sh 'npm install';
+	        	    sh 'npm install --no-audit --no-fund';
                 } catch(exc){
                     handleException('npm install failed.',exc);
                 }

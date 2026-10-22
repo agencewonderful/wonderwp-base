@@ -67,7 +67,7 @@
         "agencewonderful\/wwp-vote": "dev-develop@dev",
         "composer\/installers": "^1.9",
         "deliciousbrains-plugin\/wp-migrate-db-pro": "^2.6",
-        "johnpbloch\/wordpress": "^6.0",
+        "johnpbloch\/wordpress": "^7.0",
         "oscarotero\/env": "^1.0",
         "roots\/wp-password-bcrypt": "1.0.0",
         "twig\/twig": "^2.0",
