@@ -41,6 +41,7 @@
 
 ## Unneeded / Unwanted directories
 
+- .ddev/
 - nbproject/
 - /cypress
 - /tests

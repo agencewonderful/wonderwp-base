@@ -61,7 +61,7 @@ def finalizeDistantMigration(creds){
   if(creds.cacheEnabled || env.remoteCommandNeeded){
     echo "Finalizing distant migration";
     def remoteCommand = "ssh ${creds.sshUser}@${creds.sshServer} \"cd ${creds.sshRemotePath}";
-    def phpVersion="8.3";
+    def phpVersion="8.5";
 
     if(env.runComposer){
         def pluginListRemoteCommand = remoteCommand + " && WP_CLI_PHP=php"+phpVersion+" vendor/wp-cli/wp-cli/bin/wp wwp:doctrine-plugin-list && exit\"";
@@ -183,7 +183,7 @@ pipeline {
 
             if(env.runComposer=='true'){
               try {
-                sh '/usr/bin/php8.3 /usr/local/bin/composer install --no-dev --prefer-dist';
+                sh '/usr/bin/php8.5 /usr/local/bin/composer install --no-dev --prefer-dist';
               } catch(exc){
                 handleException('Composer install failed', exc);
               }
@@ -193,7 +193,7 @@ pipeline {
 
             if(env.runNpm=='true' || env.runBuild=='true'){
               echo "Specifying correct node version";
-              env.PATH="/var/lib/jenkins/.nvm/versions/node/v20.18.2/bin:${env.PATH}";
+              env.PATH="/var/lib/jenkins/.nvm/versions/node/v22.23.1/bin:${env.PATH}";
               sh 'node -v';
             }
 
