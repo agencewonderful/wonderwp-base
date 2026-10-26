@@ -98,6 +98,7 @@ def execDbChanges(creds,hostenv){
     echo "-- Your database should be up to date";
 }
 
+@NonCPS
 def getChangeString() {
     MAX_MSG_LEN = 100
     def changeString = "${JOB_NAME}${env.BUILD_DISPLAY_NAME}\n"
@@ -115,7 +116,7 @@ def getChangeString() {
     if (!changeLogSets) {
         changeString += " - No new changes"
     }
-    return changeString
+    return changeString.toString()
 }
 
 def defineVariables(){
