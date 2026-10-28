@@ -199,12 +199,12 @@ pipeline {
 
 	        if(env.runNpm=='true'){
 	            try {
-	        	    sh 'npm install --no-audit --no-fund';
+	        	    sh 'npm ci --no-audit --no-fund';
                 } catch(exc){
-                    handleException('npm install failed.',exc);
+                    handleException('npm ci failed.',exc);
                 }
 	        } else {
-	        	echo 'skipped npm install';
+	        	echo 'skipped npm ci';
 	        }
 
             if(env.runBuild=='true'){
