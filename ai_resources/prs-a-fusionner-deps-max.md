@@ -336,7 +336,7 @@ Contenu typique : toolchain PHP 8.5 / Node 22 · patch WP Migrate DB Pro · `twi
 
 | Repo | Branche | Base | État |
 |------|---------|------|------|
-| wonderwp-base | `chore/php-8.5-compat` | `develop` | 🔲 OPEN (à créer / suivre après push) |
+| wonderwp-base | [#45](https://github.com/agencewonderful/wonderwp-base/pull/45) `chore/php-8.5-compat` | `develop` | 🔲 OPEN | [PR](https://github.com/agencewonderful/wonderwp-base/pull/45) |
 
 ---
 
