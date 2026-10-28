@@ -17,9 +17,9 @@
 | **Base** | Branche cible de la PR |
 | **État** | Suivi : `✅ MERGED` · `🔲 OPEN` · `⚠️ CONFLICT` · `⛔ CLOSED` |
 
-**Restant à merger (utile) :** **1** — PR hôte wonderwp-base `chore/php-8.5-compat` (PHP 8.5 + lock deps-max/N + runners Integration + SessionHelper).  
-**Vagues C–H / J / K / L / M / N :** ✅ terminées.  
-**Plugins locaux :** develop tip · **0 dirty · 0 stash**.
+**Restant à merger (utile) :** **0**.  
+**Vagues C–H / J / K / L / M / N / O :** ✅ terminées (#45 · #43 hôte inclus).  
+**Local :** develop tip · plugins/theme **0 dirty · 0 stash**.
 
 ---
 
