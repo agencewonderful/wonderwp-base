@@ -80,3 +80,7 @@ main.css
 wonderwp_credentials.json
 
 web/app/themes/wwp_child_theme/assets/final/theme
+
+# PHPUnit
+.phpunit.result.cache
+**/.phpunit.result.cache
