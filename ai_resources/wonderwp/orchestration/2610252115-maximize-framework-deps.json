@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "run_id": "2610252115-maximize-framework-deps",
+  "created_at": "2026-10-25T21:15:00+01:00",
+  "updated_at": "2026-10-25T21:15:00+01:00",
+  "status": "in_progress",
+  "session": {
+    "host": "cursor",
+    "consumer_project_id": "wonderwp-base",
+    "sdlc_invoked_at": "2026-10-25T21:15:00+01:00"
+  },
+  "issue": {
+    "refs": ["notion:maximize-framework-deps"],
+    "urls": ["https://app.notion.com/p/403d89b334fb8138856dfa67460682a8"]
+  },
+  "branch": "chore/deps-max",
+  "artifacts": {
+    "implementation_plan": "ai_resources/plans/2610252115-maximize-framework-deps.md",
+    "implementation_report": null,
+    "pull_request": null
+  },
+  "validation": {
+    "orchestration_validated_at": null,
+    "orchestration_validated_by": "pending",
+    "clarity": {
+      "php": "^8.3",
+      "constraints": "^",
+      "workspace": "wonderwp-base/vendor/wonderwp/*",
+      "continue_current_branches": true,
+      "targets": {
+        "symfony": "^7.4",
+        "phpunit": "^12.0",
+        "respect": "^2.5",
+        "wordpress_dev": "^7.0"
+      },
+      "blocked_by_php83": ["symfony@8", "phpunit@13", "respect@3"]
+    }
+  },
+  "flags": [
+    "awaiting_plan_validation",
+    "multi_repo_framework",
+    "notion_tracker",
+    "no_merge_no_tag",
+    "php_caret_83_ceiling"
+  ]
+}
