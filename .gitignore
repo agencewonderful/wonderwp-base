@@ -84,3 +84,6 @@ web/app/themes/wwp_child_theme/assets/final/theme
 # PHPUnit
 .phpunit.result.cache
 **/.phpunit.result.cache
+
+# Local draft tracking (not for the repo)
+ai_resources/prs-a-fusionner-deps-max.md
