@@ -1,0 +1,312 @@
+import groovy.json.JsonSlurperClassic
+
+@NonCPS
+def parseJsonToMap(String json) {
+    final slurper = new JsonSlurperClassic()
+    return new HashMap<>(slurper.parseText(json))
+}
+
+def sshPortFlag(creds) {
+    return (creds.sshPort && creds.sshPort.toString() != '22') ? "-p ${creds.sshPort}" : ''
+}
+
+def rsyncSshCommand(creds) {
+    def portFlag = sshPortFlag(creds)
+    return portFlag ? "ssh ${portFlag}" : 'ssh'
+}
+
+def sshRemoteSh(sshBase, remoteCommand, timeoutSeconds = 60, returnStdout = false) {
+    def shellScript = """${sshBase} /bin/bash -s <<'JENKINS_REMOTE_EOF'
+set -e
+${remoteCommand}
+JENKINS_REMOTE_EOF
+"""
+    def output = null
+    timeout(time: timeoutSeconds, unit: 'SECONDS') {
+        if (returnStdout) {
+            output = sh(returnStdout: true, script: shellScript)
+        } else {
+            sh(script: shellScript)
+        }
+    }
+    return output
+}
+
+def loadCreds(secretFile){
+    withCredentials([file(credentialsId: secretFile, variable: 'MY_SECRET_FILE')]) {
+        script {
+            MY_SECRET_FILE_CONTENT = sh (
+                script: "cat ${MY_SECRET_FILE}",
+                returnStdout: true
+            ).trim()
+            return parseJsonToMap(MY_SECRET_FILE_CONTENT)
+        }
+    }
+}
+
+def handleException(msg,exc) {
+    def changeString_ = getChangeString()+"\n";
+
+    if(msg){
+		changeString_ += msg;
+    } else {
+    	changeString_ += " - Build failed. ";
+    }
+
+    if(exc){
+    	changeString_ += " | ";
+    	changeString_ += exc.getMessage();
+    }
+
+    changeString_ +="\n<${env.RUN_DISPLAY_URL}|Voir le build>";
+
+    if(env.siteUrl){
+      changeString_+="\n"+'<'+env.siteUrl+'|Voir le site>';
+    }
+
+	notify(changeString_,"danger");
+	if(exc){
+		throw(exc);
+	}
+}
+
+def notify(msg,color){
+	slackSend(message: msg, channel: '#jenkins', color: color, failOnError: true, teamDomain: 'wdf-team', token: 'ebmZ6kgsvWsgFVUY3UViZPOS');
+}
+
+def deployCode(creds) {
+    if(creds.siteUrl){
+        env.siteUrl = creds.siteUrl;
+        env.slackMsg+="\n"+'<'+creds.siteUrl+'|Voir le site>';
+    }
+    echo "Sending files to remote server"
+    sh "rsync -uvr --delete -e '${rsyncSshCommand(creds)}' --exclude-from ${WORKSPACE}/CI/exclude-file.txt ${WORKSPACE}/* ${creds.sshUser}@${creds.sshServer}:${creds.sshRemotePath};"
+}
+
+def finalizeDistantMigration(creds){
+  if(creds.cacheEnabled || env.remoteCommandNeeded){
+    echo "Finalizing distant migration";
+    def sshBase = "ssh ${sshPortFlag(creds)} -o ConnectTimeout=10 -o ServerAliveInterval=60 ${creds.sshUser}@${creds.sshServer}";
+    // Remote WP-CLI invocation is hosting-specific: Kinsta ships `wp` on the PATH with the right PHP,
+    // classic hosts (Ovea/OVH) need the vendor binary + explicit PHP. Override via creds.wpCliCommand.
+    def wpCliPhp = creds.phpPath ?: '{WP_CLI_PHP}';
+    def wpCliBase = creds.wpCliCommand ?: "WP_CLI_PHP=${wpCliPhp} vendor/wp-cli/wp-cli/bin/wp";
+    def remoteWp = { args -> """cd ${creds.sshRemotePath} || exit 1
+${wpCliBase} ${args}""" };
+
+    try {
+        if (wpCliBase.contains('vendor/')) {
+            // rsync (-uvr, no -p) can drop the exec bit on freshly deployed vendor files → exit 126.
+            echo "Ensuring vendor WP-CLI is executable...";
+            sshRemoteSh(sshBase, """cd ${creds.sshRemotePath} || exit 1
+chmod +x vendor/wp-cli/wp-cli/bin/wp || true""", 30);
+        }
+
+        // Probe before real commands: surfaces SSH/WP-CLI issues with a readable error.
+        echo "Verifying remote WP-CLI...";
+        sshRemoteSh(sshBase, remoteWp('cli version'), 30);
+
+        if(env.runComposer){
+            echo "Fetching doctrine plugin list...";
+            // Never redirect stderr to /dev/null here: it hides bash errors such as
+            // "vendor/wp-cli/wp-cli/bin/wp: Permission denied" behind a bare exit 126.
+            def doctrinePluginList = sshRemoteSh(sshBase, remoteWp('wwp:doctrine-plugin-list'), 30, true).trim();
+
+            doctrinePluginList = doctrinePluginList.replaceAll(/(?m)^#.*$/, '').trim();
+            doctrinePluginList = doctrinePluginList.replaceAll(/[\r\n]+/, ' ').trim();
+
+            if (doctrinePluginList && !doctrinePluginList.isEmpty()) {
+                echo "Deactivating plugins: ${doctrinePluginList}";
+                sshRemoteSh(sshBase, remoteWp('plugin deactivate wwp-cache'), 60);
+                sshRemoteSh(sshBase, remoteWp("plugin deactivate ${doctrinePluginList}"), 60);
+                sshRemoteSh(sshBase, remoteWp("plugin activate ${doctrinePluginList}"), 60);
+                sshRemoteSh(sshBase, remoteWp('plugin activate wwp-cache'), 60);
+                echo "Flushing rewrite rules...";
+                sshRemoteSh(sshBase, remoteWp('rewrite flush'), 60);
+            } else {
+                echo "No doctrine plugins to manage";
+            }
+        }
+
+        if(creds.cacheEnabled == true){
+            echo "Rebuilding cache...";
+            sshRemoteSh(sshBase, remoteWp('wwp-cache:rebuild'), 300);
+            echo "Cache rebuild completed";
+        }
+    } catch(exc) {
+        echo "Warning: Remote finalize command failed: ${exc.getMessage()}";
+    }
+  } else {
+    echo "Distant migration not needed";
+  }
+}
+
+def getChangeString() {
+    MAX_MSG_LEN = 100
+    def changeString = "${JOB_NAME}${env.BUILD_DISPLAY_NAME}\n"
+
+    def changeLogSets = currentBuild.rawBuild.changeSets
+    for (int i = 0; i < changeLogSets.size(); i++) {
+        def entries = changeLogSets[i].items
+        for (int j = 0; j < entries.length; j++) {
+            def entry = entries[j]
+            truncated_msg = entry.msg.take(MAX_MSG_LEN)
+            changeString += " - ${truncated_msg} [${entry.author}]\n"
+        }
+    }
+
+    if (!changeLogSets) {
+        changeString += " - No new changes"
+    }
+    return changeString
+}
+
+def defineVariables(){
+	env.slackColor = "good";
+	env.slackMsg = getChangeString();
+	env.runComposer = false;
+	env.runNpm = false;
+	env.runBuild = false;
+	env.runCypress=false;
+	env.remoteCommandNeeded = false;
+
+	if(env.BUILD_ID.toInteger() < 10 || isRestartedRun()){
+	    env.runComposer = true;
+	    env.runNpm = true;
+	    env.runBuild = true;
+	    env.runCypress=true;
+	    env.remoteCommandNeeded = true;
+	}
+
+	def changeLogSets_ = currentBuild.changeSets
+	for (int i = 0; i < changeLogSets_.size(); i++) {
+	  def entries_ = changeLogSets_[i].items
+	  for (int j = 0; j < entries_.length; j++) {
+	    def entry_ = entries_[j]
+	    def files_ = new ArrayList(entry_.affectedFiles)
+	    for (int k = 0; k < files_.size(); k++) {
+	      def file_ = files_[k]
+	      if(file_.path=='composer.json' || file_.path=='composer.lock' || file_.path.contains('Jenkinsfile')){
+	      	env.runComposer = true;
+	      	env.runBuild = true;
+	      	env.runCypress = true;
+	      }
+	      if(file_.path=='package.json' || file_.path=='package.lock' || file_.path.contains('Jenkinsfile')){
+	      	env.runNpm = true;
+	      }
+	      if(file_.path.contains(".css") || file_.path.contains(".scss") || file_.path.contains(".js") || file_.path.contains(".svg") || file_.path.contains('Jenkinsfile')){
+			    env.runBuild = true;
+	      }
+	      if(file_.path.contains(".php") || file_.path.contains(".js") || file_.path.contains('cypress')){
+			    env.runCypress = true;
+	      }
+	    }
+	  }
+	}
+
+}
+
+
+pipeline {
+  agent any
+  options {
+    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '5')
+    disableConcurrentBuilds()
+  }
+  stages {
+    stage('Build') {
+      steps {
+        script{
+            echo "Starting Build #${env.BUILD_ID}, triggered by $BRANCH_NAME";
+
+            echo "Definining variables";
+            defineVariables();
+
+            if(env.runComposer=='true'){
+              try {
+                sh '{PHP_BIN} /usr/local/bin/composer install --no-dev --prefer-dist';
+              } catch(exc){
+                handleException('Composer install failed', exc);
+              }
+            } else {
+              echo 'skipped composer install';
+            }
+
+            if(env.runNpm=='true' || env.runBuild=='true'){
+              echo "Specifying correct node version";
+              env.PATH="{NODE_BIN_DIR}:${env.PATH}";
+              sh 'node -v';
+            }
+
+	        if(env.runNpm=='true'){
+	            try {
+	        	    sh 'npm install --no-audit --no-fund';
+                } catch(exc){
+                    handleException('npm install failed',exc);
+                }
+	        } else {
+	        	echo 'skipped npm install';
+	        }
+
+            if(env.runBuild=='true'){
+	            try {
+                    sh 'npm run sprites';
+                    if(BRANCH_NAME=='master' || BRANCH_NAME=='main'){
+                        sh 'npm run build:prod{EXTRA_NPM_BUILD}';
+                    } else {
+                        sh 'npm run build{EXTRA_NPM_BUILD}';
+                    }
+                } catch(exc){
+                    handleException('Building the front failed',exc);
+                }
+            } else {
+            	echo 'skipped npm sprites & build';
+            }
+        }
+      }
+    }
+    stage('Deploy') {
+        steps {
+            script {
+            	try{
+	                echo "Deploying $BRANCH_NAME branch"
+	                def creds = loadCreds("{PROJECT_SLUG}_${BRANCH_NAME}_credentials");
+	                deployCode(creds);
+	                finalizeDistantMigration(creds);
+	            } catch(exc){
+	            	  handleException("The $BRANCH_NAME branch deployment failed",exc);
+              }
+            }
+        }
+    }
+    stage('Integration tests') {
+        steps {
+            script {
+                try {
+                    if(env.runCypress=='true'){
+                        def host = '';
+                        if(env.siteUrl){
+                            host = env.siteUrl;
+                            echo "Starting integration tests on $host"
+                            sh "cypress run --env host=$host"
+                        } else {
+                            echo 'No host defined to run cypress against';
+                        }
+                    } else {
+                        echo 'Skipped integration tests'
+                    }
+	            } catch(exc){
+	            	handleException("Cypress tests failed, which means you have a problem on your $BRANCH_NAME live environment",exc);
+                }
+            }
+        }
+    }
+    stage('notify'){
+        steps {
+            script {
+    			    notify(env.slackMsg,env.slackColor);
+            }
+        }
+    }
+  }
+}

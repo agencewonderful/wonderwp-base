@@ -1,0 +1,118 @@
+<?php
+/**
+ * Plugin Name: {PROJECT} Save Probe (temporary)
+ * Description: Temporary REST-write performance probe. Auto-expires. Delete after measurement.
+ * Version: 1.0.0
+ *
+ * Replace {PROJECT}, EXPIRES_AT, and the wrapped action to match the chantier.
+ */
+
+declare(strict_types=1);
+
+const PROJECT_SAVE_PROBE_EXPIRES_AT = '2030-01-01T00:00:00+00:00'; // set deploy+48h
+const PROJECT_SAVE_PROBE_LOG_BASENAME = 'project-save-probe.log';
+const PROJECT_SAVE_PROBE_PREFIX = '[project-save-probe]';
+
+if (time() >= strtotime(PROJECT_SAVE_PROBE_EXPIRES_AT)) {
+    return;
+}
+
+function project_save_probe_is_rest_write(): bool
+{
+    if (PHP_SAPI === 'cli') {
+        return false;
+    }
+    $method = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+    if (!in_array($method, ['POST', 'PUT', 'PATCH'], true)) {
+        return false;
+    }
+    $uri = (string) ($_SERVER['REQUEST_URI'] ?? '');
+    if (strpos($uri, '/wp-json/wp/v2/') !== false) {
+        return true;
+    }
+    if (isset($_GET['rest_route']) && is_string($_GET['rest_route'])
+        && strpos($_GET['rest_route'], '/wp/v2/') === 0) {
+        return true;
+    }
+
+    return false;
+}
+
+if (!project_save_probe_is_rest_write()) {
+    return;
+}
+
+$GLOBALS['project_save_probe'] = [
+    't0' => microtime(true),
+    'flush_urls' => 0,
+    'flush_ms' => 0.0,
+    'flush_calls' => 0,
+    'post_id' => null,
+    'post_type' => null,
+];
+
+add_action('init', static function (): void {
+    add_action('wwp.cache.flush-urls', static function ($urls = []): void {
+        $n = is_array($urls) ? count($urls) : 0;
+        $GLOBALS['project_save_probe']['flush_urls'] += $n;
+        $GLOBALS['project_save_probe']['flush_calls']++;
+        $GLOBALS['project_save_probe']['_flush_t0'] = microtime(true);
+    }, -PHP_INT_MAX);
+
+    add_action('wwp.cache.flush-urls', static function ($urls = []): void {
+        $t0 = $GLOBALS['project_save_probe']['_flush_t0'] ?? microtime(true);
+        $GLOBALS['project_save_probe']['flush_ms'] += (microtime(true) - $t0) * 1000;
+        unset($GLOBALS['project_save_probe']['_flush_t0']);
+    }, PHP_INT_MAX);
+}, 1);
+
+add_action('save_post', static function ($postId, $post = null): void {
+    $GLOBALS['project_save_probe']['post_id'] = (int) $postId;
+    if ($post instanceof WP_Post) {
+        $GLOBALS['project_save_probe']['post_type'] = $post->post_type;
+    }
+}, 1, 2);
+
+add_action('shutdown', static function (): void {
+    $probe = $GLOBALS['project_save_probe'] ?? null;
+    if (!is_array($probe) || empty($probe['t0'])) {
+        return;
+    }
+
+    $gateway = 'unknown';
+    if (class_exists('\\WonderWp\\Plugin\\Cache\\Service\\CacheGatewayFactory')) {
+        try {
+            $active = \WonderWp\Plugin\Cache\Service\CacheGatewayFactory::getActiveGateway();
+            $gateway = method_exists($active, 'getName') ? $active->getName() : $active::class;
+        } catch (Throwable $e) {
+            $gateway = 'unknown';
+        }
+    }
+
+    $line = sprintf(
+        '%s total_ms=%.2f flush_calls=%d flush_urls=%d flush_ms=%.2f post_id=%s post_type=%s gateway=%s uri=%s',
+        PROJECT_SAVE_PROBE_PREFIX,
+        (microtime(true) - $probe['t0']) * 1000,
+        (int) ($probe['flush_calls'] ?? 0),
+        (int) ($probe['flush_urls'] ?? 0),
+        (float) ($probe['flush_ms'] ?? 0),
+        $probe['post_id'] !== null ? (string) $probe['post_id'] : '-',
+        $probe['post_type'] !== null ? (string) $probe['post_type'] : '-',
+        $gateway,
+        isset($_SERVER['REQUEST_URI']) ? (string) $_SERVER['REQUEST_URI'] : '-'
+    );
+
+    error_log($line);
+
+    $dirs = [];
+    if (defined('WP_CONTENT_DIR')) {
+        $dirs[] = rtrim((string) WP_CONTENT_DIR, '/') . '/uploads';
+    }
+    $dirs[] = dirname(__DIR__) . '/uploads';
+    foreach ($dirs as $dir) {
+        if ($dir !== '' && is_dir($dir) && is_writable($dir)) {
+            @file_put_contents($dir . '/' . PROJECT_SAVE_PROBE_LOG_BASENAME, $line . "\n", FILE_APPEND | LOCK_EX);
+            break;
+        }
+    }
+}, PHP_INT_MAX);

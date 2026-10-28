@@ -1,0 +1,39 @@
+<?php
+
+namespace {Namespace}\ListTable;
+
+use WonderWp\Plugin\Core\Framework\AbstractPlugin\DoctrineListTable;
+
+/**
+ * Admin list table for {Entity}.
+ *
+ * Placeholders: see doctrine-archetype.md ({Namespace}, {Entity}, {PluginConst}).
+ */
+class {Entity}ListTable extends DoctrineListTable
+{
+    /** @inheritdoc */
+    public function get_columns()
+    {
+        $cols = parent::get_columns();
+
+        /*
+        $colsToExclude = ['field_to_hide'];
+        foreach ($colsToExclude as $col) {
+            unset($cols[$col]);
+        }
+        */
+
+        // $cols['custom_column'] = __('custom_column.trad', WWP_{PluginConst}_TEXTDOMAIN);
+
+        return $cols;
+    }
+
+    /**
+     * Example column renderer — uncomment and adapt:
+     *
+     * public function column_statut($item)
+     * {
+     *     return esc_html($item->getStatut());
+     * }
+     */
+}

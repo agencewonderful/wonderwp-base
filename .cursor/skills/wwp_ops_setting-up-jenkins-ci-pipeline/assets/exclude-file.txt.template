@@ -1,0 +1,76 @@
+## File Types
+- .svn
+- .git
+- .DS_Store
+- .htaccess
+- .gitignore
+- *.nfs*
+- *.scss
+
+## Uneeded / Unwanted files
+
+- Thumbs.db
+- config.php
+- apigen.yml
+- apigen.neon
+- cypress.json
+- *readme.*
+- *README.*
+- webpack.config.js
+- postcss.config.js
+- phpcs.xml
+- package.json
+- package-lock.json
+- Jenkinsfile
+- composer.lock
+- composer.json
+- compile-styleguide.js
+- compile-sprites.js
+- php_errors.log
+- exclude-file.txt
+- .env.example
+- .editorconfig
+- gulpFile.js
+- bower.json
+- wp/wp-admin/install.php
+- CONTRIBUTING.md
+- LICENSE.md
+- CHANGELOG.md
+- auth.json
+- agents.md
+- web/wp/wp-config-sample.php
+
+## Unneeded / Unwanted directories
+
+- .ddev/
+- .cursor/
+- .claude/
+- .wonderful/
+- nbproject/
+- /cypress
+- /tests
+- CI/
+- node_modules/
+- static_templates/
+- web/doc
+- web/app/cache
+- web/app/plugins/wwp-generator
+- web/app/plugins/wwp-maintenance
+- web/app/languages/
+- web/app/uploads/
+- web/app/wp-rocket-config
+- web/app/themes/*/assets/final/video
+- web/wp/wp-content/themes/*
+- vendor/mustache/mustache/test/*
+- vendor/respect/validation/docs/*
+- vendor/respect/validation/tests/*
+- vendor/rmccue/requests/tests/*
+- vendor/symfony/*/Tests/*
+- vendor/twig/twig/doc/*
+- vendor/twig/twig/test/*
+- vendor/wonderwp/framework/tests/*
+- vendor/wonderwp/doc/*
+- vendor/wonderwp/wonderwp/doc/*
+- vendor/composer/composer/doc/
+
+## Project Specific excludes

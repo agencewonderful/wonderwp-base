@@ -1,0 +1,9 @@
+; Temporary — delete after profiling session.
+; Place under .ddev/php/zz-xdebug-profile.ini then: ddev restart && ddev xdebug on
+[xdebug]
+xdebug.mode=profile
+xdebug.start_with_request=trigger
+xdebug.trigger_value=PROJECTPROF
+xdebug.output_dir=/tmp/xdebug
+xdebug.profiler_output_name=cachegrind.out.%R.%t
+xdebug.use_compression=0

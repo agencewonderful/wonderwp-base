@@ -1,0 +1,46 @@
+<?php
+
+namespace {Namespace}\Service;
+
+use Doctrine\ORM\Exception\ORMException;
+use WonderWp\Component\HttpFoundation\Result;
+use WonderWp\Component\Service\AbstractService;
+use WonderWp\Plugin\Core\Framework\Doctrine\EntityManager;
+
+/**
+ * Centralizes Doctrine persist/flush for the plugin.
+ * Domain services must call this instead of EntityManager directly.
+ *
+ * Placeholders: see doctrine-archetype.md ({Namespace}, {Entity}).
+ */
+class {Entity}PersisterService extends AbstractService
+{
+    public function persist{Entity}(object $entity): Result
+    {
+        return $this->persistEntity($entity, true);
+    }
+
+    public function persistEntity(object $entity, bool $flush = true): Result
+    {
+        $em = EntityManager::getInstance();
+
+        try {
+            $em->persist($entity);
+            if ($flush) {
+                $em->flush();
+            }
+
+            return new Result(200, ['msg' => 'Entity persisted']);
+        } catch (ORMException $e) {
+            return new Result(500, [
+                'msg' => 'Entity not persisted',
+                'exception' => $e->getMessage(),
+            ]);
+        }
+    }
+
+    public function flush(): void
+    {
+        EntityManager::getInstance()->flush();
+    }
+}

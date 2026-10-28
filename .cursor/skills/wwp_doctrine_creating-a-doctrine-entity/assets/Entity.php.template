@@ -1,0 +1,57 @@
+<?php
+
+namespace {Namespace}\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use WonderWp\Plugin\Core\Framework\EntityMapping\AbstractEntity;
+
+/**
+ * {Entity}
+ *
+ * Placeholders: see doctrine-archetype.md ({Namespace}, {Entity}, {Table}, {RepositoryClass}).
+ *
+ * @ORM\Table(
+ *     name="{Table}",
+ *     indexes={
+ *         // {EntityFieldsIndexes}
+ *     }
+ * )
+ * @ORM\Entity(repositoryClass="{RepositoryClass}")
+ */
+class {Entity} extends AbstractEntity
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    // {EntityFields}
+
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     *
+     * @return static
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    // {EntityGettersSetters}
+}

@@ -1,0 +1,29 @@
+# .cursorignore — ré-inclut le code versionné géré par Composer dans l'index Cursor.
+# Le .gitignore Bedrock/WonderWP les exclut, donc Cursor ne les indexe pas par défaut.
+# Ré-inclusion en deux temps (dossier puis contenu) à cause du parent exclu par `*`.
+
+# Plugins WordPress installés via Composer (wwp-* du framework + tiers)
+!web/app/plugins/*/
+!web/app/plugins/**
+
+# mu-plugins (autoload-wwp, generator-wwp, wonderwp-plugin-core, wwp-security…)
+!web/app/mu-plugins/*/
+!web/app/mu-plugins/**
+
+# Thème parent WonderWP (le thème enfant wwp_child_theme est déjà suivi par git)
+!web/app/themes/wonderwp-theme-core/
+!web/app/themes/wonderwp-theme-core/**
+!web/app/themes/wonderwp_theme/
+!web/app/themes/wonderwp_theme/**
+
+# Framework WonderWP (packages Composer) — fort intérêt pour l'autocomplétion des classes
+!vendor/wonderwp/
+!vendor/wonderwp/**
+
+# Garde le bruit généré hors de l'index (dernier match gagnant)
+web/app/plugins/*/build/
+web/app/plugins/*/node_modules/
+web/app/plugins/*/vendor/
+web/app/themes/*/assets/final/
+web/app/themes/wonderwp-theme-core/vendor/
+web/app/themes/wonderwp-theme-core/node_modules/

@@ -1,0 +1,26 @@
+<?php
+
+namespace {Namespace}\Repository;
+
+use WonderWp\Plugin\Core\Framework\Repository\BaseRepository;
+
+/**
+ * Repository for {Entity}.
+ *
+ * Placeholders: see doctrine-archetype.md ({Namespace}, {Entity}).
+ */
+class {Entity}Repository extends BaseRepository
+{
+    // Add custom query methods below, e.g.:
+    //
+    // public function findByStatut(string $statut)
+    // {
+    //     $qb = $this->createQueryBuilder('e');
+    //     $qb
+    //         ->where('e.statut = :statut')
+    //         ->setParameter('statut', $statut)
+    //     ;
+    //
+    //     return $qb->getQuery()->getResult();
+    // }
+}

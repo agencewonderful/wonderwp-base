@@ -159,3 +159,5 @@ define("WWP_PLUGIN_TRANSLATOR_MANAGER",WonderWp\Plugin\Translator\Child\Translat
 //define("WWP_PLUGIN_VIDEO_MANAGER",WonderWp\Plugin\Video\Child\VideoThemeManager::class);
 //define("WWP_PLUGIN_VOTE_MANAGER",WonderWp\Plugin\Vote\Child\VoteThemeManager::class);
 //define("WWP_PLUGIN_ALERTE_MANAGER",WonderWp\Plugin\Alerte\Child\AlerteThemeManager::class);
+//define("WWP_PLUGIN_BP_MANAGER",WonderWp\Plugin\Bp\Child\BpThemeManager::class);
+//define("WWP_PLUGIN_MAP_MANAGER",WonderWp\Plugin\Map\Child\MapThemeManager::class);
