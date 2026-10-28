@@ -1,7 +1,7 @@
 # PR à fusionner — montée de dépendances framework (PHP ^8.3) + vague tests
 
 **Généré le :** 2026-10-28  
-**Mis à jour le :** 2026-10-28 (vague **N** ✅ MERGED · `composer update` hôte · PR wonderwp-base `chore/php-8.5-compat`)  
+**Mis à jour le :** 2026-10-28 (chantier deps-max + tests + PHP 8.5 **terminé** — hors-périmètre Generator#7 / Sanitizer#1)  
 **Chantiers :** Dependabot + [Monter au maximum les versions…](https://app.notion.com/p/403d89b334fb8138856dfa67460682a8) + fiabilité Unit/Integration (P0–P2)  
 **Branche feature typique :** `chore/deps-max` → bases `feature/php_8` / variantes  
 **Règle :** Jeremy merge (pas d’auto-merge), sauf vagues triviales (ex. L CI) déléguées. **Pas de stash « perdu »** : PR ou drop explicite.
@@ -40,7 +40,7 @@
 | K | Plugins / core / base — **fix PHPUnit suite** | 6 | **5** | **0** utiles | 1 CLOSED (fix déjà sur develop) |
 | M | Unblockers / PHP8 suite | 3 | **3** | **0** | ✅ Taxonomy#4 · plugin#61 · [#62](https://github.com/agencewonderful/wonderwp-plugin/pull/62) |
 | N | Plugins / theme — **nullables PHP 8.4** (ex-dirty/stash) | 17 | **17** | **0** | ✅ Terminée |
-| O | Hôte wonderwp-base — **PHP 8.5 + lock** | 1 | 0 | **1** | 🔲 OPEN `chore/php-8.5-compat` |
+| O | Hôte wonderwp-base — **PHP 8.5 + lock** | 1 | **1** | **0** | ✅ [#45](https://github.com/agencewonderful/wonderwp-base/pull/45) · [#43](https://github.com/agencewonderful/wonderwp-base/pull/43) |
 | I | Hors périmètre | 2 | — | — | Ignorer |
 
 ---
@@ -330,13 +330,13 @@ Promu depuis dirty/stash locaux → PRs `fix/php84-explicit-nullables` ; stash c
 | wwp-espace-restreint | [#46](https://github.com/agencewonderful/wwp-espace-restreint/pull/46) | `develop` | ✅ MERGED | [PR](https://github.com/agencewonderful/wwp-espace-restreint/pull/46) |
 | wwp-contact | [#57](https://github.com/agencewonderful/wwp-contact/pull/57) | `develop` | ✅ MERGED | [PR](https://github.com/agencewonderful/wwp-contact/pull/57) |
 
-## O — Hôte wonderwp-base (`chore/php-8.5-compat`) — 🔲 OPEN
+## O — Hôte wonderwp-base (`chore/php-8.5-compat`) — ✅ MERGED
 
 Contenu typique : toolchain PHP 8.5 / Node 22 · patch WP Migrate DB Pro · `twig/twig` ^3 · `composer.lock` post deps-max/N · `SessionHelper` · runners Integration · stubs theme BP/MAP · `ai_resources/` suivi · agents/skills Cursor.
 
 | Repo | Branche | Base | État |
 |------|---------|------|------|
-| wonderwp-base | [#45](https://github.com/agencewonderful/wonderwp-base/pull/45) `chore/php-8.5-compat` | `develop` | 🔲 OPEN | [PR](https://github.com/agencewonderful/wonderwp-base/pull/45) |
+| wonderwp-base | [#45](https://github.com/agencewonderful/wonderwp-base/pull/45) · [#43](https://github.com/agencewonderful/wonderwp-base/pull/43) | `develop` | ✅ MERGED | [PR#45](https://github.com/agencewonderful/wonderwp-base/pull/45) · [PR#43](https://github.com/agencewonderful/wonderwp-base/pull/43) |
 
 ---
 
@@ -401,9 +401,9 @@ Bootstrap PHPUnit : préférer autoload hôte (`dirname(__DIR__, 3)/autoload.php
 | Plugins WPApi H | **6/6** ✅ |
 | Fix PHPUnit K | **5** ✅ · **1** ⛔ CLOSED (ER#43) |
 | Vague N nullables PHP 8.4 | **17/17** ✅ |
-| Hôte wonderwp-base (O) | `chore/php-8.5-compat` 🔲 OPEN |
+| Hôte wonderwp-base (O) | ✅ #45 · #43 |
 | Plugins locaux dirty/stash | **0** |
-| **Restant à merger (utile)** | **1** (O hôte) |
+| **Restant à merger (utile)** | **0** |
 
 ---
 
