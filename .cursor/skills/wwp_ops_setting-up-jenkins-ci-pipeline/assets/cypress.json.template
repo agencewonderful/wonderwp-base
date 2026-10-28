@@ -1,0 +1,8 @@
+{
+  "host": "https://{PROJECT_SLUG}.ddev.site",
+  "video": false,
+  "screenshotsFolder": "./cypress/screenshots",
+  "smoke-pages": [
+    "/?locale=fr_FR"
+  ]
+}

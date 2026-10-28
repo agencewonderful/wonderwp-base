@@ -1,0 +1,21 @@
+<?php
+
+namespace {Namespace}\Service;
+
+use WonderWp\Plugin\Core\Framework\Doctrine\AbstractDoctrineEMLoaderService;
+
+/**
+ * Registers Doctrine entity metadata path.
+ *
+ * Placeholders: see doctrine-archetype.md ({Namespace}, {Plugin}).
+ */
+class {Plugin}DoctrineEMLoaderService extends AbstractDoctrineEMLoaderService
+{
+    /**
+     * @return static
+     */
+    public function register()
+    {
+        return $this->registerEntityPath(implode(DIRECTORY_SEPARATOR, [dirname(__DIR__), 'Entity']));
+    }
+}

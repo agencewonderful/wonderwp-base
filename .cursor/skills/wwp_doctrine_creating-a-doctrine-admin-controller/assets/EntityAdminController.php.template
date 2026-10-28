@@ -1,0 +1,32 @@
+<?php
+
+namespace {Namespace}\Controller;
+
+use WonderWp\Plugin\Core\Framework\AbstractPlugin\AbstractPluginDoctrineBackendController;
+
+/**
+ * The admin-specific functionality of the plugin.
+ *
+ * Placeholders: see doctrine-archetype.md ({Namespace}, {Entity}).
+ */
+class {Entity}AdminController extends AbstractPluginDoctrineBackendController
+{
+    /**
+     * Create here the methods to call for your different admin pages.
+     * By default defaultAction() is called.
+     * Override defaultAction(), getDefaultRoute(), or getTabs() as needed.
+     *
+     * @see http://wonderwp.net/Creating_a_plugin/Plugin_architecture/Admin_controller
+     */
+
+    // Example custom detail action:
+    //
+    // public function detailAction()
+    // {
+    //     $id = (int) $this->request->get('id');
+    //     /** @var {Entity}Repository $repo */
+    //     $repo = $this->manager->getService(ServiceInterface::REPOSITORY_SERVICE_NAME);
+    //     $entity = $repo->find($id);
+    //     // render detail view or return Response
+    // }
+}

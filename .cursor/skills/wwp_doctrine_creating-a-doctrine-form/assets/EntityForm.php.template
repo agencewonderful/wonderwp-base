@@ -1,0 +1,63 @@
+<?php
+
+namespace {Namespace}\Form;
+
+use WonderWp\Component\Form\Field\CheckBoxField;
+use WonderWp\Component\Form\Field\HiddenField;
+use WonderWp\Component\Form\Field\SelectField;
+use WonderWp\Component\Form\Field\TextAreaField;
+use WonderWp\Component\Form\Field\TextField;
+use WonderWp\Component\Form\FormInterface;
+use WonderWp\Plugin\Core\Framework\EntityMapping\EntityAttribute;
+use WonderWp\Plugin\Core\Framework\Form\ModelForm;
+
+/**
+ * Class that defines the form to use when adding / editing the entity.
+ *
+ * Placeholders: see doctrine-archetype.md ({Namespace}, {Entity}, {EntityLower}, {PluginConst}).
+ */
+class {Entity}Form extends ModelForm
+{
+    public function setFormInstance(FormInterface $formInstance)
+    {
+        $formInstance->setName('{EntityLower}-form');
+        return parent::setFormInstance($formInstance);
+    }
+
+    /** @inheritdoc */
+    public function newField(EntityAttribute $attr)
+    {
+        $fieldName = $attr->getFieldName();
+        $entity    = $this->getModelInstance();
+        $val       = (is_string($entity->$fieldName)) ? stripslashes($entity->$fieldName) : $entity->$fieldName;
+        $label     = __($fieldName . '.trad', WWP_{PluginConst}_TEXTDOMAIN);
+
+        // Add here particular cases for your different fields
+        switch ($fieldName) {
+            // Example: hidden slug on create
+            // case 'slug':
+            //     $f = new HiddenField($fieldName, $val ?: '');
+            //     break;
+
+            // Example: textarea
+            // case 'description':
+            //     $f = new TextAreaField($fieldName, $val);
+            //     break;
+
+            // Example: checkbox / enabled
+            // case 'enabled':
+            //     $f = new CheckBoxField($fieldName, $val);
+            //     break;
+
+            default:
+                $f = parent::newField($attr);
+                break;
+        }
+
+        if (isset($f) && method_exists($f, 'setLabel')) {
+            $f->setLabel($label);
+        }
+
+        return $f;
+    }
+}

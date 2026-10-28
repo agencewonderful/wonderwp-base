@@ -1,0 +1,20 @@
+<?php
+
+namespace {Namespace}\Service;
+
+use {Namespace}\Entity\{Entity};
+use WonderWp\Plugin\Core\Framework\AbstractPlugin\AbstractDoctrinePluginActivator;
+
+/**
+ * Fired during plugin activation — creates Doctrine tables.
+ *
+ * Placeholders: see doctrine-archetype.md ({Namespace}, {Plugin}, {Entity}).
+ */
+class {Plugin}Activator extends AbstractDoctrinePluginActivator
+{
+    public function activate()
+    {
+        $this->copyLanguageFiles(dirname(dirname(__DIR__)) . '/languages');
+        $this->createTables([{Entity}::class]);
+    }
+}
