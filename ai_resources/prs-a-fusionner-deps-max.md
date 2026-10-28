@@ -208,7 +208,7 @@ Ces PR peuvent merger **sans attendre** API#5.
 | 72 | wwp-security | [#8](https://github.com/agencewonderful/wwp-security/pull/8) | `develop` | SecuPress whitelist : skip si `$wpdb` absent (PHPUnit) | 🔲 OPEN | [PR](https://github.com/agencewonderful/wwp-security/pull/8) |
 | 73 | wwp-espace-restreint | [#43](https://github.com/agencewonderful/wwp-espace-restreint/pull/43) | `develop` | DI `UnlockedAccountEmailClass` (typo config) | 🔲 OPEN | [PR](https://github.com/agencewonderful/wwp-espace-restreint/pull/43) |
 | 74 | wonderwp-plugin (core) | [#60](https://github.com/agencewonderful/wonderwp-plugin/pull/60) | `develop` | `ModelForm` : `optional(length)` pour Respect Validation 2.5 | 🔲 OPEN | [PR](https://github.com/agencewonderful/wonderwp-plugin/pull/60) |
-| 75 | wonderwp-base | *(ci-dessous)* | `develop` | propager exit code des suites PHPUnit dans `CI/run-phpunit-tests.sh` | 🔲 OPEN | voir PR base |
+| 75 | wonderwp-base | [#44](https://github.com/agencewonderful/wonderwp-base/pull/44) | `develop` | propager exit code des suites PHPUnit dans `CI/run-phpunit-tests.sh` | 🔲 OPEN | [PR](https://github.com/agencewonderful/wonderwp-base/pull/44) |
 
 ---
 
