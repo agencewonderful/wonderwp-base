@@ -135,6 +135,12 @@
     "scripts": {
         "test": [
             "vendor\/bin\/phpcs --ignore=web\/wp\/,vendor\/ -n -s ."
+        ],
+        "post-install-cmd": [
+            "@php bin\/patch-wp-migrate-db-pro-php84.php"
+        ],
+        "post-update-cmd": [
+            "@php bin\/patch-wp-migrate-db-pro-php84.php"
         ]
     }
 }
