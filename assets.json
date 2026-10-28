@@ -26,7 +26,6 @@
             ".\/web\/app\/plugins\/wwp-translator\/\/admin\/assets\/translator-admin.scss",
             ".\/web\/app\/plugins\/wwp-contact\/\/admin\/css\/contact.scss",
             ".\/web\/app\/plugins\/wwp-espace-restreint\/\/admin\/scss\/_admin.scss",
-            ".\/web\/app\/plugins\/wwp-galerie\/\/admin\/css\/galerie-form.scss",
             ".\/web\/app\/plugins\/wwp-gutenberg-utils\/\/admin\/scss\/_gutenberg-utils-admin.scss",
             ".\/web\/app\/plugins\/wwp-jeux\/\/admin\/css\/_jeux.scss",
             ".\/web\/app\/plugins\/wwp-map\/\/admin\/scss\/mapEditor.scss",
@@ -75,7 +74,6 @@
             ".\/web\/app\/plugins\/wwp-download\/\/admin\/js\/download.js",
             ".\/web\/app\/plugins\/wwp-emploi\/\/admin\/js\/emploi-form.js",
             ".\/web\/app\/plugins\/wwp-espace-restreint\/\/admin\/js\/roleEditor.js",
-            ".\/web\/app\/plugins\/wwp-galerie\/\/admin\/js\/galerie-form.js",
             ".\/web\/app\/plugins\/wwp-generator\/\/admin\/js\/generator.js",
             ".\/web\/app\/plugins\/wwp-jeux\/\/admin\/js\/jeux.js",
             ".\/web\/app\/plugins\/wwp-map\/\/admin\/js\/RepeatableCollection.js",
@@ -102,20 +100,16 @@
             ".\/web\/app\/plugins\/wwp-espace-restreint\/\/public\/js\/er.js",
             ".\/web\/app\/plugins\/wwp-event\/public\/js\/event.js",
             ".\/web\/app\/plugins\/wwp-faq\/\/public\/js\/faq.js",
-            ".\/web\/app\/plugins\/wwp-galerie\/\/public\/js\/GalerieModalComponent.js",
             ".\/web\/app\/plugins\/wwp-jeux\/\/public\/js\/jeux.js",
             ".\/web\/app\/plugins\/wwp-newsletter\/public\/js\/newsletter.js",
             ".\/web\/app\/plugins\/wwp-newsroom\/public\/js\/wwp-newsroom.js",
-            ".\/web\/app\/plugins\/wwp-parcours\/\/public\/js\/ParcoursComponent.js",
             ".\/web\/app\/plugins\/wwp-rgpd\/\/public\/js\/rgpd.js",
             ".\/web\/app\/plugins\/wwp-search\/\/public\/js\/SearchComponent.js",
             ".\/web\/app\/plugins\/wwp-search\/\/public\/js\/SearchTriggerComponent.js",
             ".\/web\/app\/plugins\/wwp-tracker\/\/public\/js\/TrackerComponent.js",
             ".\/web\/app\/plugins\/wwp-tracker\/\/public\/js\/TrackerEventEmitter.js",
             ".\/web\/app\/plugins\/wwp-tracker\/\/public\/js\/TrackerManager.js",
-            ".\/web\/app\/plugins\/wwp-tracker\/\/public\/js\/processors\/GoogleProcessor.js",
-            ".\/web\/app\/plugins\/wwp-video\/\/public\/js\/video.js",
-            ".\/web\/app\/plugins\/wwp-vote\/\/public\/js\/vote.js"
+            ".\/web\/app\/plugins\/wwp-tracker\/\/public\/js\/processors\/GoogleProcessor.js"
         ],
         "critical": [
             ".\/web\/app\/themes\/wwp_child_theme\/assets\/raw\/js\/app_bootstrap.js"

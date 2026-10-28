@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9fc77429aad6bc216407faf3c6cfff3a",
+    "content-hash": "b2fd745373f3ad1a387f9315cc868fde",
     "packages": [
         {
             "name": "agencewonderful/wonderwp-plugin-core",
@@ -490,42 +490,6 @@
             "time": "2026-10-28T17:12:45+00:00"
         },
         {
-            "name": "agencewonderful/wwp-galerie",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:agencewonderful/wwp-galerie.git",
-                "reference": "d1a88bc28dde004152b610649606f0b95b6fbbf7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-galerie/zipball/d1a88bc28dde004152b610649606f0b95b6fbbf7",
-                "reference": "d1a88bc28dde004152b610649606f0b95b6fbbf7",
-                "shasum": ""
-            },
-            "require": {
-                "agencewonderful/wonderwp-plugin-core": "dev-develop@dev"
-            },
-            "type": "wordpress-plugin",
-            "autoload": {
-                "psr-4": {
-                    "WonderWp\\Plugin\\Galerie\\": "includes"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Jeremy Desvaux",
-                    "email": "jeremy.desvaux@wonderful.fr"
-                }
-            ],
-            "description": "Plugin wwp-galerie",
-            "support": {
-                "source": "https://github.com/agencewonderful/wwp-galerie/tree/develop",
-                "issues": "https://github.com/agencewonderful/wwp-galerie/issues"
-            },
-            "time": "2025-11-06T15:49:47+00:00"
-        },
-        {
             "name": "agencewonderful/wwp-generator",
             "version": "dev-develop",
             "source": {
@@ -787,42 +751,6 @@
             "time": "2026-10-28T17:14:21+00:00"
         },
         {
-            "name": "agencewonderful/wwp-parcours",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:agencewonderful/wwp-parcours.git",
-                "reference": "b6b5c2df3d9e2985cf7b0106ca265d611b318325"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-parcours/zipball/b6b5c2df3d9e2985cf7b0106ca265d611b318325",
-                "reference": "b6b5c2df3d9e2985cf7b0106ca265d611b318325",
-                "shasum": ""
-            },
-            "require": {
-                "agencewonderful/wonderwp-plugin-core": "dev-develop@dev"
-            },
-            "type": "wordpress-plugin",
-            "autoload": {
-                "psr-4": {
-                    "WonderWp\\Plugin\\Parcours\\": "includes"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Jeremy Desvaux",
-                    "email": "jeremy.desvaux@wonderful.fr"
-                }
-            ],
-            "description": "Plugin wwp-parcours",
-            "support": {
-                "source": "https://github.com/agencewonderful/wwp-parcours/tree/develop",
-                "issues": "https://github.com/agencewonderful/wwp-parcours/issues"
-            },
-            "time": "2025-03-10T11:51:29+00:00"
-        },
-        {
             "name": "agencewonderful/wwp-partenaires",
             "version": "dev-develop",
             "source": {
@@ -968,42 +896,6 @@
             "time": "2026-10-28T17:16:58+00:00"
         },
         {
-            "name": "agencewonderful/wwp-slider",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:agencewonderful/wwp-slider.git",
-                "reference": "a627e69fc48ae1e00d2ce8af1fbd09e8d465a086"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-slider/zipball/a627e69fc48ae1e00d2ce8af1fbd09e8d465a086",
-                "reference": "a627e69fc48ae1e00d2ce8af1fbd09e8d465a086",
-                "shasum": ""
-            },
-            "require": {
-                "agencewonderful/wonderwp-plugin-core": "dev-develop@dev"
-            },
-            "type": "wordpress-plugin",
-            "autoload": {
-                "psr-4": {
-                    "WonderWp\\Plugin\\Slider\\": "includes"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Jeremy Desvaux",
-                    "email": "jeremy.desvaux@wonderful.fr"
-                }
-            ],
-            "description": "Plugin wwp-slider",
-            "support": {
-                "source": "https://github.com/agencewonderful/wwp-slider/tree/develop",
-                "issues": "https://github.com/agencewonderful/wwp-slider/issues"
-            },
-            "time": "2026-10-28T17:15:10+00:00"
-        },
-        {
             "name": "agencewonderful/wwp-stats",
             "version": "dev-develop",
             "source": {
@@ -1146,79 +1038,6 @@
                 "issues": "https://github.com/agencewonderful/wwp-trombinoscope/issues"
             },
             "time": "2024-10-10T17:05:05+00:00"
-        },
-        {
-            "name": "agencewonderful/wwp-video",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:agencewonderful/wwp-video.git",
-                "reference": "5ba064dd0fa5a640ff6041073c44d7676c8cd647"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-video/zipball/5ba064dd0fa5a640ff6041073c44d7676c8cd647",
-                "reference": "5ba064dd0fa5a640ff6041073c44d7676c8cd647",
-                "shasum": ""
-            },
-            "require": {
-                "agencewonderful/wonderwp-plugin-core": "dev-develop@dev"
-            },
-            "type": "wordpress-plugin",
-            "autoload": {
-                "psr-4": {
-                    "WonderWp\\Plugin\\Video\\": "includes"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Jeremy Desvaux",
-                    "email": "jeremy.desvaux@wonderful.fr"
-                }
-            ],
-            "description": "Plugin Video",
-            "support": {
-                "source": "https://github.com/agencewonderful/wwp-video/tree/develop",
-                "issues": "https://github.com/agencewonderful/wwp-video/issues"
-            },
-            "time": "2025-11-06T15:45:51+00:00"
-        },
-        {
-            "name": "agencewonderful/wwp-vote",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:agencewonderful/wwp-vote.git",
-                "reference": "0e0a6587160342b6ca5976c40338471837df98dc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-vote/zipball/0e0a6587160342b6ca5976c40338471837df98dc",
-                "reference": "0e0a6587160342b6ca5976c40338471837df98dc",
-                "shasum": ""
-            },
-            "require": {
-                "agencewonderful/wonderwp-plugin-core": "dev-develop@dev",
-                "agencewonderful/wwp-security": "dev-develop@dev"
-            },
-            "type": "wordpress-plugin",
-            "autoload": {
-                "psr-4": {
-                    "WonderWp\\Plugin\\Vote\\": "includes"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Jeremy Desvaux",
-                    "email": "jeremy.desvaux@wonderful.fr"
-                }
-            ],
-            "description": "wwp-vote",
-            "support": {
-                "source": "https://github.com/agencewonderful/wwp-vote/tree/develop",
-                "issues": "https://github.com/agencewonderful/wwp-vote/issues"
-            },
-            "time": "2024-10-17T14:09:25+00:00"
         },
         {
             "name": "cloudflare/cf-ip-rewrite",
@@ -14696,7 +14515,6 @@
         "agencewonderful/wwp-espace-restreint": 20,
         "agencewonderful/wwp-event": 20,
         "agencewonderful/wwp-faq": 20,
-        "agencewonderful/wwp-galerie": 20,
         "agencewonderful/wwp-generator": 20,
         "agencewonderful/wwp-gutenberg-utils": 20,
         "agencewonderful/wwp-jeux": 20,
@@ -14704,17 +14522,13 @@
         "agencewonderful/wwp-map": 20,
         "agencewonderful/wwp-newsletter": 20,
         "agencewonderful/wwp-newsroom": 20,
-        "agencewonderful/wwp-parcours": 20,
         "agencewonderful/wwp-partenaires": 20,
         "agencewonderful/wwp-rgpd": 20,
         "agencewonderful/wwp-search": 20,
-        "agencewonderful/wwp-slider": 20,
         "agencewonderful/wwp-stats": 20,
         "agencewonderful/wwp-tracker": 20,
         "agencewonderful/wwp-translator": 20,
         "agencewonderful/wwp-trombinoscope": 20,
-        "agencewonderful/wwp-video": 20,
-        "agencewonderful/wwp-vote": 20,
         "wonderwp/wonderwp": 20
     },
     "prefer-stable": true,
