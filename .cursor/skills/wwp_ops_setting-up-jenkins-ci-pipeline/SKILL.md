@@ -37,6 +37,8 @@ Bring a WonderWP Bedrock repo from no Jenkins integration to a first successful 
   - Node NVM path from `package.json` `engines.node` — pick an installed version from [references/jenkins-node-versions.md](./references/jenkins-node-versions.md)
   - Verify all npm scripts exist before committing
 - **Remote finalize SSH:** never pass remote commands as quoted SSH arguments or use `timeout:` on `sh()` — use the template’s `sshRemoteSh()` heredoc helper. See [references/post-deploy-finalize.md](./references/post-deploy-finalize.md).
+- **Reproducible npm install:** the template runs `npm ci --no-audit --no-fund`, which requires a **committed, up-to-date `package-lock.json`** (not gitignored) and fails the build if it drifts from `package.json`. Before generating the Jenkinsfile, check the lockfile exists and that `npm ci --dry-run` passes; otherwise fix the lockfile first (do not fall back to `npm install`). Legacy Node 12 / npm 6 stacks (lockfile v1): test on a branch first.
+- **Changeset helpers:** helpers that touch changesets or `User` objects must be `@NonCPS`.
 - **Exclude manifest:** copy [assets/exclude-file.txt.template](./assets/exclude-file.txt.template) to `CI/exclude-file.txt` if missing; add project-specific paths (e.g. `.ddev/`) under « Project Specific excludes ».
 - **Cypress config:** commit root `cypress.json` from [assets/cypress.json.template](./assets/cypress.json.template) with minimal `smoke-pages` for day-one setup; Jenkins still runs the full suite.
 - **First build fails** until Jenkins secret files are uploaded — expected, not a bug.

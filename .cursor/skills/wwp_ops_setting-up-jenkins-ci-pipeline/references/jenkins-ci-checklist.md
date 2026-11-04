@@ -11,6 +11,7 @@ Condensed from Wonderful documentation and latest project Jenkinsfiles. **`CI/Je
 - [ ] `CI/credentials.template.json` committed; filled files named by **environment**: `CI/{slug}_preprod_credentials.json`, `CI/{slug}_prod_credentials.json`
 - [ ] Jenkins secret file **IDs** are **branch-based** and match `loadCreds("{slug}_${BRANCH_NAME}_credentials")` (preprod file → `{slug}_develop_credentials`, prod file → `{slug}_main_credentials`; legacy repos on `master` → `{slug}_master_credentials`)
 - [ ] `wpCliCommand` set per hosting in each credential JSON (**Kinsta: `"wp"`**; classic hosts: omit → vendor fallback) — see [credential-files.md](./credential-files.md#wpclicommand-per-hosting)
+- [ ] `package-lock.json` committed (not gitignored) and in sync with `package.json` — the template runs `npm ci` (check with `npm ci --dry-run`)
 - [ ] `cypress.json` committed (from [assets/cypress.json.template](../assets/cypress.json.template)); Jenkins runs full `cypress run --env host=$host`
 
 ## Branches and environments
