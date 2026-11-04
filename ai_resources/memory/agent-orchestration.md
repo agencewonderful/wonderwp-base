@@ -1,11 +1,11 @@
 # WonderWP agent orchestration map
 
-last_updated: 2026-10-24T14:59:22+02:00
+last_updated: 2026-11-04T10:05:23+01:00
 
 ## discovery_sources
 
-- primary: `.cursor/agents/*.md` (10 agents)
-- agents.md: **missing** at consumer project root (`wonderwp-base`); tracker/git conventions unavailable until bootstrapped
+- primary: `.cursor/agents/*.md` (11 agents)
+- agents.md: **missing** at consumer project root (`wonderwp-base`); tracker/git conventions unavailable until bootstrapped — GitHub via `gh` used for this run from issue URL
 - skills root: `.cursor/skills/` (wwp_* prefixes)
 
 ## Agents
@@ -18,7 +18,7 @@ last_updated: 2026-10-24T14:59:22+02:00
 ### wonderwp-product-manager
 - path: `.cursor/agents/wonderwp-product-manager.md`
 - summary: Epics, issues, backlog workshops, clarify, tracker sync
-- Available Skills: clarify, creating-an-epic, read-issue, creating-an-issue, planning-backlog-from-conversation-transcript, co-constructing-backlog, building-backlog-plan-from-draft, creating-epics-and-issues-from-backlog-plan
+- Available Skills: clarifying-requests (clarify), creating-an-epic, read-issue, creating-an-issue, planning-backlog-from-conversation-transcript, co-constructing-backlog, building-backlog-plan-from-draft, creating-epics-and-issues-from-backlog-plan
 
 ### wonderwp-github
 - path: `.cursor/agents/wonderwp-github.md`
@@ -35,6 +35,11 @@ last_updated: 2026-10-24T14:59:22+02:00
 - summary: DDEV, Jenkins, Composer in containers, Bedrock env, perf audits
 - Available Skills: setting-up-ddev-on-existing-wonderwp-project, setting-up-jenkins-ci-pipeline, installing-kinsta-cache, enable-auto-update, auditing-back-office-request-performance, exporting-wwp-translator-delta-csv
 
+### wonderwp-maintenance
+- path: `.cursor/agents/wonderwp-maintenance.md`
+- summary: Preventive maintenance sessions, catalogue/ledger, smoke, client report
+- Available Skills: conducting-preventive-maintenance
+
 ### wonderwp-backend
 - path: `.cursor/agents/wonderwp-backend.md`
 - summary: CPT, taxonomies, hooks, plugins, WP-CLI, importers (application layer)
@@ -43,12 +48,12 @@ last_updated: 2026-10-24T14:59:22+02:00
 ### wonderwp-doctrine
 - path: `.cursor/agents/wonderwp-doctrine.md`
 - summary: Doctrine entities, forms, list tables, admin controllers
-- Available Skills: (doctrine scaffolding skills)
+- Available Skills: wiring-doctrine-manager-and-services, creating-a-doctrine-entity, creating-a-doctrine-form, creating-a-doctrine-repository, creating-a-doctrine-listtable, creating-a-doctrine-admin-controller
 
 ### wonderwp-block-editor
 - path: `.cursor/agents/wonderwp-block-editor.md`
 - summary: Gutenberg blocks, bindings, variations, compilation
-- Available Skills: (block skills)
+- Available Skills: creating-a-new-block, creating-a-new-block-type, creating-a-new-block-variation, creating-a-block-style-variation, creating-a-new-block-extension, creating-a-block-category, creating-an-icon-collection, creating-a-new-block-binding-source, listing-block-bindings-sources, creating-a-new-query-loop-post-card-block, creating-a-query-loop-filtering-hook, creating-a-new-inner-block-parent-wrapper-block, setting-up-block-compilation
 
 ### wonderwp-theme
 - path: `.cursor/agents/wonderwp-theme.md`
@@ -58,9 +63,4 @@ last_updated: 2026-10-24T14:59:22+02:00
 ### wonderwp-design-system
 - path: `.cursor/agents/wonderwp-design-system.md`
 - summary: DTCG tokens, atoms/molecules, styleguide, theme.json load
-- Available Skills: (ds skills)
-
-## Notes for deps-max run
-
-- Multi-repo framework work lives outside wonderwp-base clones: `/Users/jeremy/Sites/WonderWp/dependabot-fixes` (Asset, Documentation, wonderwp) and Notion dossier `/Users/jeremy/Sites/WonderWp/Framework`.
-- No dedicated “composer deps bump” skill; inventory/implement use ops + github + backend ad-hoc under factory plan/implement skills.
+- Available Skills: bootstrap-design-system, create-token, create-atom, create-molecule, declare-variant, declare-block-style, generate-tokens-css, validate-contract, validate-tokens, validate-mapping, generate-styleguide, remap-contract, load-contract, load-theme-json, load-wonderwp, build-design-system, capture-figma-screenshots, audit-render-fidelity

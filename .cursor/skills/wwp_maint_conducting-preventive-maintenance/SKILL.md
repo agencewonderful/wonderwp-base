@@ -124,7 +124,7 @@ flowchart LR
 1. Align `CI/run-phpunit-tests.sh` with **wonderwp-base** fail-fast driver (`recurring.devops.phpunit-driver-wonderwp-base`); then phpunit `06`; cypress `07` if installed. PHPUnit: full driver output / exit code — per-suite results in runbook ([phpunit-runbook.md](./references/phpunit-runbook.md)); never mark OK on partial log tail.
 2. Align Jenkinsfile / exclude-file from **ops skill templates** (preserve project-specific excludes + credential prefix).
 3. If `ci.jenkinsfile-wave-2026-10-28` pending: search remote PRs about Jenkinsfile update (catalogue date 2026-10-28); ask to merge if found; absorb when done.
-4. BO: audit admins, suspicious content; client-role migration only if role exists.
+4. BO: audit admins, suspicious content; client-role migration / capability alignment only if role `client` exists — follow [client-role-migration.md](./references/client-role-migration.md).
 5. Plugins: ensure sitemap + SecuPress; verify wwp-cron; absorb remaining plugin one_shots when applicable.
 6. Keep the runbook in sync (sections 5–7).
 

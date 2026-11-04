@@ -87,3 +87,6 @@ web/app/themes/wwp_child_theme/assets/final/theme
 
 # Local draft tracking (not for the repo)
 ai_resources/prs-a-fusionner-deps-max.md
+
+# Local BO test accounts (passwords) — never commit
+CI/accounts.md

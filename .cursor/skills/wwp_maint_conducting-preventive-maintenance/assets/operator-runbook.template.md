@@ -90,7 +90,7 @@ _Concerns : `recurring.devops.*`, `ci.jenkinsfile-wave-2026-10-28`_
 
 - [ ] Audit comptes admins
 - [ ] Contenu suspect / spam
-- [ ] Migration rôle `client` — **uniquement si** le rôle WP existe, sinon `[-]`
+- [ ] Rôle `client` — migration comptes + alignement des caps (**uniquement si** le rôle WP existe, sinon `[-]`) — voir `client-role-migration`
 
 _Concerns : `recurring.bo.*`_
 
