@@ -4,7 +4,7 @@
 
 - Ensure `google-sitemap-generator` active (composer require if missing).
 - Ensure `secupress` installed and reasonably configured (gate human for full config).
-- If `wwp-cron` present: activate and verify crons; if broken, prepare hosting support mail from plugin UI.
+- If `wwp-cron` present: activate and verify **full** `cron.inventory` per [verify-wwp-cron-inventory.md](./verify-wwp-cron-inventory.md) (Default WP Cron + `cron:prun-results --prune-storage-path` + other plugin rows; prove execution, not only crontab presence); if broken, prepare hosting support mail from plugin UI.
 
 ## Ledger one-shots (only if pending)
 

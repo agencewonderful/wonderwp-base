@@ -16,6 +16,7 @@ Create the base folder layout for a new Wonderful AI plugin so subsequent skills
 
 - Use the repository’s plugin layout conventions: `plugins/<pluginName>/manifest/plugin.json` and `plugins/<pluginName>/skills/<skillFolderName>/SKILL.md`.
 - If the plugin is skills-only (no specialist agent), omit the `agents/` directory and omit the `agents` field from `manifest/plugin.json`.
+- Optional **rules**: `plugins/<pluginName>/rules/<rule-slug>.md` (IDE-agnostic `.md` source). When present and installable, set `"rules": ["./rules"]` in the manifest so `install.sh` distributes them (Cursor → `.mdc`). Use **create-ai-rule** to scaffold.
 
 ## Quick Start
 
@@ -51,6 +52,7 @@ flowchart LR
 1. Create `plugins/<pluginName>/manifest/`.
 2. Create `plugins/<pluginName>/skills/`.
 3. If the plugin is not skills-only, create `plugins/<pluginName>/agents/`.
+4. Optionally create `plugins/<pluginName>/rules/` when the domain will ship harness rules.
 
 **Success criteria:** The expected directories exist on disk (even if empty).
 
@@ -59,12 +61,13 @@ flowchart LR
 **Do:**
 
 1. Create `plugins/<pluginName>/manifest/plugin.json`.
-2. Set a unique string field `diminutive` (short id, typically like `wwp_pm` or `wwp_theme`). The Cursor installer reads this via `jq` and uses it to prefix flat-installed skills (`.cursor/skills/<diminutive>_<skillFolder>/`) and commands (`.cursor/commands/<diminutive>_<file>`). Values must be **unique across all plugins** in the repo (the install script errors on duplicates). Do not rely on a trailing underscore in JSON; the installer strips trailing `_` and adds its own separator.
+2. Set a unique string field `diminutive` (short id, typically like `wwp_pm` or `wwp_theme`). The Cursor installer reads this via `jq` and uses it to prefix flat-installed skills (`.cursor/skills/<diminutive>_<skillFolder>/`), commands (`.cursor/commands/<diminutive>_<file>`), and rules (`.cursor/rules/<diminutive>_<slug>.mdc`). Values must be **unique across all plugins** in the repo (the install script errors on duplicates). Do not rely on a trailing underscore in JSON; the installer strips trailing `_` and adds its own separator.
 3. Set `skills: ["./skills"]` so the installer can expose available skills.
 4. If skills-only: omit the `agents` field entirely (and do not create an `agents/` directory).
 5. If not skills-only: include an `agents` glob consistent with other plugins.
+6. If shipping installable harness rules: set `rules: ["./rules"]`.
 
-**Success criteria:** `manifest/plugin.json` is valid JSON, defines a non-empty string `diminutive` that does not collide with other plugins, and correctly advertises `skills` (and `agents`, if present).
+**Success criteria:** `manifest/plugin.json` is valid JSON, defines a non-empty string `diminutive` that does not collide with other plugins, and correctly advertises `skills` (and `agents` / `rules`, if present).
 
 ### Step 4: Prepare skills dir
 

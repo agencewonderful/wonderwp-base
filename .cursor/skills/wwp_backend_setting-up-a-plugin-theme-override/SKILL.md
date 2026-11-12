@@ -19,6 +19,7 @@ Configure a WonderWP plugin’s activator and manager for theme overrides, regen
 
 - Gather: **target plugin** to override; **target theme** (default active theme—often `wwp_child_theme`; confirm if ambiguous).
 - Confirm with the user before running commands that change plugin activation.
+- **Override ≠ business logic.** Theme overrides may adjust configuration, views, and assets only. Do not register roles/caps, access gates, or WordPress hooks for domain behavior in the theme override. Put that work in an existing plugin (inventory first) or scaffold a new plugin via **creating-a-new-plugin**.
 
 ## Workflow
 

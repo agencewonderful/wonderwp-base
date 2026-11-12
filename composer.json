@@ -10,6 +10,7 @@
         },
         "sort-packages": true,
         "optimize-autoloader": true,
+        "fund": false,
         "allow-plugins": {
             "composer/installers": true,
             "johnpbloch/wordpress-core-installer": true,

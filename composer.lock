@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wonderwp-plugin.git",
-                "reference": "ef8dbfb69296218e2548b84d974738c101f4de1f"
+                "reference": "fc50c4bd252e255619a721a0d7e6dbc340e8f910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wonderwp-plugin/zipball/ef8dbfb69296218e2548b84d974738c101f4de1f",
-                "reference": "ef8dbfb69296218e2548b84d974738c101f4de1f",
+                "url": "https://api.github.com/repos/agencewonderful/wonderwp-plugin/zipball/fc50c4bd252e255619a721a0d7e6dbc340e8f910",
+                "reference": "fc50c4bd252e255619a721a0d7e6dbc340e8f910",
                 "shasum": ""
             },
             "require": {
@@ -49,7 +49,7 @@
                 "source": "https://github.com/agencewonderful/wonderwp-plugin/tree/develop",
                 "issues": "https://github.com/agencewonderful/wonderwp-plugin/issues"
             },
-            "time": "2026-11-04T10:50:42+00:00"
+            "time": "2026-11-04T17:06:20+00:00"
         },
         {
             "name": "agencewonderful/wonderwp-theme-core",
@@ -244,12 +244,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wwp-contact.git",
-                "reference": "a277642c124fd3d683a3004a496a1c861728df31"
+                "reference": "138cc86f43aaf224bc1b81f9dd8a4e1dcf7741da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-contact/zipball/a277642c124fd3d683a3004a496a1c861728df31",
-                "reference": "a277642c124fd3d683a3004a496a1c861728df31",
+                "url": "https://api.github.com/repos/agencewonderful/wwp-contact/zipball/138cc86f43aaf224bc1b81f9dd8a4e1dcf7741da",
+                "reference": "138cc86f43aaf224bc1b81f9dd8a4e1dcf7741da",
                 "shasum": ""
             },
             "require": {
@@ -273,7 +273,7 @@
                 "source": "https://github.com/agencewonderful/wwp-contact/tree/develop",
                 "issues": "https://github.com/agencewonderful/wwp-contact/issues"
             },
-            "time": "2026-10-28T17:20:36+00:00"
+            "time": "2026-11-04T13:07:16+00:00"
         },
         {
             "name": "agencewonderful/wwp-cron",
@@ -281,12 +281,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wwp-cron.git",
-                "reference": "04a5354abf6253d8566bda0ae2df1530b395b35b"
+                "reference": "d7d67e9bcb6da086ae9829079a86f112cefc8190"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-cron/zipball/04a5354abf6253d8566bda0ae2df1530b395b35b",
-                "reference": "04a5354abf6253d8566bda0ae2df1530b395b35b",
+                "url": "https://api.github.com/repos/agencewonderful/wwp-cron/zipball/d7d67e9bcb6da086ae9829079a86f112cefc8190",
+                "reference": "d7d67e9bcb6da086ae9829079a86f112cefc8190",
                 "shasum": ""
             },
             "require": {
@@ -309,7 +309,7 @@
                 "source": "https://github.com/agencewonderful/wwp-cron/tree/develop",
                 "issues": "https://github.com/agencewonderful/wwp-cron/issues"
             },
-            "time": "2026-11-03T10:43:30+00:00"
+            "time": "2026-11-05T11:27:22+00:00"
         },
         {
             "name": "agencewonderful/wwp-download",
@@ -389,12 +389,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wwp-espace-restreint.git",
-                "reference": "8766e9f3c65e422a1ad6d8bff837644442f6dc32"
+                "reference": "a2366241ffb981aa857dadfbe9850a87a986670f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-espace-restreint/zipball/8766e9f3c65e422a1ad6d8bff837644442f6dc32",
-                "reference": "8766e9f3c65e422a1ad6d8bff837644442f6dc32",
+                "url": "https://api.github.com/repos/agencewonderful/wwp-espace-restreint/zipball/a2366241ffb981aa857dadfbe9850a87a986670f",
+                "reference": "a2366241ffb981aa857dadfbe9850a87a986670f",
                 "shasum": ""
             },
             "default-branch": true,
@@ -415,7 +415,7 @@
                 "source": "https://github.com/agencewonderful/wwp-espace-restreint/tree/develop",
                 "issues": "https://github.com/agencewonderful/wwp-espace-restreint/issues"
             },
-            "time": "2026-11-04T12:29:23+00:00"
+            "time": "2026-11-05T16:31:14+00:00"
         },
         {
             "name": "agencewonderful/wwp-event",
@@ -569,12 +569,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wwp-jeux.git",
-                "reference": "bd1ea29f95f11c7eb989dc9ed40dab1955307feb"
+                "reference": "0f4fb5ce507cc31f3ab526a1415cd444ecd80106"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-jeux/zipball/bd1ea29f95f11c7eb989dc9ed40dab1955307feb",
-                "reference": "bd1ea29f95f11c7eb989dc9ed40dab1955307feb",
+                "url": "https://api.github.com/repos/agencewonderful/wwp-jeux/zipball/0f4fb5ce507cc31f3ab526a1415cd444ecd80106",
+                "reference": "0f4fb5ce507cc31f3ab526a1415cd444ecd80106",
                 "shasum": ""
             },
             "require": {
@@ -597,7 +597,7 @@
                 "source": "https://github.com/agencewonderful/wwp-jeux/tree/develop",
                 "issues": "https://github.com/agencewonderful/wwp-jeux/issues"
             },
-            "time": "2026-09-30T12:06:29+00:00"
+            "time": "2026-11-04T17:12:36+00:00"
         },
         {
             "name": "agencewonderful/wwp-maintenance",
@@ -605,12 +605,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wwp-maintenance.git",
-                "reference": "8d9ff47bcbf4d9f42673f1866e2036e060891739"
+                "reference": "98b9688fc48329cf55d580db1d33066022d9e74d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-maintenance/zipball/8d9ff47bcbf4d9f42673f1866e2036e060891739",
-                "reference": "8d9ff47bcbf4d9f42673f1866e2036e060891739",
+                "url": "https://api.github.com/repos/agencewonderful/wwp-maintenance/zipball/98b9688fc48329cf55d580db1d33066022d9e74d",
+                "reference": "98b9688fc48329cf55d580db1d33066022d9e74d",
                 "shasum": ""
             },
             "require": {
@@ -634,7 +634,7 @@
                 "source": "https://github.com/agencewonderful/wwp-maintenance/tree/develop",
                 "issues": "https://github.com/agencewonderful/wwp-maintenance/issues"
             },
-            "time": "2026-11-04T10:16:04+00:00"
+            "time": "2026-11-05T12:24:30+00:00"
         },
         {
             "name": "agencewonderful/wwp-map",
@@ -642,12 +642,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wwp-map.git",
-                "reference": "ed8edc3aa1355c69a7a5b19709aa79861fd74612"
+                "reference": "2d28bd0767214c43f50aea83edc4d84bb99ed04b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-map/zipball/ed8edc3aa1355c69a7a5b19709aa79861fd74612",
-                "reference": "ed8edc3aa1355c69a7a5b19709aa79861fd74612",
+                "url": "https://api.github.com/repos/agencewonderful/wwp-map/zipball/2d28bd0767214c43f50aea83edc4d84bb99ed04b",
+                "reference": "2d28bd0767214c43f50aea83edc4d84bb99ed04b",
                 "shasum": ""
             },
             "require": {
@@ -670,7 +670,7 @@
                 "source": "https://github.com/agencewonderful/wwp-map/tree/develop",
                 "issues": "https://github.com/agencewonderful/wwp-map/issues"
             },
-            "time": "2026-11-02T13:13:38+00:00"
+            "time": "2026-11-05T07:53:50+00:00"
         },
         {
             "name": "agencewonderful/wwp-newsletter",
@@ -678,12 +678,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:agencewonderful/wwp-newsletter.git",
-                "reference": "eb3dbb62a64c43abc594b0c11f16bd43a3eaa488"
+                "reference": "8102f8f9b1916955df57f93f6a637104a60d93d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agencewonderful/wwp-newsletter/zipball/eb3dbb62a64c43abc594b0c11f16bd43a3eaa488",
-                "reference": "eb3dbb62a64c43abc594b0c11f16bd43a3eaa488",
+                "url": "https://api.github.com/repos/agencewonderful/wwp-newsletter/zipball/8102f8f9b1916955df57f93f6a637104a60d93d1",
+                "reference": "8102f8f9b1916955df57f93f6a637104a60d93d1",
                 "shasum": ""
             },
             "require": {
@@ -712,7 +712,7 @@
                 "source": "https://github.com/agencewonderful/wwp-newsletter/tree/develop",
                 "issues": "https://github.com/agencewonderful/wwp-newsletter/issues"
             },
-            "time": "2026-11-03T10:43:36+00:00"
+            "time": "2026-11-05T08:47:06+00:00"
         },
         {
             "name": "agencewonderful/wwp-newsroom",
@@ -1231,16 +1231,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.11.1",
+            "version": "2.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "472b418967419c6124edd91dc6310a3bec091dae"
+                "reference": "12c820dbc3f030954b1d09f5884fcf1e9d29d6cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/472b418967419c6124edd91dc6310a3bec091dae",
-                "reference": "472b418967419c6124edd91dc6310a3bec091dae",
+                "url": "https://api.github.com/repos/composer/composer/zipball/12c820dbc3f030954b1d09f5884fcf1e9d29d6cb",
+                "reference": "12c820dbc3f030954b1d09f5884fcf1e9d29d6cb",
                 "shasum": ""
             },
             "require": {
@@ -1330,7 +1330,7 @@
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "security": "https://github.com/composer/composer/security/policy",
-                "source": "https://github.com/composer/composer/tree/2.11.1"
+                "source": "https://github.com/composer/composer/tree/2.11.2"
             },
             "funding": [
                 {
@@ -1342,7 +1342,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-30T13:52:10+00:00"
+            "time": "2026-11-10T09:09:37+00:00"
         },
         {
             "name": "composer/installers",
@@ -2213,20 +2213,21 @@
                     "type": "tidelift"
                 }
             ],
+            "abandoned": true,
             "time": "2025-01-01T22:12:03+00:00"
         },
         {
             "name": "doctrine/dbal",
-            "version": "3.10.6",
+            "version": "3.10.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "c95589d775a0b2e543467d40f8c3ecccf586f2b4"
+                "reference": "92156a662c2e177a1c9305711a0ef3ee94dcdd2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/c95589d775a0b2e543467d40f8c3ecccf586f2b4",
-                "reference": "c95589d775a0b2e543467d40f8c3ecccf586f2b4",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/92156a662c2e177a1c9305711a0ef3ee94dcdd2c",
+                "reference": "92156a662c2e177a1c9305711a0ef3ee94dcdd2c",
                 "shasum": ""
             },
             "require": {
@@ -2245,11 +2246,11 @@
                 "doctrine/coding-standard": "14.0.0",
                 "fig/log-test": "^1",
                 "jetbrains/phpstorm-stubs": "2023.1",
-                "phpstan/phpstan": "2.1.30",
+                "phpstan/phpstan": "2.3.4",
                 "phpstan/phpstan-strict-rules": "^2",
-                "phpunit/phpunit": "9.6.34",
-                "slevomat/coding-standard": "8.27.1",
-                "squizlabs/php_codesniffer": "4.0.1",
+                "phpunit/phpunit": "9.6.36",
+                "slevomat/coding-standard": "8.31.1",
+                "squizlabs/php_codesniffer": "4.0.4",
                 "symfony/cache": "^5.4|^6.0|^7.0|^8.0",
                 "symfony/console": "^4.4|^5.4|^6.0|^7.0|^8.0"
             },
@@ -2311,7 +2312,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/3.10.6"
+                "source": "https://github.com/doctrine/dbal/tree/3.10.7"
             },
             "funding": [
                 {
@@ -2327,24 +2328,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-21T12:57:49+00:00"
+            "time": "2026-11-08T21:35:21+00:00"
         },
         {
             "name": "doctrine/deprecations",
-            "version": "1.1.6",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/deprecations.git",
-                "reference": "d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca"
+                "reference": "d2e16653a734c8784c1851ad68b02f997b53ca82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca",
-                "reference": "d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/d2e16653a734c8784c1851ad68b02f997b53ca82",
+                "reference": "d2e16653a734c8784c1851ad68b02f997b53ca82",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1 || ^8.0"
+                "php": "^7.4 || ^8.0"
             },
             "conflict": {
                 "phpunit/phpunit": "<=7.5 || >=14"
@@ -2373,9 +2374,9 @@
             "homepage": "https://www.doctrine-project.org/",
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
-                "source": "https://github.com/doctrine/deprecations/tree/1.1.6"
+                "source": "https://github.com/doctrine/deprecations/tree/1.2.0"
             },
-            "time": "2026-02-07T07:09:04+00:00"
+            "time": "2026-11-11T10:04:49+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -4275,16 +4276,16 @@
         },
         {
             "name": "paragonie/constant_time_encoding",
-            "version": "v3.1.3",
+            "version": "v3.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/constant_time_encoding.git",
-                "reference": "d5b01a39b3415c2cd581d3bd3a3575c1ebbd8e77"
+                "reference": "5efef6e6cb43e088ccab7d0c1e2f2ab25b9e8b54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/d5b01a39b3415c2cd581d3bd3a3575c1ebbd8e77",
-                "reference": "d5b01a39b3415c2cd581d3bd3a3575c1ebbd8e77",
+                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/5efef6e6cb43e088ccab7d0c1e2f2ab25b9e8b54",
+                "reference": "5efef6e6cb43e088ccab7d0c1e2f2ab25b9e8b54",
                 "shasum": ""
             },
             "require": {
@@ -4340,7 +4341,7 @@
                 "issues": "https://github.com/paragonie/constant_time_encoding/issues",
                 "source": "https://github.com/paragonie/constant_time_encoding"
             },
-            "time": "2025-09-24T15:06:41+00:00"
+            "time": "2026-11-06T20:31:19+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -8441,12 +8442,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wonderwp/CPT.git",
-                "reference": "663ccfd49b3e12bcd620d5443506bc2bfaae9d3f"
+                "reference": "db50d00df82b021b699c23b8197be4cd86f43e12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wonderwp/CPT/zipball/663ccfd49b3e12bcd620d5443506bc2bfaae9d3f",
-                "reference": "663ccfd49b3e12bcd620d5443506bc2bfaae9d3f",
+                "url": "https://api.github.com/repos/wonderwp/CPT/zipball/db50d00df82b021b699c23b8197be4cd86f43e12",
+                "reference": "db50d00df82b021b699c23b8197be4cd86f43e12",
                 "shasum": ""
             },
             "require": {
@@ -8492,7 +8493,7 @@
                 "issues": "https://github.com/wonderwp/CPT/issues",
                 "source": "https://github.com/wonderwp/CPT/tree/feature/php_8"
             },
-            "time": "2026-10-28T15:40:39+00:00"
+            "time": "2026-11-04T17:03:24+00:00"
         },
         {
             "name": "wonderwp/dependency-injection",
@@ -12620,15 +12621,15 @@
         },
         {
             "name": "wpackagist-plugin/imagify",
-            "version": "2.3.4",
+            "version": "2.3.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/imagify/",
-                "reference": "tags/2.3.4"
+                "reference": "tags/2.3.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/imagify.2.3.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/imagify.2.3.5.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -12638,15 +12639,15 @@
         },
         {
             "name": "wpackagist-plugin/secupress",
-            "version": "2.7.3",
+            "version": "2.7.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/secupress/",
-                "reference": "tags/2.7.3"
+                "reference": "tags/2.7.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/secupress.2.7.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/secupress.2.7.4.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
