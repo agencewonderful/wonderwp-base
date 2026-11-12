@@ -31,6 +31,7 @@ Avoid the word **thin** in class or file names — in English it suggests lightw
 - Hooks in `includes/Hooks` are auto-discovered when the plugin loads — no manual WordPress registration outside the class.
 - **Transactional / service-delegating hooks:** use **creating-a-domain-service** first, then [ServiceDelegatingHook.php.tpl](assets/ServiceDelegatingHook.php.tpl). Mapping hook params → Request and Response → return stays in the hook callback — never on Request/Response DTOs.
 - Do **not** use vague heuristics ("try to feel"); use the gate checklist.
+- **Not in the theme** and **not in the plugin manager** (`add_action` / `add_filter` forbidden on `*Manager::register`). Register via an `includes/Hooks` class; do not call `(new SomeHook())->register()` from unrelated services.
 
 ## Workflow
 

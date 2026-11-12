@@ -83,8 +83,9 @@ flowchart LR
 3. `ddev composer update agencewonderful/wwp-maintenance` when needed; activate plugin.
 4. Database sync per [env-database-sync.md](./references/env-database-sync.md) (MigrateDB profiles → operator choice or skip; else SQL dump). Languages after DB if needed. **No media download.**
 5. Start session: `ddev wp maintenance:session start --session=... --operator=... --branch=...`
+6. If `one_shot.ctx.ensure-agents-md` is pending: ensure root `agents.md` per [ensure-agents-md.md](./references/ensure-agents-md.md) (invoke `initializing-agents-md` when missing; **absorb after** the session exists).
 
-**Success criteria:** Session JSON exists under `ai_resources/maintenance/sessions/`; plugin active.
+**Success criteria:** Session JSON exists under `ai_resources/maintenance/sessions/`; plugin active; `agents.md` present or deferral noted in runbook if the one-shot was pending.
 
 ### Step 2: Pending → operator runbook (guided plan)
 
@@ -109,11 +110,14 @@ flowchart LR
 
 **Do:**
 
-1. `HOSTING=... bash …/scripts/run-atom.sh 02` (PHP + composer checks/update).
+1. `HOSTING=... bash …/scripts/run-atom.sh 02` (PHP + composer checks/update + `composer audit`).
 2. Apply JSON check fixes; handle `milestone.php.target-8.5` / Node policy per [php-node-policy.md](./references/php-node-policy.md).
-3. Run `03` plugins cycle, `04` doctrine proxies, `05` frontend build.
-4. For pending legacy compliance / typing notices: fix via backend skill, then `maintenance:absorb`.
-5. After each meaningful block: **update runbook checkboxes** + **Étape courante**. **Continue** to next atoms/sections in the same session without operator ping unless [operator-autonomy.md](./references/operator-autonomy.md) requires a stop.
+3. If `legacy.composer.wp-password-bcrypt-remove` is pending (or `checkComposerInfos` flags installers &lt; ^2.3 / leftover bcrypt): follow [remove-wp-password-bcrypt.md](./references/remove-wp-password-bcrypt.md), then absorb.
+4. If `legacy.composer.disable-fund` is pending (or `checkComposerInfos` flags missing `config.fund: false`): follow [disable-composer-fund.md](./references/disable-composer-fund.md), then absorb.
+5. Auto-updates: if `legacy.backend.enable-auto-updates` pending → [enable-auto-updates.md](./references/enable-auto-updates.md) (delegates to ops `enable-auto-update`); then always run [verify-auto-updates.md](./references/verify-auto-updates.md) (`recurring.backend.verify-auto-updates`).
+6. Run `03` plugins cycle, `04` doctrine proxies, `05` frontend build.
+7. For pending legacy compliance / typing notices: fix via backend skill, then `maintenance:absorb`.
+8. After each meaningful block: **update runbook checkboxes** + **Étape courante**. **Continue** to next atoms/sections in the same session without operator ping unless [operator-autonomy.md](./references/operator-autonomy.md) requires a stop.
 
 **Success criteria:** Composer/npm green locally; absorbed one_shots recorded; runbook reflects progress; no unnecessary chat stops.
 
@@ -123,10 +127,11 @@ flowchart LR
 
 1. Align `CI/run-phpunit-tests.sh` with **wonderwp-base** fail-fast driver (`recurring.devops.phpunit-driver-wonderwp-base`); then phpunit `06`; cypress `07` if installed. PHPUnit: full driver output / exit code — per-suite results in runbook ([phpunit-runbook.md](./references/phpunit-runbook.md)); never mark OK on partial log tail.
 2. Align Jenkinsfile / exclude-file from **ops skill templates** (preserve project-specific excludes + credential prefix).
-3. If `ci.jenkinsfile-wave-2026-10-28` pending: search remote PRs about Jenkinsfile update (catalogue date 2026-10-28); ask to merge if found; absorb when done.
-4. BO: audit admins, suspicious content; client-role migration / capability alignment only if role `client` exists — follow [client-role-migration.md](./references/client-role-migration.md).
-5. Plugins: ensure sitemap + SecuPress; verify wwp-cron; absorb remaining plugin one_shots when applicable.
-6. Keep the runbook in sync (sections 5–7).
+3. If `legacy.hosting.custom-403-page` pending (Kinsta / nginx-origin): follow [install-custom-403-page.md](./references/install-custom-403-page.md) — copy asset → `web/errors/403.html`, support ticket, then absorb.
+4. If `ci.jenkinsfile-wave-2026-10-28` pending: search remote PRs about Jenkinsfile update (catalogue date 2026-10-28); ask to merge if found; absorb when done.
+5. BO: audit admins, suspicious content; client-role migration only if role exists.
+6. Plugins: ensure sitemap + SecuPress; verify wwp-cron via [verify-wwp-cron-inventory.md](./references/verify-wwp-cron-inventory.md) (full `cron.inventory`, including `cron:prun-results --prune-storage-path`); absorb remaining plugin one_shots when applicable.
+7. Keep the runbook in sync (sections 5–7).
 
 **Success criteria:** Tests addressed; CI files updated or deferred with notes; BO gates completed; runbook current.
 
@@ -159,6 +164,13 @@ flowchart LR
 
 - **Operator autonomy (enchaîner)**: [references/operator-autonomy.md](./references/operator-autonomy.md)
 - **Env toolchain alignment**: [references/env-toolchain-alignment.md](./references/env-toolchain-alignment.md)
+- **Ensure agents.md**: [references/ensure-agents-md.md](./references/ensure-agents-md.md)
+- **Remove wp-password-bcrypt / installers ^2.3**: [references/remove-wp-password-bcrypt.md](./references/remove-wp-password-bcrypt.md)
+- **Disable Composer funding notices**: [references/disable-composer-fund.md](./references/disable-composer-fund.md)
+- **Install custom 403 page (Kinsta)**: [references/install-custom-403-page.md](./references/install-custom-403-page.md)
+- **Enable auto-updates (one-shot)**: [references/enable-auto-updates.md](./references/enable-auto-updates.md)
+- **Verify auto-updates (recurring)**: [references/verify-auto-updates.md](./references/verify-auto-updates.md)
+- **Verify wwp-cron inventory**: [references/verify-wwp-cron-inventory.md](./references/verify-wwp-cron-inventory.md)
 - **PHPUnit runbook**: [references/phpunit-runbook.md](./references/phpunit-runbook.md)
 - **Operator runbook**: [references/operator-runbook.md](./references/operator-runbook.md)
 - **Catalogue gap PRs**: [references/catalogue-gap-proposals.md](./references/catalogue-gap-proposals.md)

@@ -36,24 +36,29 @@ _Concerns : `recurring.git.maintenance-branch`, `recurring.composer.update-wwp-m
 _Scope session : **maintenance complète** (défaut skill) — ne demander autre profil que si l’opérateur le demande._
 
 - [ ] Contexte hébergement / URLs lu depuis `CI/*_credentials.json` (sans coller de secrets)
+- [ ] `agents.md` présent à la racine (générer via skill `initializing-agents-md` si absent) + absorb `one_shot.ctx.ensure-agents-md`
 - [ ] Base de données : MigrateDB détecté → `wp migratedb profiles` listé **ou** fallback SQL **ou** `[-]` skip (DB locale conservée)
 - [ ] Migration exécutée (`wp migratedb profile …` ou `ddev import-db`) si applicable
 - [ ] Languages / traductions synchronisées (pas de sync médias)
 - [ ] Alignement éventuel avec `develop` si pertinent (`recurring.git.sync-develop`)
 
-_Concerns : `recurring.env.*`, `recurring.wonderful.submodule-and-install-skills`_
+_Concerns : `recurring.env.*`, `recurring.wonderful.submodule-and-install-skills`, `one_shot.ctx.ensure-agents-md`_
 
 ## 3. Backend
 
 - [ ] Check version PHP (`maintenance:checkPhpVersion`) — floor 8.3, cible 8.5 selon policy / hébergeur
 - [ ] Milestone PHP 8.5 traitée ou reportée avec note explicite
 - [ ] Check infos Composer + corrections appliquées
-- [ ] `composer update` (atome `02`) OK
+- [ ] `composer update` + `composer audit` (atome `02`) OK
+- [ ] `roots/wp-password-bcrypt` retiré (WP ≥ 6.8) + `composer/installers` ^2.3 si pending — puis absorb
+- [ ] `config.fund: false` dans `composer.json` si pending (`legacy.composer.disable-fund`) — puis absorb
+- [ ] Auto-updates activées architecturalement (`legacy.backend.enable-auto-updates`) si pending — puis absorb
+- [ ] Auto-updates **vérifiées** (constantes + `enable_auto_updates` + cron `wp_version_check` / exécution réelle)
 - [ ] Cycle plugins inactifs / réactivation (atome `03`)
 - [ ] Proxies Doctrine générés (atome `04`)
 - [ ] One-shots / legacy compliance restants corrigés + `maintenance:absorb` si applicable
 
-_Concerns : `recurring.backend.*`, `milestone.php.target-8.5`, éventuels `legacy.*` encore pending_
+_Concerns : `recurring.backend.*`, `milestone.php.target-8.5`, `legacy.composer.wp-password-bcrypt-remove`, `legacy.composer.disable-fund`, `legacy.backend.enable-auto-updates`, éventuels `legacy.*` encore pending_
 
 ## 4. Frontend
 
@@ -82,22 +87,23 @@ _Concerns : `recurring.frontend.*`, `milestone.node.upgrade-if-supported`_
 - [ ] Jenkinsfile aligné template ops (préserver exclus + préfixe credentials projet)
 - [ ] Exclude-file aligné template ops
 - [ ] Wave Jenkinsfile (`ci.jenkinsfile-wave-2026-10-28`) : PR remote cherchée / mergée / absorbée ou reportée
+- [ ] Page 403 custom Kinsta : `web/errors/403.html` depuis asset maintenance + ticket support (`legacy.hosting.custom-403-page`) — ou `[-]` si hors nginx-origin
 - [ ] Branches stale nettoyées ou reportées
 
-_Concerns : `recurring.devops.*`, `ci.jenkinsfile-wave-2026-10-28`_
+_Concerns : `recurring.devops.*`, `ci.jenkinsfile-wave-2026-10-28`, `legacy.hosting.custom-403-page`_
 
 ## 6. Back-office
 
 - [ ] Audit comptes admins
 - [ ] Contenu suspect / spam
-- [ ] Rôle `client` — migration comptes + alignement des caps (**uniquement si** le rôle WP existe, sinon `[-]`) — voir `client-role-migration`
+- [ ] Migration rôle `client` — **uniquement si** le rôle WP existe, sinon `[-]`
 
 _Concerns : `recurring.bo.*`_
 
 ## 7. Plugins métier
 
 - [ ] Plugins versionnés commités si besoin
-- [ ] `wwp-cron` vérifié
+- [ ] `wwp-cron` : inventaire **complet** planifié + exécuté (Default WP Cron, `cron:prun-results --prune-storage-path=~/logs_cron`, + inventaires plugins)
 - [ ] Sitemap (Google XML / équivalent) présent
 - [ ] SecuPress présent / configuré a minima
 

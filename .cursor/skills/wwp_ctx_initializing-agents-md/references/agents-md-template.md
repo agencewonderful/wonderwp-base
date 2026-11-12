@@ -36,6 +36,7 @@ Keep entries factual: descriptions aligned with the codebase, real stack version
 - **External dependencies:** <!-- third-party APIs, payment, auth providers -->
 - **Conventions:** <!-- e.g. Bedrock layout, DDD folders -->
 - If it's a WordPress project under a Bedrock architecture, use the [working-with-a-bedrock-architecture](./working-with-a-bedrock-architecture.md) reference to fill this section.
+- **Hooks & managers:** New hooks live as classes under `includes/Hooks` (simple vs service-delegating). Plugin managers wire DI and `setConfig` only—no `add_action` / `add_filter` and no business algorithms in the manager.
 
 ---
 

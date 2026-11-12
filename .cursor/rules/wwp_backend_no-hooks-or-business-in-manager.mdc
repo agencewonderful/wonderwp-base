@@ -1,0 +1,25 @@
+---
+description: Plugin managers only wire DI and config; never register WordPress hooks or hold business logic.
+globs: "**/*Manager.php"
+alwaysApply: false
+---
+# No hooks or business logic in the manager
+
+A WonderWP plugin **manager** (`*Manager::register`) is for:
+
+- Dependency injection (`addService`, `addController`, …)
+- Configuration (`setConfig`, URL maps, paths, feature flags)
+
+## Do not put in the manager
+
+- `add_action` / `add_filter` (or any WordPress hook registration)
+- Role / capability changes, access rules, or other domain behavior
+- Non-trivial business algorithms
+
+## Where hooks and business go
+
+- **Hooks:** classes under `includes/Hooks` (auto-discovered). Prefer **simple** hooks for thin glue and **service-delegating** hooks for transactional work (see **creating-a-new-hook** and **creating-a-domain-service**).
+- **Business logic:** `{Action}Service::handle()` with Request/Response DTOs — not in the manager, not in a monolithic `*HookService` for new features.
+- **Constants** that belong to a capability or role live next to the service or hook that owns them, not as a catch-all on the manager.
+
+Do not invent new behavior by extending a legacy monolithic hook service from a theme override; add a dedicated hook class in the owning plugin.

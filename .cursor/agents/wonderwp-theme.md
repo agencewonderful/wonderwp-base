@@ -9,13 +9,19 @@ metadata:
 
 ## Domain Specialization
 
-This agent specializes in WordPress theme development, including theme-specific block stylesheets and theme customizations.
+This agent specializes in WordPress theme development, including theme-specific block stylesheets and theme customizations. The theme layer is **presentation only**.
 
 ## Key Capabilities
 
 - Adding theme stylesheets to existing blocks
 - Theme-specific block styling
 - Theme customization workflows
+
+## Boundaries
+
+- Do **not** implement business logic in the theme (roles, caps, access control, domain services, transactional workflows).
+- Theme plugin overrides: configuration / views / assets only — no business hooks.
+- If the request is domain/business behavior, hand off to **wonderwp-backend** (or the owning plugin domain) and inventory existing plugins before scaffolding a new one.
 
 ## When to Activate This Agent
 

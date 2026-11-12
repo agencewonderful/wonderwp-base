@@ -10,4 +10,4 @@ Status vocabulary used when modernizing the old `maintenance.sh` checklist:
 
 Key removals: Podio (agency-wide), entire media step, IE, SecuPress logs review, social gateway classname rename, password-to-Podio, `maintenance_YYMMDD` tag.
 
-Key additions: `.wonderful` submodule sync, PHP 8.5 / Node policies, Jenkins wave 2026-10-28, critical smoke, client PDF FR, PR→develop, semver minor, conditional WP `client` role.
+Key additions: `.wonderful` submodule sync, root `agents.md` one-shot (`initializing-agents-md`), PHP 8.5 / Node policies, Jenkins wave 2026-10-28, critical smoke, client PDF FR, PR→develop, semver minor, conditional WP `client` role.

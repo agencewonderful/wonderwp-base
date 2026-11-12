@@ -1,0 +1,27 @@
+---
+description: Keep business logic out of the WordPress theme; place it in plugins instead.
+globs: "**/themes/**"
+alwaysApply: false
+---
+# No business logic in the theme
+
+The theme is for **presentation**: stylesheets, markup, and UI-only hooks (body classes, menu markup, logos, visual assets).
+
+## Do not put in the theme
+
+- Roles, capabilities, or access-control registration
+- Content protection / membership gates
+- Domain services, repositories, or transactional workflows
+- Plugin manager overrides that register hooks or replace business services
+
+## Theme plugin overrides
+
+A theme override of a plugin may adjust **configuration**, **views**, and **assets** only. It must not introduce roles, caps, access rules, or `add_action` / `add_filter` for business behavior.
+
+## Where business logic goes
+
+1. Inventory existing project plugins and shared WonderWP plugins.
+2. Place the behavior in the plugin that owns the domain.
+3. If none fits, ask whether a new plugin should be created (use **creating-a-new-plugin**), then implement there with hooks under `includes/Hooks` and domain services as needed.
+
+If the user asks for business behavior while working in the theme, stop and redirect to the appropriate backend/plugin workflow.

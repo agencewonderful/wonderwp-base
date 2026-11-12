@@ -19,7 +19,7 @@ Scaffold a channel-agnostic business unit: `{Action}Request`, `{Action}Response`
 - **Mandatory:** target plugin; business action name (`{Action}`); what `handle()` must accomplish.
 - Follow [service-delegation-architecture.md](../../references/service-delegation-architecture.md) — Request/Response must **not** include `fromHookContext`, `toHookReturn`, or other channel methods.
 - `{Action}Response` must extend `WonderWp\Component\Response\AbstractResponse` (or implement `ResponseInterface` only if inheritance is impossible).
-- Business logic lives in `{Action}Service::handle()` — not in hooks, CLI commands, or controllers.
+- Business logic lives in `{Action}Service::handle()` — not in hooks, CLI commands, controllers, **themes**, or **plugin managers**.
 - Tests are generated **after** `handle()` is implemented. See [idempotent-service-testing.md](../../references/idempotent-service-testing.md).
 
 ## Workflow
