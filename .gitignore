@@ -38,15 +38,6 @@ web/app/themes/wwp_child_theme/assets/final/*.jpeg
 web/app/themes/wwp_child_theme/assets/final/legacy
 web/app/themes/wwp_child_theme/assets/final/modern
 
-# Documentation
-web/documentation/dev/dest
-!/web/documentation/dev/dest/.gitkeep
-web/documentation/dev/src
-!/web/documentation/dev/src/.gitkeep
-web/documentation/phpdoc
-!/web/documentation/phpdoc/.gitkeep
-web/documentation/wonderwp
-!/web/documentation/wonderwp/.gitkeep
 
 # Plugins
 web/app/plugins/*
